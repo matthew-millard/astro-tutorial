@@ -1,0 +1,26 @@
+---
+import Social from '../ui/Social.astro';
+
+const socials = [
+  { name: 'Facebook', username: 'mattmillard' },
+  { name: 'Github', username: 'matthewmillard' },
+];
+
+const platform = 'Github';
+const username = 'mattmillard';
+---
+
+<footer>
+  <p>
+    Learn more about my projects on:
+    <ul>
+      {
+        socials.map(social => (
+          <li>
+            <Social platform={social.name} username={social.username} />
+          </li>
+        ))
+      }
+    </ul>
+  </p>
+</footer>

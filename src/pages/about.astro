@@ -1,65 +1,22 @@
 ---
+import Footer from '../components/layout/Footer.astro';
+import Header from '../components/layout/Header.astro';
+import '../styles/global.css';
 
-import '../styles/global.css'
-
-const pageTitle = 'About'
-
-const identity = {
-  firstName: "Matt",
-  lastName: 'Millard',
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"]
-
-const happy = true;
-const finished = false;
-const goal = 3;
+const pageTitle = 'About';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-        <header>
-			<nav>
-				<ul>
-					<a href="/">Home</a>
-					<a href="/about/">About</a>
-					<a href="/blog/">Blog</a>
-				</ul>
-			</nav>
-		</header>
-		<h1>{pageTitle}</h1>
-		<h2>... and my new Astro site!</h2>
-
-    <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-
-    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-
-
-	<h2>My Details</h2>
-	<p>First name: {identity.firstName}</p>
-	<p>Last name: {identity.lastName}</p>
-
-	<h2>Skills</h2>
-	<ul>
-	{skills.map(skill => (
-		<li>{skill}</li>
-	))}
-	</ul>
-
-	{happy && <p>I am happy to be learning Astro!</p>}
-
-{finished && <p>I finished this tutorial!</p>}
-
-{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <h1>{pageTitle}</h1>
+    <Footer />
+  </body>
 </html>

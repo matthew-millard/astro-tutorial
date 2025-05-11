@@ -1,4 +1,7 @@
 ---
+import '../styles/reset.css';
+import HeaderLayout from './HeaderLayout.astro';
+
 interface Props {
   pageTitle: string;
 }
@@ -15,7 +18,7 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <h1 class="skill">{pageTitle}</h1>
+    <HeaderLayout />
     <slot />
   </body>
 </html>

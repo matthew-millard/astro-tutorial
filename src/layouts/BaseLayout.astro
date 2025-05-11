@@ -1,6 +1,8 @@
 ---
 import '../styles/reset.css';
+import '../styles/global.css';
 import HeaderLayout from './HeaderLayout.astro';
+import FooterLayout from './FooterLayout.astro';
 
 interface Props {
   pageTitle: string;
@@ -20,5 +22,12 @@ const { pageTitle } = Astro.props;
   <body>
     <HeaderLayout />
     <slot />
+    <FooterLayout />
   </body>
 </html>
+
+<style>
+  body {
+    position: relative;
+  }
+</style>

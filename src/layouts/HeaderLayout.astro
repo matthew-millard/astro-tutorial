@@ -8,8 +8,39 @@ import Navigation from '../components/ui/navigation.astro';
 
 <style>
   header {
+    position: sticky;
+    top: 0;
     background-color: pink;
     height: 56px;
     padding: 12px 64px 12px 16px;
+    transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  header.hide {
+    transform: translateY(-100%);
   }
 </style>
+
+<script>
+  const document = window.document;
+  const header = document.querySelector('header');
+  let previousScrollY = window.scrollY;
+
+  function handleScroll() {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > previousScrollY) {
+      // Scrolling down
+      header?.classList.add('hide');
+    } else if (currentScrollY < previousScrollY) {
+      // Scrolling up
+      header?.classList.remove('hide');
+    }
+
+    previousScrollY = currentScrollY;
+  }
+
+  document.addEventListener('scroll', () => {
+    requestAnimationFrame(handleScroll);
+  });
+</script>

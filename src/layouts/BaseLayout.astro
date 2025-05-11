@@ -1,5 +1,4 @@
 ---
-import '../styles/reset.css';
 import '../styles/global.css';
 import HeaderLayout from './HeaderLayout.astro';
 import FooterLayout from './FooterLayout.astro';
@@ -29,5 +28,7 @@ const { pageTitle } = Astro.props;
 <style>
   body {
     position: relative;
+    background-color: var(--background);
+    color: var(--foreground);
   }
 </style>

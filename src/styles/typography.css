@@ -1,0 +1,241 @@
+/* The Future Font Family */
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-thin-italic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-extralight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-extralight-italic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-light-italic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-medium-italic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-bold-italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'The Future';
+  src: url('/fonts/The-Future/test-the-future-black-italic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: block;
+}
+
+/* Söhne Font Family */
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-extraleicht.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-extraleicht-kursiv.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-leicht.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-leicht-kursiv.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-buch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-buch-kursiv.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-halbfett.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-halbfett-kursiv.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-dreiviertelfett.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-dreiviertelfett-kursiv.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-kraftig.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-kraftig-kursiv.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-fett.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-fett-kursiv.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-extrafett.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/Söhne/test-soehne-extrafett-kursiv.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: block;
+}

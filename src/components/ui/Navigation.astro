@@ -7,3 +7,35 @@
     <a href="/blog"><li>Blog</li></a>
   </ul>
 </nav>
+
+<style>
+  nav {
+    font-family: 'Söhne';
+    font-weight: 500;
+    font-size: var(--text-sm);
+    line-height: 1;
+  }
+
+  @media (min-width: 1280px) {
+    nav {
+      font-size: var(--text-base);
+    }
+  }
+
+  ul {
+    padding-left: 80px;
+    display: flex;
+    gap: 1rem;
+
+    @media (min-width: 1280px) {
+      gap: 1.5rem;
+    }
+  }
+
+  a {
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    color: var(--foreground);
+  }
+</style>

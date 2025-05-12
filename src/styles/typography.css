@@ -239,3 +239,132 @@
   font-style: italic;
   font-display: block;
 }
+
+/* Söhne Mono Font Family */
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-extraleicht.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-extraleicht-kursiv.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-leicht.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-leicht-kursiv.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-buch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-buch-kursiv.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-halbfett.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-halbfett-kursiv.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-dreiviertelfett.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-dreiviertelfett-kursiv.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-kraftig.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-kraftig-kursiv.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-fett.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-fett-kursiv.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-extrafett.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Mono';
+  src: url('/fonts/Söhne Mono/test-soehne-mono-extrafett-kursiv.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: block;
+}

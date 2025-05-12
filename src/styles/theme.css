@@ -1,22 +1,40 @@
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(20, 14.3%, 4.1%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(20, 14.3%, 4.1%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(20, 14.3%, 4.1%);
-  --primary: hsl(24.6, 95%, 53.1%);
-  --primary-foreground: hsl(60, 9.1%, 97.8%);
-  --secondary: hsl(60, 4.8%, 95.9%);
-  --secondary-foreground: hsl(24, 9.8%, 10%);
-  --muted: hsl(60, 4.8%, 95.9%);
-  --muted-foreground: hsl(25, 5.3%, 44.7%);
-  --accent: hsl(60, 4.8%, 95.9%);
-  --accent-foreground: hsl(24, 9.8%, 10%);
-  --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --border: hsl(20, 5.9%, 90%);
-  --input: hsl(20, 5.9%, 90%);
-  --ring: hsl(24.6, 95%, 53.1%);
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  --background: #faf6f5;
+  --foreground: #1b120e;
+  --primary: #5c3c2d;
+  --primary-foreground: #faf6f5;
+  --primary-10: color-mix(in srgb, var(--primary) 10%, transparent);
+  --secondary: #8ec790;
+  --secondary-foreground: #1b120e;
+  --secondary-10: color-mix(in srgb, var(--secondary) 10%, transparent);
+  --accent: #468b7b;
+  --accent-foreground: #1b120e;
+  --border: color-mix(in srgb, var(--foreground) 10%, transparent);
   --radius: 0.5rem;
+
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  --gradient: linear-gradient(120deg, var(--primary), var(--accent));
+}
+
+:root[data-theme='dark'] {
+  --text: #f1e8e4;
+  --background: #0a0605;
+  --primary: #d2b2a3;
+  --secondary: #387139;
+  --accent: #74b9a9;
 }

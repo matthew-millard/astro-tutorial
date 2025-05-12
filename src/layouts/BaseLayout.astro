@@ -26,9 +26,11 @@ const { pageTitle } = Astro.props;
 </html>
 
 <style>
+  html {
+    background: var(--background);
+    color: var(--foreground);
+  }
   body {
     position: relative;
-    background-color: var(--background);
-    color: var(--foreground);
   }
 </style>

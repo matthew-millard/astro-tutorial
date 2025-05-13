@@ -4,3 +4,7 @@
 @import './utilities.css';
 
 /* Global styles 👇 */
+:root {
+  font-family: 'Söhne';
+  font-weight: 400;
+}

@@ -1,31 +1,25 @@
 ---
 interface Props {
-  type: 'submit' | 'button' | 'reset';
+  type?: 'submit' | 'button' | 'reset';
   variant: 'default' | 'ghost' | 'secondary' | 'outline';
 }
 
 const { type, variant } = Astro.props;
 ---
 
-<button type={type}><slot /> </button>
+<button type={type ? type : 'button'}><slot /> </button>
 
 <style>
   button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid transparent;
-    cursor: pointer;
-
-    padding: 6px;
+    display: grid;
+    padding: 12px;
+    font-weight: 500;
+    min-width: 0;
+    max-width: fit-content;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border: 1px solid var(--primary);
     border-radius: var(--radius);
-
-    color: var(--foreground);
-    background: none;
-  }
-
-  button:hover {
-    background: var(--secondary-10);
-    border: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
   }
 </style>

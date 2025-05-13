@@ -21,14 +21,14 @@
   --accent: #468b7b;
   --accent-foreground: #1b120e;
   --border: color-mix(in srgb, var(--foreground) 10%, transparent);
-  --radius: 0.5rem;
+  --radius: 0.3rem;
 
   --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
-  --gradient: linear-gradient(120deg, var(--primary), var(--accent));
+  --gradient-text: linear-gradient(120deg, var(--primary), var(--accent));
 }
 
 :root[data-theme='dark'] {

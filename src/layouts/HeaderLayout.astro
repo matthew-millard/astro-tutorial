@@ -6,7 +6,7 @@ import ThemeSwitch from '../components/ui/ThemeSwitch.astro';
 
 <header>
   <div class="container">
-    <div class="wrapper">
+    <div class="header-left">
       <Logo />
       <Navigation />
     </div>
@@ -20,9 +20,10 @@ import ThemeSwitch from '../components/ui/ThemeSwitch.astro';
     top: 0;
     height: 56px;
     padding: 1rem;
+    background-color: var(--background);
     backdrop-filter: blur(5px);
-    border-bottom: 1px solid var(--border);
-    box-shadow: var(--shadow-xs);
+    /* border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-xs); */
     transition: transform 0.3s ease-out;
 
     display: flex;
@@ -30,11 +31,19 @@ import ThemeSwitch from '../components/ui/ThemeSwitch.astro';
     justify-content: space-between;
   }
 
+  .container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1280px;
+  }
+
   header.hide {
     transform: translateY(-100%);
   }
 
-  .wrapper {
+  .header-left {
     display: flex;
     align-items: center;
   }

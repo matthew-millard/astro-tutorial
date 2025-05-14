@@ -1,7 +1,7 @@
 ---
 interface Props {
   type?: 'button' | 'submit' | 'reset';
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'hamburger';
 }
 
 const { type = 'button', variant = 'primary' } = Astro.props;
@@ -11,6 +11,7 @@ const classVariants = {
   ghost: 'ghost',
   secondary: 'secondary',
   outline: 'outline',
+  hamburger: 'hamburger',
 };
 ---
 
@@ -20,22 +21,31 @@ const classVariants = {
 
 <style>
   button {
-    padding: 12px;
-    font-weight: 500;
-    min-width: 0;
-    max-width: fit-content;
   }
 
   .primary {
     background-color: var(--primary);
   }
-  .ghost {
-    background-color: transparent;
-  }
+
   .secondary {
     background-color: var(--secondary);
   }
+
+  .ghost {
+    background-color: transparent;
+  }
+
   .outline {
     background-color: transparent;
+  }
+
+  .hamburger {
+    display: grid;
+    padding: 4px;
+    color: var(--accent);
+    background-color: var(--background);
+    border: 1px solid var(--accent-30);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-xs);
   }
 </style>

@@ -11,6 +11,17 @@
   --text-5xl: 3rem;
   --text-6xl: 3.75rem;
 
+  /* font-weights */
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+
   /* colour palette */
   --background: #faf6f5;
 
@@ -99,7 +110,7 @@
   --accent-90: hsl(166, 33%, 41%, 90%);
   --accent-95: hsl(166, 33%, 41%, 95%);
 
-  /* --border: ; */
+  /* --border:  */
   --radius: 0.3rem;
 
   --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);

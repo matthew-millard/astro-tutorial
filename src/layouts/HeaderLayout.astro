@@ -1,10 +1,22 @@
 ---
 import Logo from '../components/ui/Logo.astro';
+import Hamburger from '../components/ui/Hamburger.astro';
+import DesktopNavigation from '../components/ui/DesktopNavigation.astro';
 ---
 
 <header>
   <div class="container">
-    <Logo />
+    <nav>
+      <Logo />
+      <!-- set to hide at large viewports -->
+      <div id="hamburger-container">
+        <Hamburger />
+      </div>
+      <!-- set to show at large viewports -->
+      <div id="navigation-container">
+        <DesktopNavigation />
+      </div>
+    </nav>
   </div>
 </header>
 
@@ -20,14 +32,33 @@ import Logo from '../components/ui/Logo.astro';
     transition: transform 0.3s ease-out;
   }
 
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
   header.hide {
     transform: translateY(-100%);
+  }
+
+  @media (min-width: 1280px) {
+    #hamburger-container {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1279px) {
+    #navigation-container {
+      display: none;
+    }
   }
 </style>
 
 <script>
   const document = window.document;
   const header = document.querySelector('header');
+  const hamburgerButton = document.querySelector('#hamburger');
   let previousScrollY = window.scrollY;
 
   function handleScroll() {
@@ -44,7 +75,13 @@ import Logo from '../components/ui/Logo.astro';
     previousScrollY = currentScrollY;
   }
 
+  function handleClick() {
+    console.log('clicked');
+  }
+
   document.addEventListener('scroll', () => {
     requestAnimationFrame(handleScroll);
   });
+
+  hamburgerButton?.addEventListener('click', handleClick);
 </script>

@@ -1,13 +1,22 @@
 ---
-
+import Logo from '../components/ui/Logo.astro';
 ---
 
-<header></header>
+<header>
+  <div class="container">
+    <Logo />
+  </div>
+</header>
 
 <style>
   header {
     position: sticky;
     height: 64px;
+    display: flex;
+    align-items: center;
+
+    background-color: var(--secondary-30);
+    box-shadow: var(--shadow-xs);
     transition: transform 0.3s ease-out;
   }
 

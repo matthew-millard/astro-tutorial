@@ -1,4 +1,5 @@
 :root {
+  /* font sizes */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -10,17 +11,95 @@
   --text-5xl: 3rem;
   --text-6xl: 3.75rem;
 
+  /* colour palette */
   --background: #faf6f5;
-  --foreground: #1b120e;
+
+  --text: #1b120e;
+  --text-5: hsl(18, 32%, 8%, 5%);
+  --text-10: hsl(18, 32%, 8%, 10%);
+  --text-15: hsl(18, 32%, 8%, 15%);
+  --text-20: hsl(18, 32%, 8%, 20%);
+  --text-25: hsl(18, 32%, 8%, 25%);
+  --text-30: hsl(18, 32%, 8%, 30%);
+  --text-35: hsl(18, 32%, 8%, 35%);
+  --text-40: hsl(18, 32%, 8%, 40%);
+  --text-45: hsl(18, 32%, 8%, 45%);
+  --text-50: hsl(18, 32%, 8%, 50%);
+  --text-55: hsl(18, 32%, 8%, 55%);
+  --text-60: hsl(18, 32%, 8%, 60%);
+  --text-65: hsl(18, 32%, 8%, 65%);
+  --text-70: hsl(18, 32%, 8%, 70%);
+  --text-75: hsl(18, 32%, 8%, 75%);
+  --text-80: hsl(18, 32%, 8%, 80%);
+  --text-85: hsl(18, 32%, 8%, 85%);
+  --text-90: hsl(18, 32%, 8%, 90%);
+  --text-95: hsl(18, 32%, 8%, 95%);
+
   --primary: #5c3c2d;
   --primary-foreground: #faf6f5;
-  --primary-10: color-mix(in srgb, var(--primary) 10%, transparent);
+  --primary-5: hsl(19, 34%, 27%, 5%);
+  --primary-10: hsl(19, 34%, 27%, 10%);
+  --primary-15: hsl(19, 34%, 27%, 15%);
+  --primary-20: hsl(19, 34%, 27%, 20%);
+  --primary-25: hsl(19, 34%, 27%, 25%);
+  --primary-30: hsl(19, 34%, 27%, 30%);
+  --primary-35: hsl(19, 34%, 27%, 35%);
+  --primary-40: hsl(19, 34%, 27%, 40%);
+  --primary-45: hsl(19, 34%, 27%, 45%);
+  --primary-50: hsl(19, 34%, 27%, 50%);
+  --primary-55: hsl(19, 34%, 27%, 55%);
+  --primary-60: hsl(19, 34%, 27%, 60%);
+  --primary-65: hsl(19, 34%, 27%, 65%);
+  --primary-70: hsl(19, 34%, 27%, 70%);
+  --primary-75: hsl(19, 34%, 27%, 75%);
+  --primary-80: hsl(19, 34%, 27%, 80%);
+  --primary-85: hsl(19, 34%, 27%, 85%);
+  --primary-90: hsl(19, 34%, 27%, 90%);
+  --primary-95: hsl(19, 34%, 27%, 95%);
+
   --secondary: #8ec790;
-  --secondary-foreground: #1b120e;
-  --secondary-10: color-mix(in srgb, var(--secondary) 10%, transparent);
+  --secondary-5: hsl(122, 34%, 67%, 5%);
+  --secondary-10: hsl(122, 34%, 67%, 10%);
+  --secondary-15: hsl(122, 34%, 67%, 15%);
+  --secondary-20: hsl(122, 34%, 67%, 20%);
+  --secondary-25: hsl(122, 34%, 67%, 25%);
+  --secondary-30: hsl(122, 34%, 67%, 30%);
+  --secondary-35: hsl(122, 34%, 67%, 35%);
+  --secondary-40: hsl(122, 34%, 67%, 40%);
+  --secondary-45: hsl(122, 34%, 67%, 45%);
+  --secondary-50: hsl(122, 34%, 67%, 50%);
+  --secondary-55: hsl(122, 34%, 67%, 55%);
+  --secondary-60: hsl(122, 34%, 67%, 60%);
+  --secondary-65: hsl(122, 34%, 67%, 65%);
+  --secondary-70: hsl(122, 34%, 67%, 70%);
+  --secondary-75: hsl(122, 34%, 67%, 75%);
+  --secondary-80: hsl(122, 34%, 67%, 80%);
+  --secondary-85: hsl(122, 34%, 67%, 85%);
+  --secondary-90: hsl(122, 34%, 67%, 90%);
+  --secondary-95: hsl(122, 34%, 67%, 95%);
+
   --accent: #468b7b;
-  --accent-foreground: #1b120e;
-  --border: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --accent-5: hsl(166, 33%, 41%, 5%);
+  --accent-10: hsl(166, 33%, 41%, 10%);
+  --accent-15: hsl(166, 33%, 41%, 15%);
+  --accent-20: hsl(166, 33%, 41%, 20%);
+  --accent-25: hsl(166, 33%, 41%, 25%);
+  --accent-30: hsl(166, 33%, 41%, 30%);
+  --accent-35: hsl(166, 33%, 41%, 35%);
+  --accent-40: hsl(166, 33%, 41%, 40%);
+  --accent-45: hsl(166, 33%, 41%, 45%);
+  --accent-50: hsl(166, 33%, 41%, 50%);
+  --accent-55: hsl(166, 33%, 41%, 55%);
+  --accent-60: hsl(166, 33%, 41%, 60%);
+  --accent-65: hsl(166, 33%, 41%, 65%);
+  --accent-70: hsl(166, 33%, 41%, 70%);
+  --accent-75: hsl(166, 33%, 41%, 75%);
+  --accent-80: hsl(166, 33%, 41%, 80%);
+  --accent-85: hsl(166, 33%, 41%, 85%);
+  --accent-90: hsl(166, 33%, 41%, 90%);
+  --accent-95: hsl(166, 33%, 41%, 95%);
+
+  /* --border: ; */
   --radius: 0.3rem;
 
   --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -29,12 +108,4 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
   --gradient-text: linear-gradient(120deg, var(--primary), var(--accent));
-}
-
-:root[data-theme='dark'] {
-  --text: #f1e8e4;
-  --background: #0a0605;
-  --primary: #d2b2a3;
-  --secondary: #387139;
-  --accent: #74b9a9;
 }

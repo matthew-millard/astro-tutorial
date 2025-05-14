@@ -1,25 +1,41 @@
 ---
 interface Props {
-  type?: 'submit' | 'button' | 'reset';
-  variant: 'default' | 'ghost' | 'secondary' | 'outline';
+  type?: 'button' | 'submit' | 'reset';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
 }
 
-const { type, variant } = Astro.props;
+const { type = 'button', variant = 'primary' } = Astro.props;
+
+const classVariants = {
+  primary: 'primary',
+  ghost: 'ghost',
+  secondary: 'secondary',
+  outline: 'outline',
+};
 ---
 
-<button type={type ? type : 'button'}><slot /> </button>
+<button type={type} class={classVariants[variant]}>
+  <slot />
+</button>
 
 <style>
   button {
-    display: grid;
     padding: 12px;
     font-weight: 500;
     min-width: 0;
     max-width: fit-content;
+  }
+
+  .primary {
     background-color: var(--primary);
-    color: var(--primary-foreground);
-    border: 1px solid var(--primary);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-lg);
+  }
+  .ghost {
+    background-color: transparent;
+  }
+  .secondary {
+    background-color: var(--secondary);
+  }
+  .outline {
+    background-color: transparent;
   }
 </style>

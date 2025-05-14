@@ -1,51 +1,18 @@
 ---
-import Logo from '../components/ui/Logo.astro';
-import Navigation from '../components/ui/Navigation.astro';
-import ThemeSwitch from '../components/ui/ThemeSwitch.astro';
+
 ---
 
-<header>
-  <div class="container">
-    <div class="header-left">
-      <Logo />
-      <Navigation />
-    </div>
-    <ThemeSwitch />
-  </div>
-</header>
+<header></header>
 
 <style>
   header {
     position: sticky;
-    top: 0;
-    height: 56px;
-    padding: 1rem;
-    background-color: var(--background);
-    backdrop-filter: blur(5px);
-    /* border-bottom: 1px solid var(--border);
-    box-shadow: var(--shadow-xs); */
+    height: 64px;
     transition: transform 0.3s ease-out;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1280px;
   }
 
   header.hide {
     transform: translateY(-100%);
-  }
-
-  .header-left {
-    display: flex;
-    align-items: center;
   }
 </style>
 

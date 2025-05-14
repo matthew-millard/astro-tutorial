@@ -1,66 +1,11 @@
 ---
-import H1 from '../components/typography/H1.astro';
-import Lead from '../components/typography/Lead.astro';
-import P from '../components/typography/P.astro';
-import H2 from '../components/typography/H2.astro';
-import H3 from '../components/typography/H3.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/ui/Button.astro';
 
-const pageTitle = 'The Blog';
+const pageTitle = 'Home';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <main class="container">
-    <section class="hero">
-      <H1>Hi, I'm Matt</H1>
-      <H2>A <span class="highlight">SUPER</span> passionate web developer sharing my journey out loud! </H2>
-      <Lead> Welcome to my portfolio and blog where I share my technical insights, guides and projects! </Lead>
-      <div class="cta-container">
-        <Button variant="default">Read my blog</Button>
-      </div>
-    </section>
-    <div id="latest-posts-container">
-      <section class="latest-posts">
-        <H2>Latest Posts</H2>
-      </section>
-    </div>
-  </main>
+  <main></main>
 </BaseLayout>
 
-<style>
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
-  }
-
-  section {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1280px;
-  }
-
-  .hero {
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #latest-posts-container {
-    height: 400px;
-    background-color: var(--secondary-10);
-  }
-
-  .highlight {
-    font-size: var(--text-4xl);
-    font-weight: 900;
-    background-image: var(--gradient-text);
-    background-clip: text;
-    color: transparent;
-  }
-
-  .cta-container {
-    margin-top: 4rem;
-  }
-</style>
+<style></style>

@@ -1,4 +1,4 @@
-<button>
+<button id="mobile-menu-button">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -35,3 +35,18 @@
     }
   }
 </style>
+
+<script>
+  const document = window.document;
+  const mobileMenuButtonEl = document.querySelector('#mobile-menu-button');
+  const collapsedMobileMenuEl = document.querySelector('#collapsed-mobile-menu') as HTMLDivElement;
+
+  mobileMenuButtonEl?.addEventListener('click', () => {
+    const isExpanded = collapsedMobileMenuEl.style.getPropertyValue('display') === 'block' ? true : false;
+    if (isExpanded) {
+      collapsedMobileMenuEl.style.setProperty('display', 'none');
+    } else {
+      collapsedMobileMenuEl.style.setProperty('display', 'block');
+    }
+  });
+</script>

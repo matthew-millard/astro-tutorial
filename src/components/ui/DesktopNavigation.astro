@@ -1,14 +1,10 @@
 ---
-const links = [
-  { title: 'blog', url: '/blog' },
-  { title: 'about', url: '/about' },
-  { title: 'projects', url: '/projects' },
-];
+import { navigationLinks } from '../../data/navigation';
 ---
 
 <ul>
   {
-    links.map(link => (
+    navigationLinks.map(link => (
       <a href={link.url}>
         <li>{link.title}</li>
       </a>

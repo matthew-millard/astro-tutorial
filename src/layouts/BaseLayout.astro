@@ -1,5 +1,5 @@
 ---
-import CollapsedMobileMenu from '../components/ui/CollapsedMobileMenu.astro';
+import MobileMenu from '../components/ui/MobileMenu.astro';
 import '../styles/global.css';
 import HeaderLayout from './HeaderLayout.astro';
 
@@ -20,7 +20,7 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <HeaderLayout />
-    <CollapsedMobileMenu />
+    <MobileMenu />
     <slot />
   </body>
 </html>
@@ -34,3 +34,7 @@ const { pageTitle } = Astro.props;
     position: relative;
   }
 </style>
+
+<script>
+  import '../scripts/mobile-menu';
+</script>

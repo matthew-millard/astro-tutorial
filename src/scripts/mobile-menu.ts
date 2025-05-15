@@ -1,6 +1,11 @@
-const mobileMenuButtonEl = document.querySelector('#mobile-menu-button');
-const mobileMenuEl = document.querySelector('#mobile-menu') as HTMLDivElement;
+const toggleMobileMenuButton = document.querySelector('#toggle-mobile-menu-button') as HTMLButtonElement;
+const closeMobileMenuButton = document.querySelector('#close-mobile-menu-button') as HTMLButtonElement;
+const mobileMenu = document.querySelector('#mobile-menu') as HTMLDivElement;
 
-mobileMenuButtonEl?.addEventListener('click', () => {
-  mobileMenuEl.classList.toggle('expanded');
+toggleMobileMenuButton?.addEventListener('click', () => {
+  mobileMenu.classList.toggle('expanded');
+});
+
+closeMobileMenuButton?.addEventListener('click', () => {
+  mobileMenu.classList.remove('expanded');
 });

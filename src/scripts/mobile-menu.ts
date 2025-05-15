@@ -1,24 +1,19 @@
-const toggleMobileMenuButton = document.querySelector('#toggle-mobile-menu-button') as HTMLButtonElement;
+const openMobileMenuButton = document.querySelector('#open-mobile-menu-button') as HTMLButtonElement;
 const closeMobileMenuButton = document.querySelector('#close-mobile-menu-button') as HTMLButtonElement;
-const pageContainer = document.querySelector('#page-container') as HTMLDivElement;
 const mobileMenu = document.querySelector('#mobile-menu') as HTMLDivElement;
+const overlay = document.querySelector('#mobile-menu-overlay') as HTMLDivElement;
+const pageContainer = document.querySelector('#page-container') as HTMLDivElement;
 
-toggleMobileMenuButton?.addEventListener('click', () => {
-  const isMenuOpen = mobileMenu.classList.contains('expanded');
-
-  if (isMenuOpen) {
-    mobileMenu.classList.remove('expanded');
-    pageContainer.removeAttribute('inert');
-    toggleMobileMenuButton.focus();
-  } else {
-    mobileMenu.classList.add('expanded');
-    pageContainer.setAttribute('inert', 'true');
-    closeMobileMenuButton.focus();
-  }
+openMobileMenuButton?.addEventListener('click', () => {
+  mobileMenu.classList.add('expanded');
+  pageContainer.setAttribute('inert', '');
+  overlay.setAttribute('aria-hidden', 'false');
+  closeMobileMenuButton.focus();
 });
 
 closeMobileMenuButton?.addEventListener('click', () => {
   mobileMenu.classList.remove('expanded');
   pageContainer.removeAttribute('inert');
-  toggleMobileMenuButton.focus();
+  overlay.setAttribute('aria-hidden', 'true');
+  openMobileMenuButton.focus();
 });

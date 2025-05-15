@@ -24,6 +24,25 @@
 
   /* colour palette */
   --background: #faf6f5;
+  --background-5: hsl(12, 33%, 98%, 5%);
+  --background-10: hsl(12, 33%, 98%, 10%);
+  --background-15: hsl(12, 33%, 98%, 15%);
+  --background-20: hsl(12, 33%, 98%, 20%);
+  --background-25: hsl(12, 33%, 98%, 25%);
+  --background-30: hsl(12, 33%, 98%, 30%);
+  --background-35: hsl(12, 33%, 98%, 35%);
+  --background-40: hsl(12, 33%, 98%, 40%);
+  --background-45: hsl(12, 33%, 98%, 45%);
+  --background-50: hsl(12, 33%, 98%, 50%);
+  --background-55: hsl(12, 33%, 98%, 55%);
+  --background-60: hsl(12, 33%, 98%, 60%);
+  --background-65: hsl(12, 33%, 98%, 65%);
+  --background-70: hsl(12, 33%, 98%, 70%);
+  --background-75: hsl(12, 33%, 98%, 75%);
+  --background-80: hsl(12, 33%, 98%, 80%);
+  --background-85: hsl(12, 33%, 98%, 85%);
+  --background-90: hsl(12, 33%, 98%, 90%);
+  --background-95: hsl(12, 33%, 98%, 95%);
 
   --text: #1b120e;
   --text-5: hsl(18, 32%, 8%, 5%);

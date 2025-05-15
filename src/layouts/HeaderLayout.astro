@@ -1,21 +1,15 @@
 ---
 import Logo from '../components/ui/Logo.astro';
-import Hamburger from '../components/ui/Hamburger.astro';
 import DesktopNavigation from '../components/ui/DesktopNavigation.astro';
+import MobileMenu from '../components/ui/MobileMenu.astro';
 ---
 
 <header>
   <div class="container">
     <nav>
       <Logo />
-      <!-- set to hide at large viewports -->
-      <div id="hamburger-container">
-        <Hamburger />
-      </div>
-      <!-- set to show at large viewports -->
-      <div id="navigation-container">
-        <DesktopNavigation />
-      </div>
+      <MobileMenu />
+      <DesktopNavigation />
     </nav>
   </div>
 </header>
@@ -26,8 +20,7 @@ import DesktopNavigation from '../components/ui/DesktopNavigation.astro';
     height: 64px;
     display: flex;
     align-items: center;
-
-    background-color: var(--secondary-30);
+    background-color: var(--background);
     box-shadow: var(--shadow-xs);
     transition: transform 0.3s ease-out;
   }
@@ -41,24 +34,12 @@ import DesktopNavigation from '../components/ui/DesktopNavigation.astro';
   header.hide {
     transform: translateY(-100%);
   }
-
-  @media (min-width: 1280px) {
-    #hamburger-container {
-      display: none;
-    }
-  }
-
-  @media (max-width: 1279px) {
-    #navigation-container {
-      display: none;
-    }
-  }
 </style>
 
 <script>
   const document = window.document;
   const header = document.querySelector('header');
-  const hamburgerButton = document.querySelector('#hamburger');
+
   let previousScrollY = window.scrollY;
 
   function handleScroll() {
@@ -75,13 +56,7 @@ import DesktopNavigation from '../components/ui/DesktopNavigation.astro';
     previousScrollY = currentScrollY;
   }
 
-  function handleClick() {
-    console.log('clicked');
-  }
-
   document.addEventListener('scroll', () => {
     requestAnimationFrame(handleScroll);
   });
-
-  hamburgerButton?.addEventListener('click', handleClick);
 </script>

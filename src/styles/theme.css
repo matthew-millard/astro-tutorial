@@ -28,13 +28,16 @@
   --font-black: 900;
 
   /* colour palette */
-  --background: #faf6f5;
-  --text: #1b120e;
-  --text-hover: rgba(27, 18, 14, 0.8);
-  --primary: #5c3c2d;
-  --primary-foreground: #faf6f5;
-  --secondary: #8ec790;
-  --secondary-foreground: #1b120e;
+  --background: rgb(248, 250, 252);
+  --background-hover: rgb(241, 245, 249);
+  --background-active: rgb(226, 232, 240);
+
+  --text: rgb(2, 6, 23);
+  --text-hover: rgba(2, 6, 23, 0.7);
+  --primary: rgb(51, 65, 85);
+  --primary-foreground: rgb(241, 245, 249);
+  --secondary: rgb(203, 213, 225);
+  --secondary-foreground: rgb(30, 41, 59);
   --accent: #468b7b;
 
   /* borders */

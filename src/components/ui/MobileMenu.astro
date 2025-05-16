@@ -11,15 +11,17 @@ import { Icon } from 'astro-icon/components';
       <Icon name="x" />
     </Button>
   </header>
-  <ul>
-    {
-      navigationLinks.map(link => (
-        <a href={link.url}>
-          <li>{link.title}</li>
-        </a>
-      ))
-    }
-  </ul>
+  <nav>
+    <ul>
+      {
+        navigationLinks.map(link => (
+          <a href={link.url}>
+            <li>{link.title}</li>
+          </a>
+        ))
+      }
+    </ul>
+  </nav>
 </div>
 
 <style>
@@ -70,5 +72,32 @@ import { Icon } from 'astro-icon/components';
     height: 64px;
     border-bottom: 1px solid var(--border-10);
     box-shadow: var(--shadow-xs);
+  }
+
+  nav {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-semibold);
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    li {
+      padding: 40px;
+    }
+
+    li:hover {
+      background-color: var(--background-hover);
+    }
+
+    li:active {
+      background-color: var(--background-active);
+    }
   }
 </style>

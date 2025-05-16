@@ -1,5 +1,5 @@
 export const navigationLinks = [
-  { title: 'blog', url: '/blog' },
-  { title: 'about', url: '/about' },
-  { title: 'projects', url: '/projects' },
+  { title: 'Blog', url: '/blog' },
+  { title: 'About', url: '/about' },
+  { title: 'Projects', url: '/projects' },
 ];

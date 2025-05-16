@@ -30,7 +30,7 @@ const { pathname } = Astro.url;
     position: fixed;
     inset: 0;
     z-index: 40;
-    background-color: black;
+    background-color: var(--overlay-hidden);
     opacity: 0;
     visibility: hidden;
     transition:
@@ -39,7 +39,8 @@ const { pathname } = Astro.url;
   }
 
   #mobile-menu-overlay[aria-hidden='false'] {
-    opacity: 0.5;
+    background-color: var(--overlay-visible);
+    opacity: 0.3;
     visibility: visible;
   }
 

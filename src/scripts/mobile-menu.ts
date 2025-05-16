@@ -5,17 +5,19 @@ const overlay = document.querySelector('#mobile-menu-overlay') as HTMLDivElement
 const pageContainer = document.querySelector('#page-container') as HTMLDivElement;
 
 function closeMobileMenu() {
-  mobileMenu.classList.remove('expanded');
-  pageContainer.removeAttribute('inert');
-  overlay.setAttribute('aria-hidden', 'true');
-  openMobileMenuButton.focus();
+  console.log(overlay);
+  mobileMenu?.classList.remove('expanded');
+  pageContainer?.removeAttribute('inert');
+  overlay?.setAttribute('aria-hidden', 'true');
+  openMobileMenuButton?.focus();
 }
 
 function openMobileMenu() {
-  mobileMenu.classList.add('expanded');
-  pageContainer.setAttribute('inert', '');
-  overlay.setAttribute('aria-hidden', 'false');
-  closeMobileMenuButton.focus();
+  console.log(overlay);
+  mobileMenu?.classList.add('expanded');
+  pageContainer?.setAttribute('inert', '');
+  overlay?.setAttribute('aria-hidden', 'false');
+  closeMobileMenuButton?.focus();
 }
 
 openMobileMenuButton.addEventListener('click', openMobileMenu);

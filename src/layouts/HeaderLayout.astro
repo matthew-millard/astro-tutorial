@@ -46,14 +46,15 @@ import { Icon } from 'astro-icon/components';
   const header = document.querySelector('header');
 
   let previousScrollY = window.scrollY;
-
   function handleScroll() {
+    const SCROLL_THRESHOLD = 10;
     const currentScrollY = window.scrollY;
+    const scrollDifference = Math.abs(currentScrollY - previousScrollY);
 
     if (currentScrollY > previousScrollY) {
       // Scrolling down
       header?.setAttribute('data-hidden', 'true');
-    } else if (currentScrollY < previousScrollY) {
+    } else if ((currentScrollY < previousScrollY && SCROLL_THRESHOLD < scrollDifference) || window.scrollY < 100) {
       // Scrolling up
       header?.removeAttribute('data-hidden');
     }

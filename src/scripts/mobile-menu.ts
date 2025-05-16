@@ -7,6 +7,7 @@ const pageContainer = document.querySelector('.page-container') as HTMLDivElemen
 function closeMobileMenu() {
   mobileMenu?.classList.remove('expanded');
   pageContainer?.removeAttribute('inert');
+  pageContainer?.classList.remove('prevent-scroll');
   overlay?.setAttribute('aria-hidden', 'true');
   openMobileMenuButton?.focus();
 }
@@ -14,6 +15,7 @@ function closeMobileMenu() {
 function openMobileMenu() {
   mobileMenu?.classList.add('expanded');
   pageContainer?.setAttribute('inert', '');
+  pageContainer?.classList.add('prevent-scroll');
   overlay?.setAttribute('aria-hidden', 'false');
   closeMobileMenuButton?.focus();
 }

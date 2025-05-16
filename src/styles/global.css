@@ -41,6 +41,12 @@ p {
 .page-container {
   padding-top: 66px;
 }
+
+.prevent-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 /* responsive header */
 @media (min-width: 1280px) {
   #open-mobile-menu-button {

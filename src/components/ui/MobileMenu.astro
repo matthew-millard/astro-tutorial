@@ -2,6 +2,7 @@
 import { navigationLinks } from '../../data/navigation';
 import Button from './Button.astro';
 import { Icon } from 'astro-icon/components';
+const { pathname } = Astro.url;
 ---
 
 <div id="mobile-menu-overlay" aria-hidden="true"></div>
@@ -15,8 +16,8 @@ import { Icon } from 'astro-icon/components';
     <ul>
       {
         navigationLinks.map(link => (
-          <a href={link.url}>
-            <li>{link.title}</li>
+          <a href={`/${link.slug}`}>
+            <li aria-current={pathname.slice(1) === link.slug ? 'page' : 'false'}>{link.title}</li>
           </a>
         ))
       }
@@ -92,12 +93,13 @@ import { Icon } from 'astro-icon/components';
       padding: 40px;
     }
 
-    li:hover {
-      background-color: var(--background-hover);
+    li:active,
+    li[aria-current='page'] {
+      background-color: var(--background-active);
     }
 
-    li:active {
-      background-color: var(--background-active);
+    li:hover {
+      background-color: var(--background-hover);
     }
   }
 </style>

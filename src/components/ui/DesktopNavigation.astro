@@ -1,14 +1,17 @@
 ---
 import { navigationLinks } from '../../data/navigation';
+const { pathname } = Astro.url;
 ---
 
 <ul>
   {
-    navigationLinks.map(link => (
-      <a href={link.url}>
-        <li>{link.title}</li>
-      </a>
-    ))
+    navigationLinks.map(link => {
+      return (
+        <a href={`/${link.slug}`} aria-current={pathname.slice(1) === link.slug ? 'page' : 'false'}>
+          <li>{link.title}</li>
+        </a>
+      );
+    })
   }
 </ul>
 
@@ -20,6 +23,7 @@ import { navigationLinks } from '../../data/navigation';
   }
 
   a {
+    padding: 8px 12px;
     text-decoration: none;
     font-weight: var(--font-medium);
     color: var(--text);
@@ -27,7 +31,16 @@ import { navigationLinks } from '../../data/navigation';
   }
 
   a:hover {
-    color: var(--text-hover);
+    background-color: var(--background-hover);
+  }
+
+  a:active {
+    background-color: var(--background-active);
+  }
+
+  a[aria-current='page'] {
+    text-decoration: underline solid var(--text) 3px;
+    text-underline-offset: 25px;
   }
 
   @media (max-width: 1279px) {

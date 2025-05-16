@@ -11,6 +11,11 @@
   --text-5xl: 3rem;
   --text-6xl: 3.75rem;
 
+  --icon-sm: 1.125rem;
+  --icon-base: 1.25rem;
+  --icon-lg: 1.5rem;
+  --icon-xl: 1.875rem;
+
   /* font-weights */
   --font-thin: 100;
   --font-extralight: 200;
@@ -128,6 +133,18 @@
   --accent-85: hsl(166, 33%, 41%, 85%);
   --accent-90: hsl(166, 33%, 41%, 90%);
   --accent-95: hsl(166, 33%, 41%, 95%);
+
+  /* borders */
+  --border-10: rgba(0, 0, 0, 0.1);
+  --border-20: rgba(0, 0, 0, 0.2);
+  --border-30: rgba(0, 0, 0, 0.3);
+  --border-40: rgba(0, 0, 0, 0.4);
+  --border-50: rgba(0, 0, 0, 0.5);
+  --border-60: rgba(0, 0, 0, 0.6);
+  --border-70: rgba(0, 0, 0, 0.7);
+  --border-80: rgba(0, 0, 0, 0.8);
+  --border-90: rgba(0, 0, 0, 0.9);
+  --border-95: rgba(0, 0, 0, 0.95);
 
   /* border radius  */
   --radius-xs: 0.125rem;

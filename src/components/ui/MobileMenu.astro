@@ -1,12 +1,15 @@
 ---
 import { navigationLinks } from '../../data/navigation';
-import CloseButton from './CloseButton.astro';
+import Button from './Button.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <div id="mobile-menu-overlay" aria-hidden="true"></div>
 <div id="mobile-menu">
   <header>
-    <CloseButton />
+    <Button id="close-mobile-menu-button" variant="ghost" size="icon">
+      <Icon name="x" />
+    </Button>
   </header>
   <ul>
     {
@@ -24,7 +27,7 @@ import CloseButton from './CloseButton.astro';
     position: fixed;
     inset: 0;
     z-index: 40;
-    background-color: var(--text);
+    background-color: black;
     opacity: 0;
     visibility: hidden;
     transition:
@@ -33,7 +36,7 @@ import CloseButton from './CloseButton.astro';
   }
 
   #mobile-menu-overlay[aria-hidden='false'] {
-    opacity: 0.1;
+    opacity: 0.5;
     visibility: visible;
   }
 
@@ -44,8 +47,9 @@ import CloseButton from './CloseButton.astro';
     width: 0%;
     min-width: 64px;
     margin-left: -64px;
-    background-color: var(--secondary);
-    border-right: 2px solid var(--text);
+    background-color: var(--background);
+    border-right: 1px solid var(--border-10);
+    box-shadow: var(--shadow-xl);
     transition: all 0.2s ease-out;
     overflow: hidden;
     opacity: 90%;
@@ -64,6 +68,7 @@ import CloseButton from './CloseButton.astro';
     align-items: center;
     padding-inline: 16px;
     height: 64px;
+    border-bottom: 1px solid var(--border-10);
     box-shadow: var(--shadow-xs);
   }
 </style>

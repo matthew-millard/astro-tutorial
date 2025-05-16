@@ -3,9 +3,10 @@ interface Props {
   id?: string;
   type?: 'button' | 'submit' | 'reset';
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'icon';
 }
 
-const { id, type = 'button', variant = 'primary' } = Astro.props;
+const { id, type = 'button', variant = 'primary', size = 'icon' } = Astro.props;
 
 const classVariants = {
   primary: 'primary',
@@ -13,9 +14,13 @@ const classVariants = {
   secondary: 'secondary',
   outline: 'outline',
 };
+
+const sizeVariants = {
+  icon: 'icon',
+};
 ---
 
-<button type={type} id={id} class={classVariants[variant]}>
+<button type={type} id={id} class={`${classVariants[variant]} ${sizeVariants[size]}`}>
   <slot />
 </button>
 
@@ -32,10 +37,17 @@ const classVariants = {
   }
 
   .ghost {
+    border: none;
+    padding: 0;
     background-color: transparent;
   }
 
   .outline {
     background-color: transparent;
+  }
+
+  .icon {
+    display: grid;
+    font-size: var(--icon-lg);
   }
 </style>

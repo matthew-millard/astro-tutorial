@@ -1,14 +1,17 @@
 ---
 import Logo from '../components/ui/Logo.astro';
 import DesktopNavigation from '../components/ui/DesktopNavigation.astro';
-import OpenMobileMenuButton from '../components/ui/OpenMobileMenuButton.astro';
+import Button from '../components/ui/Button.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <header>
   <div class="container">
     <nav>
       <Logo />
-      <OpenMobileMenuButton />
+      <Button id="open-mobile-menu-button" variant="ghost" size="icon">
+        <Icon name="panel-left-open" />
+      </Button>
       <DesktopNavigation />
     </nav>
   </div>
@@ -21,6 +24,7 @@ import OpenMobileMenuButton from '../components/ui/OpenMobileMenuButton.astro';
     display: flex;
     align-items: center;
     background-color: var(--background);
+    border-bottom: 1px solid var(--border-10);
     box-shadow: var(--shadow-xs);
     transition: transform 0.2s ease-out;
   }

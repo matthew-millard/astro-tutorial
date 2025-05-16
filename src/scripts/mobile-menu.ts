@@ -5,7 +5,6 @@ const overlay = document.querySelector('#mobile-menu-overlay') as HTMLDivElement
 const pageContainer = document.querySelector('#page-container') as HTMLDivElement;
 
 function closeMobileMenu() {
-  console.log(overlay);
   mobileMenu?.classList.remove('expanded');
   pageContainer?.removeAttribute('inert');
   overlay?.setAttribute('aria-hidden', 'true');
@@ -13,7 +12,6 @@ function closeMobileMenu() {
 }
 
 function openMobileMenu() {
-  console.log(overlay);
   mobileMenu?.classList.add('expanded');
   pageContainer?.setAttribute('inert', '');
   overlay?.setAttribute('aria-hidden', 'false');

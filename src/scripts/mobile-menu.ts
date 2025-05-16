@@ -2,7 +2,7 @@ const openMobileMenuButton = document.querySelector('#open-mobile-menu-button') 
 const closeMobileMenuButton = document.querySelector('#close-mobile-menu-button') as HTMLButtonElement;
 const mobileMenu = document.querySelector('#mobile-menu') as HTMLDivElement;
 const overlay = document.querySelector('#mobile-menu-overlay') as HTMLDivElement;
-const pageContainer = document.querySelector('#page-container') as HTMLDivElement;
+const pageContainer = document.querySelector('.page-container') as HTMLDivElement;
 
 function closeMobileMenu() {
   mobileMenu?.classList.remove('expanded');

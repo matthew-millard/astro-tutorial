@@ -19,7 +19,8 @@ import { Icon } from 'astro-icon/components';
 
 <style>
   header {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     height: 64px;
     display: flex;
     align-items: center;
@@ -35,7 +36,7 @@ import { Icon } from 'astro-icon/components';
     justify-content: space-between;
   }
 
-  header.hide {
+  header[data-hidden='true'] {
     transform: translateY(-100%);
   }
 </style>
@@ -51,10 +52,10 @@ import { Icon } from 'astro-icon/components';
 
     if (currentScrollY > previousScrollY) {
       // Scrolling down
-      header?.classList.add('hide');
+      header?.setAttribute('data-hidden', 'true');
     } else if (currentScrollY < previousScrollY) {
       // Scrolling up
-      header?.classList.remove('hide');
+      header?.removeAttribute('data-hidden');
     }
 
     previousScrollY = currentScrollY;

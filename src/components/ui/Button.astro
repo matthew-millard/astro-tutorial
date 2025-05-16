@@ -26,6 +26,8 @@ const sizeVariants = {
 
 <style>
   button {
+    padding: 8px;
+    transition: all 0.2s ease;
   }
 
   .primary {
@@ -37,9 +39,17 @@ const sizeVariants = {
   }
 
   .ghost {
-    border: none;
-    padding: 0;
     background-color: transparent;
+    border: none;
+    border-radius: 100px;
+  }
+
+  .ghost:hover {
+    background-color: var(--border-10);
+  }
+
+  .ghost:active {
+    background-color: var(--border-20);
   }
 
   .outline {

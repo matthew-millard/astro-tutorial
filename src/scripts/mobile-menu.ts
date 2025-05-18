@@ -4,30 +4,28 @@ const mobileMenu = document.querySelector('#mobile-menu') as HTMLDivElement;
 const overlay = document.querySelector('#mobile-menu-overlay') as HTMLDivElement;
 const pageContainer = document.querySelector('.page-container') as HTMLDivElement;
 
+// For the prevent scroll and returning to the last scroll position after mobile menu is closed,
+// I referred to this blog post by Brad Wu for inspiration: https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
+
 function closeMobileMenu() {
+  const lastScrollPosition = Number(document.body.getAttribute('data-scroll-y'));
   mobileMenu?.classList.remove('expanded');
   pageContainer?.removeAttribute('inert');
-  pageContainer?.classList.remove('prevent-scroll');
   overlay?.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('prevent-scroll');
+  window.scrollTo(0, lastScrollPosition);
   openMobileMenuButton?.focus();
-  // When the modal is hidden...
-  // https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/#aa-lets-enhance-the-fixed-body-approach
-  const scrollY = document.body.style.top;
-  document.body.style.position = '';
-  document.body.style.top = '';
-  window.scrollTo(0, parseInt(scrollY || '0') * -1);
 }
 
 function openMobileMenu() {
+  const scrollY = window.scrollY;
+  document.body.setAttribute('data-scroll-y', scrollY.toString());
+  document.body.classList.add('prevent-scroll');
   mobileMenu?.classList.add('expanded');
   pageContainer?.setAttribute('inert', '');
-  pageContainer?.classList.add('prevent-scroll');
   overlay?.setAttribute('aria-hidden', 'false');
   closeMobileMenuButton?.focus();
-  // When the modal is shown, we want a fixed body
-  // https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/#aa-lets-enhance-the-fixed-body-approach
-  document.body.style.position = 'fixed';
-  document.body.style.top = `-${window.scrollY}px`;
+  document.body.scrollTo({ top: scrollY });
 }
 
 openMobileMenuButton.addEventListener('click', openMobileMenu);

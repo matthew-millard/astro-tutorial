@@ -47,7 +47,7 @@ import { Icon } from 'astro-icon/components';
 
   let previousScrollY = window.scrollY;
   function handleScroll() {
-    const SCROLL_THRESHOLD = 10;
+    const SCROLL_THRESHOLD = 0; // Not sure how I feel about the threshold yet, so I'll set it to 0 for the time being
     const currentScrollY = window.scrollY;
     const scrollDifference = Math.abs(currentScrollY - previousScrollY);
 

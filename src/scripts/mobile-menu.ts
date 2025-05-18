@@ -6,7 +6,6 @@ const pageContainer = document.querySelector('.page-container') as HTMLDivElemen
 
 // For the prevent scroll and returning to the last scroll position after mobile menu is closed,
 // I referred to this blog post by Brad Wu for inspiration: https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
-
 function closeMobileMenu() {
   const lastScrollPosition = Number(document.body.getAttribute('data-scroll-y'));
   mobileMenu?.classList.remove('expanded');
@@ -14,6 +13,7 @@ function closeMobileMenu() {
   overlay?.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('prevent-scroll');
   window.scrollTo(0, lastScrollPosition);
+  document.dispatchEvent(new Event('mobileMenuClosed'));
   openMobileMenuButton?.focus();
 }
 

@@ -1,6 +1,7 @@
 ---
 import MobileMenu from '../components/ui/MobileMenu.astro';
 import '../styles/global.css';
+import FooterLayout from './FooterLayout.astro';
 import HeaderLayout from './HeaderLayout.astro';
 
 interface Props {
@@ -22,6 +23,7 @@ const { pageTitle } = Astro.props;
     <HeaderLayout />
     <MobileMenu />
     <slot />
+    <FooterLayout />
   </body>
 </html>
 

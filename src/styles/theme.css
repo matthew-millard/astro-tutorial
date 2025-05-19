@@ -31,6 +31,7 @@
   --background: rgb(248, 250, 252);
   --background-hover: rgb(241, 245, 249);
   --background-active: rgb(226, 232, 240);
+  --background-footer: rgb(241, 245, 249);
 
   --overlay-hidden: rgb(2, 6, 23, 0);
   --overlay-visible: rgba(2, 6, 23, 1);
@@ -41,7 +42,7 @@
   --primary-foreground: rgb(241, 245, 249);
   --secondary: rgb(203, 213, 225);
   --secondary-foreground: rgb(30, 41, 59);
-  --accent: #468b7b;
+  --text-accent: rgb(236, 72, 153);
 
   /* borders */
   --border-10: rgba(0, 0, 0, 0.1);

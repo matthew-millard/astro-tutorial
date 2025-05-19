@@ -1,9 +1,54 @@
-<footer></footer>
+---
+import { Icon } from 'astro-icon/components';
+---
 
-<style>
-  footer {
-    background-color: teal;
-    height: 56px;
-    padding: 12px 64px 12px 16px;
-  }
-</style>
+<footer>
+  <div class="container">
+    <p class="external-link-group">
+      Built by me with <a href="https://astro.build/" target="_blank" referrerpolicy="no-referrer" class="external-link"
+        >Astro</a
+      >.
+    </p>
+    <p class="external-link-group">
+      Deployed on <a href="https://www.netlify.com/" target="_blank" referrerpolicy="no-referrer" class="external-link"
+        >Netlify</a
+      >.
+    </p>
+    <p class="external-link-group">
+      Code on <a
+        href="https://github.com/matthew-millard/astro-tutorial"
+        target="_blank"
+        referrerpolicy="no-referrer"
+        class="external-link github">Github <Icon name="external-link" /></a
+      >
+    </p>
+    <p id="copyright-notice">All rights reserved &copy; Matt Millard 2025</p>
+  </div>
+
+  <style>
+    footer {
+      /* height: 100px; */
+      /* display: grid; */
+      padding-block: 8px;
+
+      color: var(--secondary-foreground);
+      background-color: var(--background-footer);
+
+      .external-link-group {
+        display: flex;
+        gap: 4px;
+      }
+
+      .github {
+        display: flex;
+        gap: 2px;
+        align-items: center;
+      }
+
+      #copyright-notice {
+        align-content: center;
+        font-size: var(--text-sm);
+      }
+    }
+  </style>
+</footer>

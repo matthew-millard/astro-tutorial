@@ -1,4 +1,18 @@
+.external-link {
+  color: var(--text-accent);
+  text-underline-offset: 2px;
+  font-style: italic;
+  font-weight: 400;
+}
+
 /* Containers */
+.page-container {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1280px;
+  padding: 66px 16px;
+}
+
 .container {
   width: 100%;
   max-width: 1280px;
@@ -7,6 +21,7 @@
 }
 
 @media (min-width: 1280px) {
+  .page-container,
   .container {
     padding-inline: 32px;
   }

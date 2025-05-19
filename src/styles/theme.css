@@ -38,11 +38,13 @@
 
   --text: rgb(2, 6, 23);
   --text-hover: rgba(2, 6, 23, 0.7);
+  --text-active: rgba(2, 6, 23, 0.5);
+  --text-accent: rgb(236, 72, 153);
+
   --primary: rgb(51, 65, 85);
   --primary-foreground: rgb(241, 245, 249);
   --secondary: rgb(203, 213, 225);
   --secondary-foreground: rgb(30, 41, 59);
-  --text-accent: rgb(236, 72, 153);
 
   /* borders */
   --border-10: rgba(0, 0, 0, 0.1);

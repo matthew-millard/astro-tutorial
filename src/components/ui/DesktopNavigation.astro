@@ -3,7 +3,7 @@ import { navigationLinks } from '../../data/navigation';
 const { pathname } = Astro.url;
 ---
 
-<ul>
+<ul id="desktop-navigation-links">
   {
     navigationLinks.map(link => {
       return (
@@ -18,34 +18,28 @@ const { pathname } = Astro.url;
 <style>
   ul {
     display: flex;
-    gap: 2rem;
+    gap: 40px;
     list-style: none;
   }
 
   a {
-    padding: 8px 12px;
     text-decoration: none;
-    font-weight: var(--font-medium);
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
     color: var(--text);
+    letter-spacing: -0.25px;
     transition: all 0.2s ease;
   }
 
   a:hover {
-    background-color: var(--background-hover);
+    color: var(--text-hover);
   }
 
   a:active {
-    background-color: var(--background-active);
+    color: var(--text-active);
   }
 
   a[aria-current='page'] {
-    text-decoration: underline solid var(--text) 3px;
-    text-underline-offset: 25px;
-  }
-
-  @media (max-width: 1279px) {
-    ul {
-      display: none;
-    }
+    color: var(--text-accent);
   }
 </style>

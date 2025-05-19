@@ -50,3 +50,9 @@ p {
     display: none;
   }
 }
+
+@media (max-width: 1279px) {
+  #desktop-navigation-links {
+    display: none;
+  }
+}

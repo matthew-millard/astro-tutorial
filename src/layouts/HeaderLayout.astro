@@ -36,6 +36,12 @@ import { Icon } from 'astro-icon/components';
     justify-content: space-between;
   }
 
+  @media (min-width: 1280px) {
+    nav {
+      justify-content: start;
+    }
+  }
+
   header[data-hidden='true'] {
     transform: translateY(-100%);
   }

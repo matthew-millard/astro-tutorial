@@ -1,86 +1,108 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-
-const pageTitle = 'Home';
+import NewLayout from '../layouts/NewLayout.astro';
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <div class="page-container">
-    <h1>Lorem Ipsum</h1>
-    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <h3>Impedit facilis sapiente libero quidem</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <h3>Impedit facilis sapiente libero quidem</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <h1>Lorem Ipsum</h1>
-    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <h3>Impedit facilis sapiente libero quidem</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <h3>Impedit facilis sapiente libero quidem</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis sapiente libero quidem, quae quibusdam
-      facere labore ipsa ipsum est, reiciendis illum, magnam nemo dicta enim. Non provident blanditiis dolores.
-    </p>
+<NewLayout pageTitle="Home">
+  <div class="slot slot-container">
+    <aside class="desktop-only aside-container">
+      <h3>Aside</h3>
+    </aside>
+    <main class="main-container">
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+      <h1>Main</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam cupiditate, maiores soluta neque quasi
+        hic! Temporibus eaque tempore sed repellendus, a, quo nobis inventore tenetur, placeat deleniti possimus fugiat.
+      </p>
+    </main>
   </div>
-</BaseLayout>
-
-<style></style>
+</NewLayout>

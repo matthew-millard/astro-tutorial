@@ -6,23 +6,25 @@
 }
 
 /* Containers */
-.page-container {
+/* .page-container {
   margin-inline: auto;
   width: 100%;
   max-width: 1280px;
-  padding: 66px 16px;
-}
+  padding: 66px 16px 0px 16px;
 
-.container {
+  min-height: calc(100dvh - 106px);
+} */
+
+/* .container {
   width: 100%;
   max-width: 1280px;
   padding-inline: 16px;
   margin-inline: auto;
-}
+} */
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .page-container,
   .container {
     padding-inline: 32px;
   }
-}
+} */

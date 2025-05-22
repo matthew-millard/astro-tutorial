@@ -54,7 +54,6 @@ const { pathname } = Astro.url;
     background-color: var(--background);
     border-right: 1px solid var(--border-50);
     box-shadow: var(--shadow-xl);
-    transition: all 0.2s ease-out;
     overflow: hidden;
     opacity: 90%;
     max-width: 450px;
@@ -64,6 +63,10 @@ const { pathname } = Astro.url;
     width: 80% !important;
     margin-left: 0 !important;
     opacity: 100% !important;
+  }
+
+  .transition-out {
+    transition: all 0.2s ease-out;
   }
 
   header {

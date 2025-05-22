@@ -9,6 +9,8 @@ const overlay = document.querySelector('#mobile-menu-overlay') as HTMLDivElement
 function closeMobileMenu() {
   const lastScrollPosition = Number(document.body.getAttribute('data-scroll-y'));
   mobileMenu?.classList.remove('expanded');
+  mobileMenu?.classList.add('transition-out');
+
   // pageContainer?.removeAttribute('inert');
   overlay?.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('prevent-scroll');
@@ -22,6 +24,8 @@ function openMobileMenu() {
   document.body.setAttribute('data-scroll-y', scrollY.toString());
   document.body.classList.add('prevent-scroll');
   mobileMenu?.classList.add('expanded');
+  mobileMenu.classList.remove('transition-out');
+
   // pageContainer?.setAttribute('inert', '');
   overlay?.setAttribute('aria-hidden', 'false');
   closeMobileMenuButton?.focus();

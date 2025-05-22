@@ -15,16 +15,14 @@
   min-height: calc(100dvh - 106px);
 } */
 
-/* .container {
+.container {
   width: 100%;
   max-width: 1280px;
   padding-inline: 16px;
   margin-inline: auto;
-} */
-
-/* @media (min-width: 1280px) {
-  .page-container,
+}
+@media (min-width: 1280px) {
   .container {
     padding-inline: 32px;
   }
-} */
+}

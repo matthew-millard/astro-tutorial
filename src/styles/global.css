@@ -57,10 +57,6 @@ p {
   grid-row: 3 / 4;
 }
 
-.slot-container {
-  display: grid;
-}
-
 /* Prevent scroll y on open modal/ */
 .prevent-scroll {
   height: 100vh;

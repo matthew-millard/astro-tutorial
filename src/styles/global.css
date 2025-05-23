@@ -8,6 +8,8 @@
   font-family: 'Söhne';
   font-weight: 400;
   letter-spacing: 0.5px;
+  background: var(--background);
+  color: var(--text);
 }
 
 h1 {
@@ -36,35 +38,6 @@ p {
   font-weight: 400;
   font-size: var(--text-base);
   line-height: 1.5;
-}
-
-.page-container {
-  min-height: 100dvh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 4rem 1fr minmax(4rem, auto);
-}
-
-.header {
-  grid-row: 1 / 2;
-}
-
-.slot {
-  grid-row: 2 / 3;
-}
-
-.footer {
-  grid-row: 3 / 4;
-}
-
-/* Prevent scroll y on open modal/ */
-.prevent-scroll {
-  height: 100vh;
-  overflow-y: hidden;
-}
-
-.desktop-only {
-  display: none;
 }
 
 /* responsive header */

@@ -27,13 +27,24 @@ const { pageTitle } = Astro.props;
   </body>
 </html>
 
-<style>
-  html {
-    background: var(--background);
-    color: var(--text);
+<style is:global>
+  .page-container {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4rem 1fr minmax(4rem, auto);
   }
-  body {
-    position: relative;
+
+  .header {
+    grid-row: 1 / 2;
+  }
+
+  .slot {
+    grid-row: 2 / 3;
+  }
+
+  .footer {
+    grid-row: 3 / 4;
   }
 </style>
 

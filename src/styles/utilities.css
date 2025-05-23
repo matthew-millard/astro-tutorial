@@ -5,15 +5,14 @@
   font-weight: 400;
 }
 
-/* Containers */
-/* .page-container {
-  margin-inline: auto;
-  width: 100%;
-  max-width: 1280px;
-  padding: 66px 16px 0px 16px;
+.desktop-only {
+  display: none;
+}
 
-  min-height: calc(100dvh - 106px);
-} */
+.prevent-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
 
 .container {
   width: 100%;
@@ -21,6 +20,7 @@
   padding-inline: 16px;
   margin-inline: auto;
 }
+
 @media (min-width: 1280px) {
   .container {
     padding-inline: 32px;

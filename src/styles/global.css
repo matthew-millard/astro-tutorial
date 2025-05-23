@@ -40,6 +40,10 @@ p {
   line-height: 1.5;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
 /* responsive header */
 @media (min-width: 1280px) {
   .slot-container {

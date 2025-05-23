@@ -1,8 +1,6 @@
 .external-link {
-  color: var(--text-accent);
   text-underline-offset: 2px;
   font-style: italic;
-  font-weight: 400;
 }
 
 .desktop-only {

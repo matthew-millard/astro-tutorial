@@ -126,3 +126,132 @@
   font-style: italic;
   font-display: block;
 }
+
+/* Söhne Schmal Font Family */
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-extraleicht.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-extraleicht-kursiv.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-leicht.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-leicht-kursiv.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-buch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-buch-kursiv.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-halbfett.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-halbfett-kursiv.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-dreiviertelfett.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-dreiviertelfett-kursiv.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-kraftig.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-kraftig-kursiv.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-fett.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-fett-kursiv.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-extrafett.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Söhne Schmal';
+  src: url('/fonts/Söhne-Schmal/test-soehne-schmal-extrafett-kursiv.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: block;
+}

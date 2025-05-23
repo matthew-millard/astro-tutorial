@@ -40,7 +40,7 @@ const { pathname } = Astro.url;
 
   #mobile-menu-overlay[aria-hidden='false'] {
     background-color: var(--overlay-visible);
-    opacity: 0.3;
+    opacity: 0.5;
     visibility: visible;
   }
 
@@ -52,8 +52,8 @@ const { pathname } = Astro.url;
     min-width: 64px;
     margin-left: -64px;
     background-color: var(--background);
-    border-right: 1px solid var(--border-50);
-    box-shadow: var(--shadow-xl);
+    border-right: 1px solid var(--border-70);
+    /* box-shadow: var(--shadow-xl); */
     overflow: hidden;
     opacity: 90%;
     max-width: 450px;
@@ -75,8 +75,7 @@ const { pathname } = Astro.url;
     align-items: center;
     padding-inline: 16px;
     height: 64px;
-    border-bottom: 1px solid var(--border-10);
-    box-shadow: var(--shadow-xs);
+    border-bottom: 1px solid var(--border-50);
   }
 
   nav {

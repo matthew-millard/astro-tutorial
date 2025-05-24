@@ -30,7 +30,7 @@ import { blogPosts } from '../data/blog-posts';
       </div>
       <div class="featured-content container">
         <div class="featured-header">
-          <h2>Featured Posts</h2>
+          <!-- <h2>Featured Posts</h2> -->
         </div>
       </div>
     </main>
@@ -48,9 +48,9 @@ import { blogPosts } from '../data/blog-posts';
     }
 
     .aside-container {
-      grid-column: 1 / 3;
+      grid-column: 1 / 4;
 
-      padding-block: 1rem;
+      padding-top: 1rem;
       display: grid;
       grid-template-rows: 3rem auto;
       border-right: 1px solid var(--border-50);
@@ -60,14 +60,17 @@ import { blogPosts } from '../data/blog-posts';
       ul {
         a {
           display: block;
+          margin-bottom: 1rem;
           color: var(--text);
           text-decoration: none;
+          transition: background-color 0.2s ease;
 
           li {
             padding: 0.5rem 1rem;
           }
 
           p {
+            font-size: var(--text-lg);
             font-weight: var(--font-medium);
           }
         }
@@ -85,14 +88,14 @@ import { blogPosts } from '../data/blog-posts';
     }
 
     .main-container {
-      grid-column: 3 / 13;
+      grid-column: 4 / 13;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
 
       .main-content {
         padding-top: 1rem;
         grid-column: 1 / 10;
-        border-right: 1px solid var(--border-50);
+        /* border-right: 1px solid var(--border-50); */
       }
 
       .featured-content {

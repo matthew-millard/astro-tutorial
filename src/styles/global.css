@@ -46,10 +46,6 @@ ul {
 }
 /* responsive header */
 @media (min-width: 1280px) {
-  .slot-container {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
   .aside-container {
     grid-column: 1 / 3;
   }

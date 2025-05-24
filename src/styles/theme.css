@@ -31,7 +31,7 @@
   --background: rgb(248, 250, 252);
   --background-hover: rgb(241, 245, 249);
   --background-active: rgb(226, 232, 240);
-  --background-footer: rgb(241, 245, 249);
+  --background-footer: rgb(239 246 255);
 
   --overlay-hidden: rgb(2, 6, 23, 0);
   --overlay-visible: rgba(2, 6, 23, 1);
@@ -39,7 +39,10 @@
   --text: rgb(2, 6, 23);
   --text-hover: rgba(2, 6, 23, 0.7);
   --text-active: rgba(2, 6, 23, 0.5);
-  --text-accent: rgb(236, 72, 153);
+
+  --external-link: rgb(37 99 235);
+  --external-link-hover: rgb(59 130 246);
+  --external-link-active: rgb(29 78 216);
 
   --primary: rgb(51, 65, 85);
   --primary-foreground: rgb(241, 245, 249);

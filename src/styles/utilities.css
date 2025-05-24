@@ -1,11 +1,16 @@
 .external-link {
   text-underline-offset: 2px;
   font-style: italic;
-  transition: opacity 0.2s ease;
+  color: var(--external-link);
+  transition: color 0.2s ease;
 }
 
 .external-link:hover {
-  opacity: 0.7;
+  color: var(--external-link-hover);
+}
+
+.external-link:active {
+  color: var(--external-link-active);
 }
 
 .desktop-only {

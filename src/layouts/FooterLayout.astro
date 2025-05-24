@@ -3,51 +3,65 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <footer class="footer">
-  <div class="container">
-    <p class="external-link-group">
-      Built by me with <a href="https://astro.build/" target="_blank" referrerpolicy="no-referrer" class="external-link"
-        >Astro</a
-      >.
-    </p>
-    <p class="external-link-group">
-      Deployed on <a href="https://www.netlify.com/" target="_blank" referrerpolicy="no-referrer" class="external-link"
-        >Netlify</a
-      >.
-    </p>
-    <p class="external-link-group">
-      Code on <a
-        href="https://github.com/matthew-millard/astro-tutorial"
-        target="_blank"
-        referrerpolicy="no-referrer"
-        class="external-link github">Github <Icon name="external-link" /></a
-      >
-    </p>
+  <div class="container footer-container">
+    <div class="footer-content">
+      <p class="external-link-group">
+        Built by me with <a
+          href="https://astro.build/"
+          target="_blank"
+          referrerpolicy="no-referrer"
+          class="external-link">Astro</a
+        >
+        .
+      </p>
+      <p class="external-link-group">
+        Deployed on <a
+          href="https://www.netlify.com/"
+          target="_blank"
+          referrerpolicy="no-referrer"
+          class="external-link">Netlify</a
+        >
+        .
+      </p>
+      <p class="external-link-group">
+        Code on <a
+          href="https://github.com/matthew-millard/astro-tutorial"
+          target="_blank"
+          referrerpolicy="no-referrer"
+          class="external-link github">Github <Icon name="external-link" /></a
+        >
+      </p>
+    </div>
     <p id="copyright-notice">All rights reserved &copy; Matt Millard 2025</p>
   </div>
 </footer>
 
 <style>
   footer {
-    /* height: 100px; */
-    /* display: grid; */
-    padding-block: 8px;
+    background-color: var(--background-footer);
     border-top: 1px solid var(--border-50);
-    /* background-color: var(--background-footer); */
+  }
 
-    .external-link-group {
+  .footer-container {
+    padding-block: 1rem;
+  }
+
+  .footer-content {
+    margin-bottom: 0.5rem;
+  }
+
+  .external-link-group {
+    font-weight: var(--font-medium);
+  }
+
+  #copyright-notice {
+    font-size: var(--text-xs);
+  }
+
+  @media (min-width: 1280px) {
+    .footer-content {
       display: flex;
-      gap: 4px;
-    }
-
-    .github {
-      display: flex;
-      gap: 2px;
-      align-items: center;
-    }
-
-    #copyright-notice {
-      align-content: center;
-      font-size: var(--text-sm);
+      gap: 0.5rem;
     }
   }
 </style>

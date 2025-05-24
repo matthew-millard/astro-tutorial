@@ -13,7 +13,7 @@ function handleScroll() {
   const currentScrollY = window.scrollY;
   const scrollDifference = Math.abs(currentScrollY - previousScrollY);
 
-  if (currentScrollY > previousScrollY) {
+  if (previousScrollY > 64 && currentScrollY > previousScrollY) {
     // Scrolling down
     header?.setAttribute('data-hidden', 'true');
   } else if (currentScrollY < previousScrollY) {

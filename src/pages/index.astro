@@ -5,11 +5,11 @@ import { blogPosts } from '../data/blog-posts';
 
 <BaseLayout pageTitle="Home">
   <div class="slot slot-container">
-    <aside class="aside-container desktop-only">
-      <div class="aside-header">
+    <aside class="aside-left-container desktop-only">
+      <div class="aside-left-header">
         <h2>Posts</h2>
       </div>
-      <nav class="aside-content">
+      <nav class="aside-left-content">
         <ul>
           {
             blogPosts.map(post => (
@@ -28,10 +28,30 @@ import { blogPosts } from '../data/blog-posts';
       <div class="main-content container">
         <h1>Main</h1>
       </div>
-      <div class="featured-content container">
-        <div class="featured-header">
-          <!-- <h2>Featured Posts</h2> -->
-        </div>
+      <div class="aside-right-content container">
+        <aside class="aside-right-header">
+          <h3>Recent posts</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
+            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
+            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
+            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
+            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
+            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
+          </p>
+        </aside>
       </div>
     </main>
   </div>
@@ -47,7 +67,7 @@ import { blogPosts } from '../data/blog-posts';
       grid-template-columns: repeat(12, 1fr);
     }
 
-    .aside-container {
+    .aside-left-container {
       grid-column: 1 / 4;
 
       padding-top: 1rem;
@@ -56,7 +76,7 @@ import { blogPosts } from '../data/blog-posts';
       border-right: 1px solid var(--border-50);
     }
 
-    .aside-content {
+    .aside-left-content {
       ul {
         a {
           display: block;
@@ -81,8 +101,8 @@ import { blogPosts } from '../data/blog-posts';
       }
     }
 
-    .aside-header,
-    .featured-header {
+    .aside-left-header,
+    .aside-right-header {
       align-content: center;
       padding-left: 1rem;
     }
@@ -98,7 +118,9 @@ import { blogPosts } from '../data/blog-posts';
         /* border-right: 1px solid var(--border-50); */
       }
 
-      .featured-content {
+      .aside-right-content {
+        background-color: var(--background-aside-right);
+        border-left: 1px solid var(--border-50);
         padding-top: 1rem;
         grid-column: 10 / 13;
         display: grid;

@@ -32,6 +32,7 @@
   --background-hover: rgb(241, 245, 249);
   --background-active: rgb(226, 232, 240);
   --background-footer: rgb(239 246 255);
+  --background-aside-right: rgb(239 246 255);
 
   --overlay-hidden: rgb(2, 6, 23, 0);
   --overlay-visible: rgba(2, 6, 23, 1);

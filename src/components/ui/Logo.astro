@@ -1,4 +1,4 @@
-<a href="/"><div>Web Development Blog</div></a>
+<a href="/"><div><span>mattmillard.dev</span>Web Development Blog</div></a>
 
 <style>
   a {
@@ -6,14 +6,21 @@
     font-family: 'Söhne';
     font-weight: var(--font-bold);
     font-size: var(--text-2xl);
-    line-height: 1;
+    line-height: 1.1;
     color: var(--text);
     text-decoration: none;
     letter-spacing: -0.05rem;
   }
 
+  span {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-light);
+  }
+
   @media (min-width: 1280px) {
     a {
+      line-height: 1;
       font-size: var(--text-3xl);
     }
   }

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Divider from '../components/ui/Divider.astro';
 import { articles } from '../data/blog-posts';
 ---
 
@@ -8,6 +9,7 @@ import { articles } from '../data/blog-posts';
     <aside class="aside-left-container desktop-only">
       <div class="aside-left-header">
         <h3>Articles</h3>
+        <!-- <Divider marginTop="0.5rem" /> -->
       </div>
       <nav class="aside-left-content">
         <ul>
@@ -126,6 +128,7 @@ import { articles } from '../data/blog-posts';
       <div class="aside-right-content">
         <aside class="aside-right-header">
           <h3>Recent posts</h3>
+          <!-- <Divider marginTop="0.5rem" /> -->
         </aside>
       </div>
     </main>
@@ -183,9 +186,9 @@ import { articles } from '../data/blog-posts';
 
     .aside-left-header,
     .aside-right-header {
-      padding-left: 1rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
+      padding-inline: 1rem;
+      margin-top: 2rem;
+      padding-bottom: 0.5rem;
     }
 
     .main-container {

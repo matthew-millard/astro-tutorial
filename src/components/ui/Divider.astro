@@ -1,0 +1,15 @@
+---
+interface Props {
+  marginTop?: string;
+}
+
+const { marginTop = '0.25rem' } = Astro.props;
+---
+
+<div style={`margin-top: ${marginTop};`}></div>
+
+<style>
+  div {
+    border-bottom: 1px solid var(--border-10);
+  }
+</style>

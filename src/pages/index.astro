@@ -1,21 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { blogPosts } from '../data/blog-posts';
+import { articles } from '../data/blog-posts';
 ---
 
 <BaseLayout pageTitle="Home">
   <div class="slot slot-container">
     <aside class="aside-left-container desktop-only">
       <div class="aside-left-header">
-        <h2>Posts</h2>
+        <h3>Articles</h3>
       </div>
       <nav class="aside-left-content">
         <ul>
           {
-            blogPosts.map(post => (
-              <a href={`/${post.slug}`}>
+            articles.map(article => (
+              <a href={`/${article.slug}`}>
                 <li>
-                  <p>{post.title}</p>
+                  <p>
+                    {article.title}
+                    <span class="article-date">{article.updatedAt || article.createdAt}</span>
+                  </p>
                 </li>
               </a>
             ))
@@ -119,194 +122,10 @@ import { blogPosts } from '../data/blog-posts';
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa reiciendis adipisci odit id distinctio modi
           voluptas rerum dolor eos nam, ex exercitationem at iusto! Repellat alias ea molestiae. Maiores, itaque!
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa reiciendis adipisci odit id distinctio modi
-          voluptas rerum dolor eos nam, ex exercitationem at iusto! Repellat alias ea molestiae. Maiores, itaque!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa reiciendis adipisci odit id distinctio modi
-          voluptas rerum dolor eos nam, ex exercitationem at iusto! Repellat alias ea molestiae. Maiores, itaque!
-        </p>
       </div>
-      <div class="aside-right-content container">
+      <div class="aside-right-content">
         <aside class="aside-right-header">
           <h3>Recent posts</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sed libero. Tempore fuga assumenda, nihil
-            voluptates quas repellendus at voluptate esse! Est quas accusamus eum. Dolor minus est blanditiis dolorem!
-          </p>
         </aside>
       </div>
     </main>
@@ -325,28 +144,29 @@ import { blogPosts } from '../data/blog-posts';
 
     .aside-left-container {
       grid-column: 1 / 4;
-
-      padding-top: 1rem;
       display: grid;
-      grid-template-rows: 3rem auto;
+      grid-template-rows: min-content auto;
       border-right: 1px solid var(--border-50);
+      background-color: var(--background-aside-left);
     }
 
     .aside-left-content {
       ul {
         a {
           display: block;
-          margin-bottom: 1rem;
           color: var(--text);
           text-decoration: none;
           transition: background-color 0.2s ease;
 
           li {
-            padding: 0.5rem 1rem;
+            padding: 1rem;
           }
 
           p {
-            font-size: var(--text-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
             font-weight: var(--font-medium);
           }
         }
@@ -354,13 +174,18 @@ import { blogPosts } from '../data/blog-posts';
         a:hover {
           background-color: var(--background-hover);
         }
+
+        a:active {
+          background-color: var(--background-active);
+        }
       }
     }
 
     .aside-left-header,
     .aside-right-header {
-      align-content: center;
       padding-left: 1rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
     }
 
     .main-container {
@@ -379,8 +204,6 @@ import { blogPosts } from '../data/blog-posts';
         position: sticky;
         height: 100%;
         overflow-y: scroll;
-        background-color: var(--background-aside-right);
-        padding-top: 1rem;
         grid-column: 10 / 13;
         display: grid;
         grid-template-rows: 3rem auto;

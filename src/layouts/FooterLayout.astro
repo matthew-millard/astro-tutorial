@@ -6,7 +6,7 @@ import { Icon } from 'astro-icon/components';
   <div class="container footer-container">
     <div class="footer-content">
       <p class="external-link-group">
-        Built by me with <a
+        Made by me with <a
           href="https://astro.build/"
           target="_blank"
           referrerpolicy="no-referrer"
@@ -30,6 +30,7 @@ import { Icon } from 'astro-icon/components';
           referrerpolicy="no-referrer"
           class="external-link github">Github <Icon name="external-link" /></a
         >
+        .
       </p>
     </div>
     <p id="copyright-notice">All rights reserved &copy; Matt Millard 2025</p>
@@ -47,21 +48,22 @@ import { Icon } from 'astro-icon/components';
   }
 
   .footer-content {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.125rem;
   }
 
   .external-link-group {
-    font-weight: var(--font-medium);
+    font-size: var(--text-sm);
   }
 
   #copyright-notice {
     font-size: var(--text-xs);
+    color: var(--text-muted);
   }
 
   @media (min-width: 1280px) {
     .footer-content {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.18rem;
     }
   }
 </style>

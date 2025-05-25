@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Divider from '../components/ui/Divider.astro';
 import { articles } from '../data/blog-posts';
+import PreviewCard from '../components/ui/PreviewCard.astro';
 ---
 
 <BaseLayout pageTitle="Home">
@@ -125,12 +126,19 @@ import { articles } from '../data/blog-posts';
           voluptas rerum dolor eos nam, ex exercitationem at iusto! Repellat alias ea molestiae. Maiores, itaque!
         </p>
       </div>
-      <div class="aside-right-content">
-        <aside class="aside-right-header">
-          <h3>Recent posts</h3>
-          <!-- <Divider marginTop="0.5rem" /> -->
-        </aside>
-      </div>
+      <aside class="aside-right-container">
+        <div class="aside-right-header">
+          <h3>Recent articles</h3>
+        </div>
+        <div class="aside-right-content container">
+          {
+            articles.map((article, index) => {
+              // if (index > 3) return;
+              return <PreviewCard {...article} />;
+            })
+          }
+        </div>
+      </aside>
     </main>
   </div>
 </BaseLayout>
@@ -203,13 +211,19 @@ import { articles } from '../data/blog-posts';
         border-right: 1px solid var(--border-50);
       }
 
-      .aside-right-content {
+      .aside-right-container {
         position: sticky;
         height: 100%;
         overflow-y: scroll;
         grid-column: 10 / 13;
         display: grid;
-        grid-template-rows: 3rem auto;
+        grid-template-rows: min-content auto;
+      }
+
+      .aside-right-content {
+        display: grid;
+        row-gap: 2rem;
+        margin-block: 1.5rem;
       }
     }
   }

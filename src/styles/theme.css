@@ -33,6 +33,7 @@
   --background-active: rgb(203 213 225);
   --background-footer: rgb(241 245 249);
   --background-aside-left: rgb(241 245 249);
+  --background-card: rgb(226 232 240);
 
   --overlay-hidden: rgb(2, 6, 23, 0);
   --overlay-visible: rgba(2, 6, 23, 0.3);

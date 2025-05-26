@@ -5,7 +5,7 @@ export const articles = [
     description: 'Explore the evolution of CSS-in-JS solutions and their impact on modern web development.',
     imageUrl: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
     altText: 'Code editor showing JavaScript and CSS code',
-    createdAt: 'May 24th 2025',
+    createdAt: 'May 24th, 2025',
     updatedAt: null,
     estimatedReadTime: '5 min read',
   },

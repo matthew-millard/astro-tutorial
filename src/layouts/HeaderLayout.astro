@@ -3,15 +3,19 @@ import Logo from '../components/ui/Logo.astro';
 import DesktopNavigation from '../components/ui/DesktopNavigation.astro';
 import Button from '../components/ui/Button.astro';
 import { Icon } from 'astro-icon/components';
+import ThemeToggle from '../components/ui/ThemeToggle.astro';
 ---
 
 <header id="header" class="header">
   <div class="container">
     <nav>
       <Logo />
-      <Button id="open-mobile-menu-button" variant="ghost" size="icon">
-        <Icon name="panel-left-open" />
-      </Button>
+      <div class="header-buttons">
+        <ThemeToggle />
+        <Button id="open-mobile-menu-button" variant="ghost" size="icon">
+          <Icon name="panel-left-open" />
+        </Button>
+      </div>
       <!-- <DesktopNavigation /> -->
     </nav>
   </div>
@@ -39,14 +43,14 @@ import { Icon } from 'astro-icon/components';
     align-items: center;
   }
 
-  header[data-hidden='true'] {
-    transform: translateY(-100%);
+  .header-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.125rem;
   }
 
-  @media (min-width: 1280px) {
-    nav {
-      justify-content: flex-start;
-    }
+  header[data-hidden='true'] {
+    transform: translateY(-100%);
   }
 </style>
 

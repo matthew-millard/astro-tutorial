@@ -1,0 +1,23 @@
+---
+import { Icon } from 'astro-icon/components';
+import Button from './Button.astro';
+---
+
+<Button id="theme-toggle-button" variant="ghost" size="icon">
+  <span class="icon hide" id="moon-icon">
+    <Icon name="moon" />
+  </span>
+  <span class="icon hide" id="sun-icon">
+    <Icon name="sun" />
+  </span>
+</Button>
+
+<style>
+  .icon {
+    display: grid;
+  }
+
+  .hide {
+    display: none;
+  }
+</style>

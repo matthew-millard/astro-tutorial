@@ -80,3 +80,42 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
+
+:root[data-theme='dark'] {
+  --background: rgb(2, 6, 23);
+  --background-hover: rgb(30, 41, 59);
+  --background-active: rgb(51, 65, 85);
+  --background-footer: rgb(15, 23, 42);
+  --background-aside-left: rgb(15, 23, 42);
+  --background-card: rgb(30, 41, 59);
+
+  --overlay-hidden: rgb(248, 250, 252, 0);
+  --overlay-visible: rgba(248, 250, 252, 0.3);
+
+  --text: rgb(248, 250, 252);
+  --text-muted: rgb(148, 163, 184);
+  --text-accent: rgb(96, 165, 250);
+  --text-hover: rgba(248, 250, 252, 0.7);
+  --text-active: rgba(248, 250, 252, 0.5);
+
+  --external-link: rgb(96, 165, 250);
+  --external-link-hover: rgb(147, 197, 253);
+  --external-link-active: rgb(59, 130, 246);
+
+  --primary: rgb(203, 213, 225);
+  --primary-foreground: rgb(15, 23, 42);
+  --secondary: rgb(51, 65, 85);
+  --secondary-foreground: rgb(226, 232, 240);
+
+  /* borders - inverted for dark mode */
+  --border-10: rgba(255, 255, 255, 0.1);
+  --border-20: rgba(255, 255, 255, 0.2);
+  --border-30: rgba(255, 255, 255, 0.3);
+  --border-40: rgba(255, 255, 255, 0.4);
+  --border-50: rgba(255, 255, 255, 0.5);
+  --border-60: rgba(255, 255, 255, 0.6);
+  --border-70: rgba(255, 255, 255, 0.7);
+  --border-80: rgba(255, 255, 255, 0.8);
+  --border-90: rgba(255, 255, 255, 0.9);
+  --border-95: rgba(255, 255, 255, 0.95);
+}

@@ -13,7 +13,15 @@ const { pageTitle } = Astro.props;
 
 <html lang="en">
   <head>
+    <script is:inline>
+      // Block rendering until theme is set
+      (function () {
+        const preferredTheme = localStorage.getItem('preferredTheme') || 'light';
+        document.documentElement.setAttribute('data-theme', preferredTheme);
+      })();
+    </script>
     <meta charset="utf-8" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
@@ -49,5 +57,6 @@ const { pageTitle } = Astro.props;
 </style>
 
 <script>
+  import '../scripts/theme';
   import '../scripts/mobile-menu';
 </script>

@@ -43,9 +43,9 @@
   --text-hover: rgba(2, 6, 23, 0.7);
   --text-active: rgba(2, 6, 23, 0.5);
 
-  --external-link: rgb(37 99 235);
-  --external-link-hover: rgb(59 130 246);
-  --external-link-active: rgb(29 78 216);
+  --external-link: rgb(178, 70, 255);
+  --external-link-hover: rgb(190, 100, 255);
+  --external-link-active: rgb(149, 0, 255);
 
   --primary: rgb(51, 65, 85);
   --primary-foreground: rgb(241, 245, 249);
@@ -63,7 +63,8 @@
   --border-80: rgba(0, 0, 0, 0.8);
   --border-90: rgba(0, 0, 0, 0.9);
   --border-95: rgba(0, 0, 0, 0.95);
-  --border-highlight: rgb(29 78 216);
+  --border-highlight: rgb(0, 255, 0);
+  --border-highlight-active: rgb(30, 255, 30);
 
   /* border radius  */
   --radius-xs: 0.125rem;
@@ -96,10 +97,6 @@
   --text-accent: rgb(96, 165, 250);
   --text-hover: rgba(248, 250, 252, 0.7);
   --text-active: rgba(248, 250, 252, 0.5);
-
-  --external-link: rgb(96, 165, 250);
-  --external-link-hover: rgb(147, 197, 253);
-  --external-link-active: rgb(59, 130, 246);
 
   --primary: rgb(203, 213, 225);
   --primary-foreground: rgb(15, 23, 42);

@@ -1,39 +1,11 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Divider from '../components/ui/Divider.astro';
-import { articles } from '../data/blog-posts';
-import PreviewCard from '../components/ui/PreviewCard.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import LeftPanelLayout from '@layouts/LeftPanelLayout.astro';
 ---
 
 <BaseLayout pageTitle="Home">
   <div class="slot slot-container">
-    <aside class="aside-left-container desktop-only">
-      <div class="aside-left-header">
-        <h3>Articles</h3>
-      </div>
-      <nav class="aside-left-content">
-        <ul>
-          {
-            articles.map(article => {
-              const hasBeenUpdated = article.updatedAt ? true : false;
-              return (
-                <a href={`/${article.slug}`}>
-                  <li>
-                    <p>
-                      <span class="article-date">
-                        {hasBeenUpdated ? `Updated: ${article.updatedAt}` : `Published: ${article.createdAt}`}
-                      </span>
-                      {article.title}
-                    </p>
-                  </li>
-                </a>
-              );
-            })
-          }
-        </ul>
-      </nav>
-    </aside>
-
+    <LeftPanelLayout />
     <main class="main-container">
       <div class="main-content">
         <div class="main-heading">
@@ -91,55 +63,6 @@ import PreviewCard from '../components/ui/PreviewCard.astro';
       .main-copy {
         grid-row: 2;
         grid-column: 1;
-      }
-
-      .aside-left-container {
-        grid-column: 1 / 3;
-        display: grid;
-        grid-template-rows: min-content auto;
-        /* border-right: 1px solid var(--border-50); */
-        background-color: var(--background-aside-left);
-      }
-
-      .aside-left-content {
-        ul {
-          a {
-            display: block;
-            color: var(--text);
-            text-decoration: none;
-            transition: background-color 0.2s ease;
-
-            li {
-              padding: 1rem;
-            }
-
-            p {
-              display: grid;
-              font-weight: var(--font-medium);
-
-              .article-date {
-                font-size: var(--text-xs);
-                font-weight: var(--font-normal);
-                font-style: oblique;
-                color: var(--text-muted);
-              }
-            }
-          }
-
-          a:hover {
-            background-color: var(--background-hover);
-          }
-
-          a:active {
-            background-color: var(--background-active);
-          }
-        }
-      }
-
-      .aside-left-header {
-        padding-inline: 1rem;
-        margin-top: 2rem;
-        padding-bottom: 0.5rem;
       }
 
       .main-container {

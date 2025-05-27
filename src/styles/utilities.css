@@ -22,6 +22,14 @@
   overflow-y: hidden;
 }
 
+.lead {
+  font-size: var(--text-xl);
+  font-weight: var(--font-medium);
+  color: var(--text-muted);
+  line-height: 1.1;
+  margin-top: 0.25rem;
+}
+
 .container {
   padding-inline: 16px;
   width: 100%;

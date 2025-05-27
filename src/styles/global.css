@@ -14,8 +14,8 @@
 
 h1 {
   font-family: 'Söhne';
-  font-weight: 800;
-  font-size: var(--text-6xl);
+  font-weight: 600;
+  font-size: var(--text-5xl);
   line-height: 1.1;
 }
 

@@ -32,6 +32,7 @@
   --background-hover: rgb(226 232 240);
   --background-active: rgb(203 213 225);
   --background-footer: rgb(241 245 249);
+  --background-image: rgb(241 245 249);
   --background-aside-left: rgb(241 245 249);
   --background-card: rgb(226 232 240);
 
@@ -86,6 +87,7 @@
   --background-hover: rgb(30, 41, 59);
   --background-active: rgb(51, 65, 85);
   --background-footer: rgb(15, 23, 42);
+  --background-image: rgb(15 23 42);
   --background-aside-left: rgb(15, 23, 42);
   --background-card: rgb(30, 41, 59);
 

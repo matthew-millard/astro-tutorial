@@ -1,13 +1,26 @@
-<input type="search" name="search" id="search-input" placeholder="Search..." />
-
+<input type="text" name="search" id="search-input" placeholder="Search..." />
+<kbd></kbd>
 <style>
   input {
     color: var(--foreground);
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
     background-color: transparent;
     border: 1px solid var(--border-30);
-    border-radius: var(--radius-xs);
+    border-radius: var(--radius-sm);
+  }
+
+  kbd {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: var(--text-sm);
+  }
+
+  kbd::after {
+    color: var(--text-muted);
+    content: '⌘K';
+    font-size: var(--text-sm);
   }
 </style>
 

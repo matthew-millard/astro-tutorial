@@ -29,6 +29,7 @@ import { articles } from '@data/articles-metadata';
           );
         })
       }
+      <p class="no-results-message">No articles found</p>
     </ul>
   </nav>
 </aside>
@@ -80,7 +81,6 @@ import { articles } from '@data/articles-metadata';
     padding-inline: 1rem;
     margin-top: 2rem;
     padding-bottom: 0.5rem;
-    /* background-color: blue; */
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -90,5 +90,14 @@ import { articles } from '@data/articles-metadata';
     font-size: var(--text-xs);
     font-style: italic;
     color: var(--text-muted);
+  }
+
+  .no-results-message {
+    display: none;
+    padding-inline: 1rem;
+  }
+
+  .show-message {
+    display: block;
   }
 </style>

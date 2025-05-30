@@ -1,13 +1,17 @@
 ---
+import Search from '@components/ui/Search.astro';
 import { articles } from '@data/articles-metadata';
 ---
 
 <aside class="desktop-only">
   <div class="header">
     <h3>Articles</h3>
+    <div id="search-container">
+      <Search />
+    </div>
   </div>
   <nav>
-    <ul>
+    <ul id="list-of-articles">
       {
         articles.map(article => {
           const hasBeenUpdated = article.updatedAt ? true : false;
@@ -76,6 +80,10 @@ import { articles } from '@data/articles-metadata';
     padding-inline: 1rem;
     margin-top: 2rem;
     padding-bottom: 0.5rem;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .article-date {

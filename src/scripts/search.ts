@@ -3,7 +3,7 @@ const ul = document.querySelector('#list-of-articles') as HTMLUListElement;
 const a = ul.querySelectorAll('a') as NodeListOf<HTMLAnchorElement>;
 const noResultsMessage = ul.querySelector('.no-results-message') as HTMLParagraphElement;
 
-function moveFocusToSearch(e: KeyboardEvent) {
+function handleSearchShortcut(e: KeyboardEvent) {
   if ((e.metaKey && e.key === 'k') || (e.ctrlKey && e.key === 'k')) {
     input?.focus();
   }
@@ -33,5 +33,5 @@ function handleSearch() {
   }
 }
 
-document.addEventListener('keydown', e => moveFocusToSearch(e));
+document.addEventListener('keydown', e => handleSearchShortcut(e));
 input.addEventListener('keyup', handleSearch);

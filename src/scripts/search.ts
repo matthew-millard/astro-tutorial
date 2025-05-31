@@ -4,7 +4,7 @@ const a = ul.querySelectorAll('a') as NodeListOf<HTMLAnchorElement>;
 const noResultsMessage = ul.querySelector('.no-results-message') as HTMLParagraphElement;
 
 function moveFocusToSearch(e: KeyboardEvent) {
-  if (e.metaKey && e.key === 'k') {
+  if ((e.metaKey && e.key === 'k') || (e.ctrlKey && e.key === 'k')) {
     input?.focus();
   }
 }
@@ -12,7 +12,6 @@ function moveFocusToSearch(e: KeyboardEvent) {
 function handleSearch() {
   const query = input.value.toUpperCase();
   let searchResults = 0;
-  console.log(noResultsMessage.classList.contains('show-message'));
 
   if (noResultsMessage.classList.contains('show-message')) {
     noResultsMessage.classList.toggle('show-message');

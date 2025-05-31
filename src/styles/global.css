@@ -46,6 +46,7 @@ ul {
   list-style: none;
   padding: 0;
 }
+
 /* responsive header */
 @media (min-width: 1280px) {
   #open-mobile-menu-button {

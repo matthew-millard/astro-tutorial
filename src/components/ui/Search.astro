@@ -15,12 +15,15 @@
     top: 0.5rem;
     right: 1rem;
     font-size: var(--text-sm);
+    color: var(--text-muted);
   }
 
-  kbd::after {
-    color: var(--text-muted);
-    content: '⌘K';
-    font-size: var(--text-sm);
+  :root[data-is-macos='true'] kbd::after {
+    content: 'Cmd+K';
+  }
+
+  :root[data-is-macos='false'] kbd::after {
+    content: 'Ctrl+K';
   }
 </style>
 

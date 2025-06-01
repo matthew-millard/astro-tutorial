@@ -5,8 +5,13 @@ const noResultsMessage = ul.querySelector('.no-results-message') as HTMLParagrap
 const kbd = document.querySelector('.keyboard-shortcut') as HTMLElement;
 const isMac = navigator.userAgent.toLowerCase().includes('mac');
 
-function setOS() {
+function setOSAttribute() {
   kbd.setAttribute('data-is-macos', isMac.toString());
+}
+
+function handleBlur() {
+  setOSAttribute();
+  input.style.paddingRight = '4.5rem';
 }
 
 function handleSearchShortcut(e: KeyboardEvent) {
@@ -41,10 +46,11 @@ function handleSearch() {
 
 function handleFocus() {
   kbd.removeAttribute('data-is-macos');
+  input.style.paddingRight = '0.5rem';
 }
 
 document.addEventListener('keydown', e => handleSearchShortcut(e));
 input.addEventListener('keyup', handleSearch);
 input.addEventListener('focus', handleFocus);
-input.addEventListener('blur', setOS);
-setOS();
+input.addEventListener('blur', handleBlur);
+setOSAttribute();

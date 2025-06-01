@@ -1,5 +1,5 @@
 <input type="text" name="search" id="search-input" placeholder="Search..." />
-<kbd></kbd>
+<kbd class="keyboard-shortcut"></kbd>
 <style>
   input {
     color: var(--foreground);
@@ -18,11 +18,11 @@
     color: var(--text-muted);
   }
 
-  :root[data-is-macos='true'] kbd::after {
+  kbd[data-is-macos='true']::after {
     content: 'Cmd+K';
   }
 
-  :root[data-is-macos='false'] kbd::after {
+  kbd[data-is-macos='false']::after {
     content: 'Ctrl+K';
   }
 </style>

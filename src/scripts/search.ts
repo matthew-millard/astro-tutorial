@@ -2,6 +2,12 @@ const input = document.querySelector('#search-input') as HTMLInputElement;
 const ul = document.querySelector('#list-of-articles') as HTMLUListElement;
 const a = ul.querySelectorAll('a') as NodeListOf<HTMLAnchorElement>;
 const noResultsMessage = ul.querySelector('.no-results-message') as HTMLParagraphElement;
+const kbd = document.querySelector('.keyboard-shortcut') as HTMLElement;
+const isMac = navigator.userAgent.toLowerCase().includes('mac');
+
+function setOS() {
+  kbd.setAttribute('data-is-macos', isMac.toString());
+}
 
 function handleSearchShortcut(e: KeyboardEvent) {
   if ((e.metaKey && e.key === 'k') || (e.ctrlKey && e.key === 'k')) {
@@ -33,5 +39,12 @@ function handleSearch() {
   }
 }
 
+function handleFocus() {
+  kbd.removeAttribute('data-is-macos');
+}
+
 document.addEventListener('keydown', e => handleSearchShortcut(e));
 input.addEventListener('keyup', handleSearch);
+input.addEventListener('focus', handleFocus);
+input.addEventListener('blur', setOS);
+setOS();

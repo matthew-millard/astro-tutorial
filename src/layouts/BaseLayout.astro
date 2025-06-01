@@ -16,9 +16,6 @@ const { pageTitle } = Astro.props;
     <script is:inline>
       const preferredTheme = localStorage.getItem('preferredTheme') || 'light';
       document.documentElement.setAttribute('data-theme', preferredTheme);
-
-      const isMac = navigator.userAgent.toLowerCase().includes('mac');
-      document.documentElement.setAttribute('data-is-macos', isMac);
     </script>
     <meta charset="utf-8" />
 

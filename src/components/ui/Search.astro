@@ -2,12 +2,17 @@
 <kbd class="keyboard-shortcut"></kbd>
 <style>
   input {
-    color: var(--foreground);
+    color: var(--text);
     width: 100%;
     padding: 0.5rem 2.5rem 0.5rem 0.5rem;
     background-color: transparent;
-    border: 1px solid var(--border-30);
+    border: 1px solid var(--border-10);
     border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+  }
+
+  input::placeholder {
+    color: var(--text-muted);
   }
 
   kbd {

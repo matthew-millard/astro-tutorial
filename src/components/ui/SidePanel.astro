@@ -106,16 +106,18 @@ import { articles } from '@data/articles-metadata';
   }
 
   #list-of-articles {
-    display: none;
-    height: 0%;
-    transition: height 1s ease-out;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.3s ease-out,
+      opacity 0.2s ease-out;
   }
 
   #list-of-articles[data-expanded='true'] {
-    display: block;
-    height: 100%;
+    opacity: 1;
     max-height: 700px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .article-link {

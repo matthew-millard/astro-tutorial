@@ -1,8 +1,9 @@
 ---
-import HeaderLayout from './HeaderLayout.astro';
-import MobileMenu from '../components/ui/MobileMenu.astro';
+import HeaderLayout from '@layouts/HeaderLayout.astro';
+import MobileMenu from '@components/ui/MobileMenu.astro';
 import '../styles/global.css';
-import FooterLayout from './FooterLayout.astro';
+import FooterLayout from '@layouts/FooterLayout.astro';
+import SidePanel from '@components/ui/SidePanel.astro';
 
 interface Props {
   pageTitle: string;
@@ -27,6 +28,7 @@ const { pageTitle } = Astro.props;
   <body class="page-container">
     <HeaderLayout />
     <MobileMenu />
+    <SidePanel />
     <slot />
     <FooterLayout />
   </body>
@@ -36,20 +38,24 @@ const { pageTitle } = Astro.props;
   .page-container {
     min-height: 100dvh;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4rem 1fr minmax(4rem, auto);
+    grid-template-rows: auto auto 1fr auto;
   }
 
   .header {
     grid-row: 1 / 2;
   }
 
+  .side-panel {
+    grid-row: 1 / 3;
+  }
+
   .slot {
-    grid-row: 2 / 3;
+    background-color: pink;
+    grid-row: 3 / 4;
   }
 
   .footer {
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
   }
 </style>
 

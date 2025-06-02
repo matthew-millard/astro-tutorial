@@ -1,0 +1,134 @@
+---
+import { articles } from '@data/articles-metadata';
+---
+
+<aside id="side-panel">
+  <div id="side-panel-header">
+    <h3>Articles</h3>
+    <div id="search-container">
+      <input type="search" name="search" id="search-input" placeholder="Search" autocomplete="off" />
+      <kbd id="keyboard-shortcut"></kbd>
+    </div>
+  </div>
+  <ul id="list-of-articles">
+    {
+      articles.map(article => {
+        const hasBeenUpdated = article.updatedAt ? true : false;
+        return (
+          <a class="article-link" href={`/${article.slug}`}>
+            <li class="article-item">
+              <p class="article-title">
+                <span class="article-date">
+                  {hasBeenUpdated ? `Updated: ${article.updatedAt}` : `Published: ${article.createdAt}`}
+                </span>
+                {article.title}
+              </p>
+            </li>
+          </a>
+        );
+      })
+    }
+    <p class="no-results-message">No articles found</p>
+  </ul>
+</aside>
+
+<style>
+  #side-panel {
+    padding-top: 4rem;
+  }
+
+  #side-panel-header {
+    padding-inline: 1rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #search-container {
+    position: relative;
+  }
+
+  #search-input {
+    color: var(--text);
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    background-color: transparent;
+    border: 1px solid var(--border-10);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+  }
+
+  #search-input::placeholder {
+    color: var(--text-muted-extra);
+  }
+
+  #keyboard-shortcut {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+
+  #keyboard-shortcut[data-is-macos='true']::after {
+    content: 'Cmd+K';
+  }
+
+  #keyboard-shortcut[data-is-macos='false']::after {
+    content: 'Ctrl+K';
+  }
+
+  #list-of-articles {
+  }
+
+  .article-link {
+    display: block;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-right: 2px solid transparent;
+  }
+
+  .article-link:hover {
+    border-right: 2px solid var(--border-highlight);
+    background-color: var(--background-hover);
+    p {
+      color: var(--text);
+    }
+  }
+
+  .article-link:active {
+    border-right: 2px solid var(--border-highlight-active);
+    background-color: var(--background-active);
+  }
+
+  .article-item {
+    padding: 1rem;
+  }
+
+  .article-title {
+    display: grid;
+    color: var(--text-muted-subtle);
+    font-weight: var(--font-medium);
+  }
+
+  .article-date {
+    font-size: var(--text-xs);
+    font-style: italic;
+    color: var(--text-muted);
+  }
+
+  .no-results-message {
+    display: none;
+    padding-inline: 1rem;
+  }
+
+  .show-message {
+    display: block;
+  }
+</style>
+
+<script>
+  import '@scripts/search';
+</script>

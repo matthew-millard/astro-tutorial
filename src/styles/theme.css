@@ -38,6 +38,7 @@
 
   --text: rgb(2, 6, 23);
   --text-muted: rgb(71 85 105);
+  --text-muted-extra: rgba(71, 85, 105, 0.5);
   --text-muted-subtle: rgb(51 65 85);
   --text-accent: rgb(z);
   --text-hover: rgba(2, 6, 23, 0.7);
@@ -93,6 +94,7 @@
 
   --text: rgb(248, 250, 252);
   --text-muted: rgb(148, 163, 184);
+  --text-muted-extra: rgba(148, 163, 184, 0.5);
   --text-muted-subtle: rgb(203 213 225);
   --text-accent: rgb(96, 165, 250);
   --text-hover: rgba(248, 250, 252, 0.7);

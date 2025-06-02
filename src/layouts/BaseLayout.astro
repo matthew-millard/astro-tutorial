@@ -41,20 +41,24 @@ const { pageTitle } = Astro.props;
     grid-template-rows: auto auto 1fr auto;
   }
 
-  .header {
+  #header {
+    background-color: aqua;
     grid-row: 1 / 2;
+    /* visibility: hidden; */
   }
 
-  .side-panel {
+  #side-panel {
+    background-color: yellow;
     grid-row: 1 / 3;
   }
 
-  .slot {
-    background-color: pink;
+  #main {
+    background-color: palevioletred;
     grid-row: 3 / 4;
   }
 
-  .footer {
+  #footer {
+    background-color: chocolate;
     grid-row: 4 / 5;
   }
 </style>

@@ -1,10 +1,9 @@
 ---
-import Divider from '@components/ui/Divider.astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
 ---
 
 <BaseLayout pageTitle="Welcome">
-  <main id="main-container">
+  <main id="main">
     <h1>Welcome To My Blog</h1>
     <p class="lead">
       I'm excited to start share with you my technical insights and guides on all things web development.
@@ -32,8 +31,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-  #main-container {
-    padding-block: 4rem;
-    padding-inline: 1rem;
+  #main {
+    padding: 4rem 1rem;
   }
 </style>

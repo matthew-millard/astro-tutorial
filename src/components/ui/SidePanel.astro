@@ -10,7 +10,9 @@ import { articles } from '@data/articles-metadata';
       <kbd id="keyboard-shortcut"></kbd>
     </div>
   </div>
-  <button id="expand-collapse-list-of-articles-button" data-expanded="false">{' '}articles</button>
+  <div class="container">
+    <button id="expand-collapse-list-of-articles-button" data-expanded="false">{' '}articles</button>
+  </div>
   <ul id="list-of-articles">
     {
       articles.map(article => {
@@ -36,10 +38,10 @@ import { articles } from '@data/articles-metadata';
 <style>
   #side-panel {
     padding-top: 4rem;
-    padding-inline: 1rem;
   }
 
   #side-panel-header {
+    padding-inline: 1rem;
     margin-top: 2rem;
     padding-bottom: 2rem;
     display: flex;
@@ -125,6 +127,22 @@ import { articles } from '@data/articles-metadata';
     opacity: 1;
     max-height: 700px;
     overflow-y: auto;
+  }
+
+  @media (min-width: 80rem) {
+    #side-panel {
+      border-right: 1px solid var(--border-10);
+    }
+
+    #expand-collapse-list-of-articles-button {
+      display: none;
+    }
+
+    #list-of-articles {
+      opacity: 1;
+      max-height: 700px;
+      overflow-y: auto;
+    }
   }
 
   .article-link {

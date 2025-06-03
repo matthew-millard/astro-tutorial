@@ -1,14 +1,24 @@
 const button = document.querySelector('#expand-collapse-list-of-articles-button') as HTMLButtonElement;
 const listOfArticles = document.querySelector('#list-of-articles') as HTMLUListElement;
+const searchInput = document.querySelector('#search-input') as HTMLInputElement;
 
-function handleClick() {
-  if (listOfArticles.hasAttribute('data-expanded')) {
-    listOfArticles.removeAttribute('data-expanded');
-    button.setAttribute('data-expanded', 'false');
+function expandArticleList() {
+  listOfArticles.setAttribute('data-expanded', 'true');
+  button.setAttribute('data-expanded', 'true');
+}
+
+function collapseArticleList() {
+  listOfArticles.removeAttribute('data-expanded');
+  button.setAttribute('data-expanded', 'false');
+}
+
+function handleExpandCollapseArticles(e: FocusEvent | MouseEvent) {
+  if (e.type === 'click' && listOfArticles.hasAttribute('data-expanded')) {
+    collapseArticleList();
   } else {
-    listOfArticles.setAttribute('data-expanded', 'true');
-    button.setAttribute('data-expanded', 'true');
+    expandArticleList();
   }
 }
 
-button.addEventListener('click', handleClick);
+button.addEventListener('click', e => handleExpandCollapseArticles(e));
+searchInput.addEventListener('focus', e => handleExpandCollapseArticles(e));

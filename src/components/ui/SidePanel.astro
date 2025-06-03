@@ -11,7 +11,7 @@ import { articles } from '@data/articles-metadata';
     </div>
   </div>
   <div class="container">
-    <button id="expand-collapse-list-of-articles-button" data-expanded="false">{' '}articles</button>
+    <button id="expand-collapse-list-of-articles-button" data-expanded="false">Articles </button>
   </div>
   <ul id="list-of-articles">
     {
@@ -38,6 +38,7 @@ import { articles } from '@data/articles-metadata';
 <style>
   #side-panel {
     padding-top: 4rem;
+    height: 100%;
   }
 
   #side-panel-header {
@@ -84,12 +85,18 @@ import { articles } from '@data/articles-metadata';
   }
 
   #expand-collapse-list-of-articles-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
     width: 100%;
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
     border: none;
     border-radius: var(--radius-sm);
-    color: var(--text-muted);
+    color: var(--text-muted-subtle);
+    /* font-weight: var(--font-medium); */
+    /* font-style: italic; */
     background-color: var(--background-secondary);
     box-shadow: var(--shadow-xs);
     cursor: pointer;
@@ -106,12 +113,17 @@ import { articles } from '@data/articles-metadata';
     background-color: var(--background-active);
   } */
 
-  #expand-collapse-list-of-articles-button[data-expanded='false']::before {
-    content: 'Show';
+  #expand-collapse-list-of-articles-button[data-expanded='false']::after {
+    content: url('/src/icons/chevron-down.svg');
+    height: var(--icon-lg);
+    width: var(--icon-lg);
   }
 
-  #expand-collapse-list-of-articles-button[data-expanded='true']::before {
-    content: 'Collapse';
+  #expand-collapse-list-of-articles-button[data-expanded='true']::after {
+    content: url('/src/icons/chevron-up.svg');
+
+    height: var(--icon-lg);
+    width: var(--icon-lg);
   }
 
   #list-of-articles {
@@ -125,13 +137,16 @@ import { articles } from '@data/articles-metadata';
 
   #list-of-articles[data-expanded='true'] {
     opacity: 1;
-    max-height: 700px;
+    max-height: 60vh;
     overflow-y: auto;
+    border-bottom: 1px solid var(--border-10);
+    box-shadow: var(--shadow-sm);
   }
 
   @media (min-width: 80rem) {
     #side-panel {
       border-right: 1px solid var(--border-10);
+      height: 100%;
     }
 
     #expand-collapse-list-of-articles-button {
@@ -140,7 +155,7 @@ import { articles } from '@data/articles-metadata';
 
     #list-of-articles {
       opacity: 1;
-      max-height: 700px;
+      max-height: 100%;
       overflow-y: auto;
     }
   }

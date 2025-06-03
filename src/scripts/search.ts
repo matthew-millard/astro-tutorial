@@ -41,4 +41,5 @@ function handleSearch() {
 
 document.addEventListener('keydown', e => handleSearchShortcut(e));
 input.addEventListener('keyup', handleSearch);
+
 setOSAttribute();

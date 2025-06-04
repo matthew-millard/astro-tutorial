@@ -23,7 +23,9 @@ h2 {
   font-family: 'Söhne';
   font-weight: var(--font-medium);
   font-size: var(--text-3xl);
-  line-height: 1.1;
+  line-height: 1;
+  text-decoration: 2px underline var(--text-underline);
+  text-underline-offset: 0.25rem;
 }
 
 h3 {

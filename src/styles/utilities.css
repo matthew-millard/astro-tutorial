@@ -31,6 +31,28 @@
 }
 
 .container {
-  padding-inline: 16px;
+  padding-inline: 1rem;
   width: 100%;
+}
+
+.flow {
+  margin-block: 2rem;
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+.flow > h1 + * {
+  margin-block-start: 2rem;
+}
+
+.flow > h2 {
+  margin-block-start: 3rem;
+}
+
+@media (min-width: 80rem) {
+  .flow {
+    margin-block: 8rem;
+  }
 }

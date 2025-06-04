@@ -43,6 +43,7 @@
   --text-accent: rgb(z);
   --text-hover: rgba(2, 6, 23, 0.7);
   --text-active: rgba(2, 6, 23, 0.5);
+  --text-underline: var(--text-muted-extra);
 
   --external-link: rgb(178, 70, 255);
   --external-link-hover: rgb(190, 100, 255);

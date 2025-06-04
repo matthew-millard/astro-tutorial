@@ -3,7 +3,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 ---
 
 <BaseLayout pageTitle="Welcome">
-  <main id="main">
+  <main id="main" class="main flow">
     <h1>Welcome To My Blog</h1>
     <p class="lead">
       I'm excited to start share with you my technical insights and guides on all things web development.
@@ -13,6 +13,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
       The purpose of this blog is to document my coding journey and share the insights and solutions I've picked up
       along the way with other developers.
     </p>
+    <h2>Lorem ipsum dolor sit amet</h2>
     <p>
       Since I began learning to code in January 2023, one of the biggest takeaways has been this: the cleanest and most
       effective solutions are often found in documentation or in articles/blog posts written by other developers who
@@ -31,6 +32,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
       The purpose of this blog is to document my coding journey and share the insights and solutions I've picked up
       along the way with other developers.
     </p>
+    <h2>Lorem ipsum dolor sit amet</h2>
     <p>
       Since I began learning to code in January 2023, one of the biggest takeaways has been this: the cleanest and most
       effective solutions are often found in documentation or in articles/blog posts written by other developers who
@@ -157,7 +159,13 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-  #main {
-    padding: 4rem 1rem;
+  .main {
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 80rem) {
+    .main {
+      padding-inline: 4rem;
+    }
   }
 </style>

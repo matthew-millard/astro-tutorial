@@ -61,7 +61,7 @@ import { articles } from '@data/articles-metadata';
     background-color: transparent;
     border: 1px solid var(--border-10);
     border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-xs);
   }
 
   #search-input::placeholder {
@@ -202,7 +202,9 @@ import { articles } from '@data/articles-metadata';
 
   .no-results-message {
     display: none;
-    padding-inline: 1rem;
+    padding: 1rem;
+    /* font-weight: var(--font-medium); */
+    font-style: italic;
   }
 
   .show-message {

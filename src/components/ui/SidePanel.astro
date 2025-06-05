@@ -11,7 +11,21 @@ import { articles } from '@data/articles-metadata';
     </div>
   </div>
   <div class="container">
-    <button id="expand-collapse-list-of-articles-button" data-expanded="false">Articles </button>
+    <button id="expand-collapse-list-of-articles-button" data-expanded="false"
+      >Articles
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"></path></svg
+      >
+    </button>
   </div>
   <ul id="list-of-articles">
     {
@@ -108,22 +122,18 @@ import { articles } from '@data/articles-metadata';
     color: var(--text);
     background-color: var(--background-hover);
   }
-  /* 
-  #expand-collapse-list-of-articles-button:active {
-    background-color: var(--background-active);
-  } */
 
-  #expand-collapse-list-of-articles-button[data-expanded='false']::after {
-    content: url('/src/icons/chevron-down.svg');
-    height: var(--icon-lg);
-    width: var(--icon-lg);
+  #expand-collapse-list-of-articles-button svg {
+    color: var(--text-muted);
   }
 
-  #expand-collapse-list-of-articles-button[data-expanded='true']::after {
-    content: url('/src/icons/chevron-up.svg');
+  #expand-collapse-list-of-articles-button[data-expanded='false'] svg {
+    transition: transform 0.3s ease;
+  }
 
-    height: var(--icon-lg);
-    width: var(--icon-lg);
+  #expand-collapse-list-of-articles-button[data-expanded='true'] svg {
+    transform: rotate(0.5turn);
+    transition: transform 0.3s ease;
   }
 
   #list-of-articles {

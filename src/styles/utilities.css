@@ -56,3 +56,11 @@
     margin-block: 8rem;
   }
 }
+
+.cover {
+  object-fit: cover;
+}
+
+.aspect-square {
+  aspect-ratio: 1;
+}

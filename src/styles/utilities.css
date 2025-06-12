@@ -22,21 +22,59 @@
   overflow-y: hidden;
 }
 
-.lead {
-  font-size: var(--text-xl);
-  font-weight: var(--font-medium);
-  color: var(--text-muted);
+.line-height-1 {
   line-height: 1.1;
-  margin-top: 0.25rem;
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+.text-medium {
+  font-weight: var(--font-medium);
+}
+
+.text-muted {
+  color: var(--text-muted);
 }
 
 .container {
   padding-inline: 1rem;
+  margin-inline: auto;
   width: 100%;
 }
 
-.flow {
-  margin-block: 2rem;
+.guides {
+  border: 1px solid red;
+}
+
+.mt-2 {
+  margin-block-start: 2rem;
+}
+
+.pt-2 {
+  padding-block-start: 2rem;
+}
+
+.pt-4 {
+  padding-block-start: 4rem;
+}
+
+.pt-6 {
+  padding-block-start: 6rem;
+}
+
+.pb-2 {
+  padding-block-end: 2rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-gap-1 {
+  row-gap: 1rem;
 }
 
 .flow > * + * {
@@ -51,13 +89,7 @@
   margin-block-start: 3rem;
 }
 
-@media (min-width: 80rem) {
-  .flow {
-    margin-block: 8rem;
-  }
-}
-
-.cover {
+.object-cover {
   object-fit: cover;
 }
 

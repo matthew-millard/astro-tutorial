@@ -43,12 +43,12 @@ import { articles } from '@data/articles-metadata';
   }
 
   #side-panel-mask {
-    display: none;
-    postion: fixed;
+    z-index: 9;
+    position: fixed;
     width: 100vw;
     height: 100vh;
+    display: none;
     inset: 0;
-    z-index: 0;
   }
 
   h3,
@@ -71,5 +71,11 @@ import { articles } from '@data/articles-metadata';
 
   a:hover {
     background-color: var(--background-hover);
+  }
+
+  @media (min-width: 1250px) {
+    aside {
+      transform: translateX(0%);
+    }
   }
 </style>

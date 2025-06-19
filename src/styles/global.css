@@ -5,63 +5,48 @@
 
 /* Global styles 👇 */
 :root {
-  font-family: 'Söhne';
-  font-weight: 400;
-  letter-spacing: 0.5px;
   background: var(--background);
+}
+
+body {
   color: var(--text);
+  font-family: 'Söhne';
+  font-size: var(--step-1);
 }
 
 h1 {
-  font-family: 'Söhne';
-  font-weight: 600;
-  font-size: var(--text-5xl);
-  line-height: 1.1;
+  font-size: var(--step-5);
+  margin-block-start: var(--space-xl);
 }
 
 h2 {
-  font-family: 'Söhne';
-  font-weight: var(--font-medium);
-  font-size: var(--text-3xl);
-  line-height: 1;
-  text-decoration: 2px underline var(--text-underline);
-  text-underline-offset: 0.25rem;
+  font-size: var(--step-4);
+  margin-block-start: var(--space-l);
 }
 
 h3 {
-  font-family: 'Söhne';
-  font-weight: var(--font-medium);
-  font-size: var(--text-2xl);
-  color: var(--text-muted);
-  line-height: 1.1;
+  font-size: var(--step-3);
+  margin-block-start: var(--space-m);
+}
+
+h4 {
+  font-size: var(--step-2);
+  margin-block-start: var(--space-s);
 }
 
 p {
-  font-family: 'Söhne';
-  font-weight: 400;
-  font-size: var(--text-base);
-  color: var(--text);
-  line-height: 1.5;
+  margin-block-start: var(--space-xs);
+}
+
+p:first-of-type {
+  margin-block-start: var(--space-l);
+}
+
+a {
+  text-decoration: none;
 }
 
 ul {
   list-style: none;
   padding: 0;
-}
-
-/* responsive header */
-@media (min-width: 1280px) {
-  #open-mobile-menu-button {
-    display: none;
-  }
-
-  .desktop-only {
-    display: grid;
-  }
-}
-
-@media (max-width: 1279px) {
-  #desktop-navigation-links {
-    display: none;
-  }
 }

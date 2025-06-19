@@ -1,0 +1,30 @@
+---
+import Logo from '@components/ui/Logo.astro';
+import Button from '@components/ui/Button.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<header>
+  <Logo />
+  <Button id="side-panel-button" variant="ghost">
+    <Icon name="panel-left-open" />
+  </Button>
+</header>
+
+<style>
+  header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border-10);
+  }
+</style>

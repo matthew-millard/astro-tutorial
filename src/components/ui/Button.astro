@@ -6,7 +6,7 @@ interface Props {
   size?: 'icon';
 }
 
-const { id, type = 'button', variant = 'primary', size = 'icon' } = Astro.props;
+const { id, type = 'button', variant = 'primary', size = 'icon', ...props } = Astro.props;
 
 const classVariants = {
   primary: 'primary',
@@ -20,7 +20,7 @@ const sizeVariants = {
 };
 ---
 
-<button type={type} id={id} class={`${classVariants[variant]} ${sizeVariants[size]}`}>
+<button type={type} id={id} class={`${classVariants[variant]} ${sizeVariants[size]}`} {...props}>
   <slot />
 </button>
 

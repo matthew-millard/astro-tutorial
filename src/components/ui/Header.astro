@@ -6,8 +6,10 @@ import { Icon } from 'astro-icon/components';
 
 <header>
   <Logo />
-  <Button id="side-panel-button" variant="ghost">
-    <Icon name="panel-left-open" />
+
+  <Button id="side-panel-button" variant="ghost" data-panel-state="closed">
+    <Icon name="panel-left-open" class="panel-open-icon" />
+    <Icon name="panel-left-close" class="panel-close-icon" />
   </Button>
 </header>
 
@@ -24,7 +26,23 @@ import { Icon } from 'astro-icon/components';
     align-items: center;
     padding-block: 0.75rem;
     padding-inline: 1rem;
-    background-color: var(--background);
+    background-color: var(--background-accent);
     border-bottom: 1px solid var(--border-10);
+  }
+
+  .panel-open-icon {
+    display: block;
+  }
+
+  .panel-close-icon {
+    display: none;
+  }
+
+  #side-panel-button[data-panel-state='open'] .panel-close-icon {
+    display: block;
+  }
+
+  #side-panel-button[data-panel-state='open'] .panel-open-icon {
+    display: none;
   }
 </style>

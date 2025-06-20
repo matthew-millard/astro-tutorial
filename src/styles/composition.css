@@ -1,0 +1,65 @@
+.page {
+  padding-left: 0;
+  padding-bottom: 2rem;
+}
+@media (min-width: 1250px) {
+  .page {
+    padding-left: 20rem;
+  }
+}
+
+.flow {
+  padding-inline: 1rem;
+}
+
+@media (min-width: 1250px) {
+  .flow {
+    padding-inline: 2.5rem;
+    padding-block: 2rem;
+  }
+}
+
+.flow > h1 {
+  margin-block-start: var(--space-3xl);
+}
+
+.flow > h1 + * {
+  margin-block-start: var(--space-l);
+}
+
+.flow > h2 {
+  margin-block-start: var(--space-xl);
+}
+
+.flow > h2 + * {
+  margin-block-start: var(--space-m);
+}
+
+.flow > h3 {
+  margin-block-start: var(--space-l);
+}
+
+.flow > h3 + * {
+  margin-block-start: var(--space-s);
+}
+
+.flow > * + * {
+  margin-block-start: var(--space-xs);
+}
+
+[class^='stack'] > * {
+  /* top and bottom margins in horizontal-tb writing mode */
+  margin-block: 0rem;
+}
+
+.stack-lg {
+  padding-block: 2rem;
+}
+
+.stack-sm {
+  margin-block-start: 1rem;
+}
+
+.stack-sm > * > * {
+  padding-block: 0.75rem;
+}

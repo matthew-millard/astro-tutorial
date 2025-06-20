@@ -2,6 +2,7 @@
 @import './theme.css';
 @import './reset.css';
 @import './utilities.css';
+@import './composition.css';
 
 /* Global styles 👇 */
 :root {
@@ -16,34 +17,33 @@ body {
 
 h1 {
   font-size: var(--step-5);
-  margin-block-start: var(--space-xl);
+  /* margin-block-start: var(--space-xl); */
 }
 
 h2 {
   font-size: var(--step-4);
-  margin-block-start: var(--space-l);
+  /* margin-block-start: var(--space-l); */
 }
 
 h3 {
   font-size: var(--step-3);
-  margin-block-start: var(--space-m);
+  /* margin-block-start: var(--space-m); */
 }
 
 h4 {
   font-size: var(--step-2);
-  margin-block-start: var(--space-s);
+  /* margin-block-start: var(--space-s); */
 }
 
 p {
-  margin-block-start: var(--space-xs);
+  /* margin-block-start: var(--space-xs); */
 }
 
 p:first-of-type {
-  margin-block-start: var(--space-l);
+  /* margin-block-start: var(--space-l); */
 }
 
 a {
-  color: var(--link);
   text-decoration: none;
 }
 

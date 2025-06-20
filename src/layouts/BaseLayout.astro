@@ -23,33 +23,13 @@ const { pageTitle } = Astro.props;
     <Header />
     <SidePanel />
     <main class="page">
-      <div class="content">
+      <div class="flow">
         <slot />
       </div>
     </main>
     <Footer />
   </body>
 </html>
-
-<style>
-  .page {
-    padding-block-start: 5rem;
-  }
-
-  .content {
-    padding-inline: 1rem;
-  }
-
-  @media (min-width: 1250px) {
-    .page {
-      padding-left: 20rem;
-    }
-
-    .content {
-      padding-inline: 3.5rem;
-    }
-  }
-</style>
 
 <script>
   import '@scripts/side-panel';

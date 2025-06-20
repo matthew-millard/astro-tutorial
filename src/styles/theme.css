@@ -54,14 +54,15 @@
   --color-100: rgb(245 245 245);
   --color-50: rgb(250 250 250);
 
-  --link: rgb(3 105 161);
+  --primary: #2bb66d;
+  --secondary: #13693f;
 
   --background: var(--color-50);
   --background-accent: var(--color-100);
   --background-hover: var(--color-200);
-  --background-active: var(--color-300);
 
   --text: var(--color-950);
+  --text-muted: var(--color-900);
 
   /* borders */
   --border-10: rgba(10, 10, 10, 0.1);

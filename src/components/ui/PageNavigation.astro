@@ -1,0 +1,34 @@
+<div class="page-navigation">
+  <div class="inner grid" data-layout="split">
+    <span class="navigation-item arrow prev"> ← <a href="/previous">Previous</a></span>
+    <span class="navigation-item arrow next"> <a href="/next">Next</a> → </span>
+  </div>
+</div>
+
+<style>
+  .inner {
+    padding-block: 1.5rem;
+    margin-inline: 1rem;
+    border-top: 1px solid var(--border-10);
+  }
+
+  @media (min-width: 1250px) {
+    .inner {
+      margin-left: 22rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .next {
+    margin-left: auto;
+  }
+
+  .prev {
+    margin-right: auto;
+  }
+
+  .prev a,
+  .next a {
+    font-weight: var(--font-medium);
+  }
+</style>

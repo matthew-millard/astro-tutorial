@@ -63,3 +63,11 @@
 .stack-sm > * > * {
   padding-block: 0.75rem;
 }
+
+.grid {
+  display: grid;
+}
+
+.grid[data-layout='split'] {
+  grid-template-columns: repeat(2, 1fr);
+}

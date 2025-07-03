@@ -10,6 +10,7 @@ interface Props {
 }
 
 const { pageTitle } = Astro.props;
+const { pathname } = Astro.url;
 ---
 
 <html lang="en">
@@ -22,15 +23,15 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <SidePanel />
+    <SidePanel currentPath={pathname.slice(1)} />
     <main class="page">
-      <div class="flow">
+      <div class="flow content-container">
         <slot />
+        <PageNavigation />
       </div>
     </main>
-    <PageNavigation />
-    <Footer />
   </body>
+  <Footer />
 </html>
 
 <script>

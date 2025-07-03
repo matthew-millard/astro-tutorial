@@ -1,9 +1,11 @@
 ---
 import { articles } from '@data/articles-metadata';
 
-const { pathname } = Astro.url;
-const currentPath = pathname.slice(1);
-console.log('currentPath', currentPath);
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
 ---
 
 <aside id="side-panel" class="stack-lg">

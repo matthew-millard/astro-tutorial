@@ -47,6 +47,10 @@
   margin-block-start: var(--space-xs);
 }
 
+.flow > [class*='page-navigation'] {
+  margin-block-start: var(--space-xl);
+}
+
 [class^='stack'] > * {
   /* top and bottom margins in horizontal-tb writing mode */
   margin-block: 0rem;
@@ -70,4 +74,12 @@
 
 .grid[data-layout='split'] {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.repel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gutter, 1em);
 }

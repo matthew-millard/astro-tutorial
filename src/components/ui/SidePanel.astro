@@ -1,9 +1,11 @@
 ---
 import { articles } from '@data/articles-metadata';
 
-const { pathname } = Astro.url;
-const currentPath = pathname.slice(1);
-console.log('currentPath', currentPath);
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
 ---
 
 <aside id="side-panel" class="stack-lg">
@@ -81,16 +83,15 @@ console.log('currentPath', currentPath);
   }
 
   .article-link:hover {
-    color: var(--text);
     background-color: var(--background-hover);
   }
 
   a[aria-current='page'] {
-    border-left-color: var(--secondary);
+    border-left-color: var(--text-link-active);
   }
 
   a[aria-current='page'] .article-title {
     font-weight: var(--font-medium);
-    color: var(--secondary);
+    color: var(--text-link-active);
   }
 </style>

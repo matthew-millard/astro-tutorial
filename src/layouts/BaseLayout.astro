@@ -3,12 +3,14 @@ import '../styles/global.css';
 import Header from '@components/ui/Header.astro';
 import SidePanel from '@components/ui/SidePanel.astro';
 import Footer from '@components/ui/Footer.astro';
+import PageNavigation from '@components/ui/PageNavigation.astro';
 
 interface Props {
   pageTitle: string;
 }
 
 const { pageTitle } = Astro.props;
+const { pathname } = Astro.url;
 ---
 
 <html lang="en">
@@ -21,14 +23,15 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <SidePanel />
+    <SidePanel currentPath={pathname.slice(1)} />
     <main class="page">
-      <div class="flow">
+      <div class="flow content-container">
         <slot />
+        <PageNavigation />
       </div>
     </main>
-    <Footer />
   </body>
+  <Footer />
 </html>
 
 <script>

@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<div class="page-navigation repel">
+  <span>
+    <Icon name="arrow-left" class="arrow" />
+    <a href="/previous">Previous</a>
+  </span>
+
+  <span>
+    <a href="/next">Next</a>
+    <Icon name="arrow-right" class="arrow" />
+  </span>
+</div>
+
+<style>
+  .page-navigation {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-10);
+  }
+
+  a {
+    font-weight: var(--font-medium);
+  }
+
+  .arrow {
+    vertical-align: -0.17em;
+  }
+</style>

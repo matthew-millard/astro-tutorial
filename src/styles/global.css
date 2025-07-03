@@ -1,8 +1,8 @@
 @import './typography.css';
 @import './theme.css';
 @import './reset.css';
-@import './utilities.css';
 @import './composition.css';
+@import './utilities.css';
 
 /* Global styles 👇 */
 :root {
@@ -45,9 +45,19 @@ p:first-of-type {
 
 a {
   text-decoration: none;
+  color: var(--text-link);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--text-link-hover);
 }
 
 ul {
   list-style: none;
   padding: 0;
+}
+
+.arrow {
+  color: var(--text-muted);
 }

@@ -1,0 +1,10 @@
+.content-container {
+  width: 100%;
+  margin-inline: auto;
+}
+
+@media (min-width: 1250px) {
+  .content-container {
+    max-width: 72rem;
+  }
+}

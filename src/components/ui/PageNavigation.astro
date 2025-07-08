@@ -1,15 +1,27 @@
 ---
+import type { Article } from '@data/articles-metadata';
 import { Icon } from 'astro-icon/components';
+interface Props {
+  nextArticle: Article;
+  previousArticle: Article;
+  mostRecentArticle: boolean;
+  oldestArticle: boolean;
+}
+const { nextArticle, previousArticle, mostRecentArticle, oldestArticle } = Astro.props;
 ---
 
 <div class="page-navigation repel">
-  <span>
-    <Icon name="arrow-left" class="arrow" />
-    <a href="/previous">Previous</a>
-  </span>
+  {
+    !mostRecentArticle && (
+      <span>
+        <Icon name="arrow-left" class="arrow" />
+        <a href={previousArticle.slug}>{previousArticle.title}</a>
+      </span>
+    )
+  }
 
   <span>
-    <a href="/next">Next</a>
+    <a href={nextArticle.slug}>{nextArticle.title}</a>
     <Icon name="arrow-right" class="arrow" />
   </span>
 </div>

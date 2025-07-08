@@ -9,8 +9,25 @@ interface Props {
   pageTitle: string;
 }
 
+import { articles } from '../data/articles-metadata';
+const currentPath = Astro.url.pathname.slice(1);
+
+const numOfArticles = articles.length;
+const indexOfCurrArticle = articles.findIndex(article => article.slug === currentPath);
+
+const { prev, next, first, last } = {
+  prev: articles[indexOfCurrArticle - 1],
+  next: articles[indexOfCurrArticle + 1],
+  first: indexOfCurrArticle === 0,
+  last: indexOfCurrArticle === numOfArticles - 1,
+};
+
+console.log('first', first);
+console.log('last', last);
+console.log('prev', prev);
+console.log('next', next);
+
 const { pageTitle } = Astro.props;
-const { pathname } = Astro.url;
 ---
 
 <html lang="en">
@@ -19,15 +36,15 @@ const { pathname } = Astro.url;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>{pageTitle} | Matt Millard</title>
   </head>
   <body>
     <Header />
-    <SidePanel currentPath={pathname.slice(1)} />
+    <SidePanel currentPath={currentPath} />
     <main class="page">
       <div class="flow content-container">
         <slot />
-        <PageNavigation />
+        <PageNavigation nextArticle={next} previousArticle={prev} mostRecentArticle={first} oldestArticle={last} />
       </div>
     </main>
   </body>

@@ -1,4 +1,15 @@
-export const articles = [
+export interface Article {
+  title: string;
+  slug: string;
+  description: string;
+  imageUrl: string;
+  altText: string;
+  createdAt: string;
+  updatedAt: null | string;
+  estimatedReadTime: string;
+}
+
+export const articles: Article[] = [
   {
     title: 'CSS in JavaScript',
     slug: 'css-in-javascript',

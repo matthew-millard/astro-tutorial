@@ -10,22 +10,18 @@ interface Props {
 }
 
 import { articles } from '../data/articles-metadata';
-const currentPath = Astro.url.pathname.slice(1);
+const currentPath = Astro.url.pathname;
 
 const numOfArticles = articles.length;
-const indexOfCurrArticle = articles.findIndex(article => article.slug === currentPath);
+const indexOfCurrArticle = articles.findIndex(article => article.slug === currentPath.slice(1));
 
-const { prev, next, first, last } = {
+const articleNavigation = {
+  isArticlePage: indexOfCurrArticle !== -1,
   prev: articles[indexOfCurrArticle - 1],
   next: articles[indexOfCurrArticle + 1],
   first: indexOfCurrArticle === 0,
   last: indexOfCurrArticle === numOfArticles - 1,
 };
-
-console.log('first', first);
-console.log('last', last);
-console.log('prev', prev);
-console.log('next', next);
 
 const { pageTitle } = Astro.props;
 ---
@@ -40,11 +36,11 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <SidePanel currentPath={currentPath} />
+    <SidePanel currentPath={currentPath.slice(1)} />
     <main class="page">
       <div class="flow content-container">
         <slot />
-        <PageNavigation nextArticle={next} previousArticle={prev} mostRecentArticle={first} oldestArticle={last} />
+        <PageNavigation navigation={articleNavigation} />
       </div>
     </main>
   </body>

@@ -14,11 +14,11 @@ const { navigation } = Astro.props;
 const { isArticlePage, first, last, next, prev } = navigation;
 ---
 
-<div class="page-navigation repel">
+<div class="page-navigation">
   {
     isArticlePage && !first && (
-      <span>
-        <Icon name="arrow-left" class="arrow" />
+      <span class="nav-link-container">
+        <Icon name="arrow-left" />
         <a href={prev?.slug}>{prev?.title}</a>
       </span>
     )
@@ -26,9 +26,9 @@ const { isArticlePage, first, last, next, prev } = navigation;
 
   {
     isArticlePage && !last && (
-      <span>
+      <span class="nav-link-container ml-auto">
         <a href={next?.slug}>{next?.title}</a>
-        <Icon name="arrow-right" class="arrow" />
+        <Icon name="arrow-right" />
       </span>
     )
   }
@@ -36,15 +36,27 @@ const { isArticlePage, first, last, next, prev } = navigation;
 
 <style>
   .page-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     padding-top: 2rem;
     border-top: 1px solid var(--border-10);
   }
 
+  .nav-link-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   a {
+    font-size: var(--step-0);
     font-weight: var(--font-medium);
   }
 
-  .arrow {
-    vertical-align: -0.17em;
+  @media (min-width: 1250px) {
+    a {
+      font-size: var(--step-1);
+    }
   }
 </style>

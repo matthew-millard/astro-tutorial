@@ -8,3 +8,7 @@
     max-width: 72rem;
   }
 }
+
+.ml-auto {
+  margin-left: auto;
+}

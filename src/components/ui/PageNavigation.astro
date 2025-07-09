@@ -2,41 +2,61 @@
 import type { Article } from '@data/articles-metadata';
 import { Icon } from 'astro-icon/components';
 interface Props {
-  nextArticle: Article;
-  previousArticle: Article;
-  mostRecentArticle: boolean;
-  oldestArticle: boolean;
+  navigation: {
+    isArticlePage: boolean;
+    prev: Article;
+    next: Article;
+    first: boolean;
+    last: boolean;
+  };
 }
-const { nextArticle, previousArticle, mostRecentArticle, oldestArticle } = Astro.props;
+const { navigation } = Astro.props;
+const { isArticlePage, first, last, next, prev } = navigation;
 ---
 
-<div class="page-navigation repel">
+<div class="page-navigation">
   {
-    !mostRecentArticle && (
-      <span>
-        <Icon name="arrow-left" class="arrow" />
-        <a href={previousArticle.slug}>{previousArticle.title}</a>
+    isArticlePage && !first && (
+      <span class="nav-link-container">
+        <Icon name="arrow-left" />
+        <a href={prev?.slug}>{prev?.title}</a>
       </span>
     )
   }
 
-  <span>
-    <a href={nextArticle.slug}>{nextArticle.title}</a>
-    <Icon name="arrow-right" class="arrow" />
-  </span>
+  {
+    isArticlePage && !last && (
+      <span class="nav-link-container ml-auto">
+        <a href={next?.slug}>{next?.title}</a>
+        <Icon name="arrow-right" />
+      </span>
+    )
+  }
 </div>
 
 <style>
   .page-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     padding-top: 2rem;
     border-top: 1px solid var(--border-10);
   }
 
+  .nav-link-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   a {
+    font-size: var(--step-0);
     font-weight: var(--font-medium);
   }
 
-  .arrow {
-    vertical-align: -0.17em;
+  @media (min-width: 1250px) {
+    a {
+      font-size: var(--step-1);
+    }
   }
 </style>

@@ -1,11 +1,9 @@
 ---
-import { articles } from '@data/articles-metadata';
+import { getCollection } from 'astro:content';
 
-interface Props {
-  currentPath: string;
-}
+const { pathname: currentPath } = Astro.url;
 
-const { currentPath } = Astro.props;
+const articles = await getCollection('blog');
 ---
 
 <aside id="side-panel" class="stack-lg">
@@ -13,8 +11,12 @@ const { currentPath } = Astro.props;
   <ul class="stack-sm">
     {
       articles.map(article => (
-        <a href={article.slug} class="article-link" aria-current={currentPath === article.slug ? 'page' : 'false'}>
-          <li class="article-title">{article.title}</li>
+        <a
+          href={`/articles/${article.id}`}
+          class="article-link"
+          aria-current={currentPath === `/articles/${article.id}` ? 'page' : 'false'}
+        >
+          <li class="article-title">{article.data.title}</li>
         </a>
       ))
     }
@@ -95,3 +97,5 @@ const { currentPath } = Astro.props;
     color: var(--text-link-active);
   }
 </style>
+
+<script></script>

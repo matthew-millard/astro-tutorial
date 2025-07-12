@@ -3,12 +3,13 @@ import '../styles/global.css';
 import Header from '@components/ui/Header.astro';
 import SidePanel from '@components/ui/SidePanel.astro';
 import Footer from '@components/ui/Footer.astro';
+import type { InferEntrySchema } from 'astro:content';
 
 interface Props {
-  pageTitle: string;
+  frontmatter: InferEntrySchema<'blog'>;
 }
 
-const { pageTitle } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,7 +18,7 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle} | Matt Millard</title>
+    <title>{frontmatter.title} | Matt Millard</title>
   </head>
   <body>
     <Header />

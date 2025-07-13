@@ -4,6 +4,7 @@ import Header from '@components/ui/Header.astro';
 import SidePanel from '@components/ui/SidePanel.astro';
 import Footer from '@components/ui/Footer.astro';
 import type { InferEntrySchema } from 'astro:content';
+import ArticleNavigation from '@components/ui/ArticleNavigation.astro';
 
 interface Props {
   frontmatter: InferEntrySchema<'blog'>;
@@ -26,6 +27,7 @@ const { frontmatter } = Astro.props;
     <main class="page">
       <div class="flow content-container">
         <slot />
+        <ArticleNavigation />
       </div>
     </main>
   </body>

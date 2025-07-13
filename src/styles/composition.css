@@ -47,7 +47,7 @@
   margin-block-start: var(--space-xs);
 }
 
-.flow > [class*='page-navigation'] {
+.flow > [class*='article-navigation'] {
   margin-block-start: var(--space-xl);
 }
 

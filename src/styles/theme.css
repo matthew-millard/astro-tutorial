@@ -110,11 +110,11 @@
   --background-hover: var(--color-900);
 
   --text: var(--color-50);
-  --text-muted: var(--color-100);
+  --text-muted: var(--color-400);
   --text-extra-muted: var(--color-700);
   --text-link: var(--green-500);
-  --text-link-hover: var(--green-800);
+  --text-link-hover: var(--green-700);
   --text-link-active: var(--green-500);
 
-  --border-10: rgba(245, 245, 245, 0.1);
+  --border-10: rgba(245, 245, 245, 0.2);
 }

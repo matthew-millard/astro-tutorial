@@ -1,30 +1,26 @@
 const html = document.querySelector('html');
 const themeTogglebutton = document.querySelector('#theme-toggle-button');
-const preferredTheme = window.localStorage.getItem('preferredTheme');
 const themeIcon = themeTogglebutton?.querySelector('#theme-icon');
 const moonIcon = themeTogglebutton?.querySelector('#moon-icon');
 const sunIcon = themeTogglebutton?.querySelector('#sun-icon');
 
-if (preferredTheme) {
-  setTheme(preferredTheme);
-} else {
-  setTheme('light');
-}
+// Update UI to match the theme that was already set by the inline script
+updateThemeUI();
 
-// if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//   setTheme('dark');
-// } else {
-//   setTheme('light');
-// }
+function updateThemeUI() {
+  const currentTheme = html?.getAttribute('data-theme');
 
-function setTheme(theme: string) {
-  if (theme === 'dark') {
+  if (currentTheme === 'dark') {
     moonIcon?.classList.remove('hide');
     sunIcon?.classList.add('hide');
   } else {
     sunIcon?.classList.remove('hide');
     moonIcon?.classList.add('hide');
   }
+}
+
+function setTheme(theme: string) {
+  updateThemeUI();
   html?.setAttribute('data-theme', theme);
   window.localStorage.setItem('preferredTheme', theme);
 }

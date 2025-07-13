@@ -76,6 +76,10 @@ const articles = await getCollection('blog').then(articles =>
     line-height: 1.3;
     color: var(--text-muted);
   }
+
+  .article-title:hover {
+    color: var(--text);
+  }
   .article-link {
     display: inline-block;
     width: 100%;

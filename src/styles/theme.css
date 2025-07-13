@@ -73,9 +73,9 @@
   --text: var(--color-950);
   --text-muted: var(--color-900);
   --text-extra-muted: var(--color-700);
-  --text-link: var(--green-800);
-  --text-link-hover: var(--green-700);
-  --text-link-active: var(--green-800);
+  --text-link: var(--green-700);
+  --text-link-hover: var(--green-800);
+  --text-link-active: var(--green-700);
 
   /* borders */
   --border-10: rgba(10, 10, 10, 0.1);
@@ -105,4 +105,16 @@
 }
 
 :root[data-theme='dark'] {
+  --background: var(--color-950);
+  --background-accent: var(--color-950);
+  --background-hover: var(--color-900);
+
+  --text: var(--color-50);
+  --text-muted: var(--color-100);
+  --text-extra-muted: var(--color-700);
+  --text-link: var(--green-500);
+  --text-link-hover: var(--green-800);
+  --text-link-active: var(--green-500);
+
+  --border-10: rgba(245, 245, 245, 0.1);
 }

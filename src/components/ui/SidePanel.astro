@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 
-const { pathname: currentPath } = Astro.url;
-
-const articles = await getCollection('blog');
+const articles = await getCollection('blog').then(articles =>
+  articles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+);
 ---
 
 <aside id="side-panel" class="stack-lg">
@@ -14,7 +14,7 @@ const articles = await getCollection('blog');
         <a
           href={`/articles/${article.id}`}
           class="article-link"
-          aria-current={currentPath === `/articles/${article.id}` ? 'page' : 'false'}
+          aria-current={Astro.params.slug === article.id ? 'page' : 'false'}
         >
           <li class="article-title">{article.data.title}</li>
         </a>

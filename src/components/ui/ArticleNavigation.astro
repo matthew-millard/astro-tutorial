@@ -1,0 +1,58 @@
+---
+import { Icon } from 'astro-icon/components';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('blog');
+const sortedArticles = articles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const currentArticleIndex = sortedArticles.findIndex(article => article.id === Astro.params.slug);
+const previousArticle = currentArticleIndex > 0 ? sortedArticles[currentArticleIndex - 1] : undefined;
+const nextArticle =
+  currentArticleIndex < sortedArticles.length - 1 ? sortedArticles[currentArticleIndex + 1] : undefined;
+---
+
+{
+  (previousArticle || nextArticle) && (
+    <nav class="article-navigation">
+      {previousArticle && (
+        <span class="nav-link-container">
+          <Icon name="arrow-left" />
+          <a href={`/articles/${previousArticle.id}`}>{previousArticle.data.title}</a>
+        </span>
+      )}
+      {nextArticle && (
+        <span class="nav-link-container ml-auto">
+          <a href={`/articles/${nextArticle.id}`}>{nextArticle.data.title}</a>
+          <Icon name="arrow-right" />
+        </span>
+      )}
+    </nav>
+  )
+}
+
+<style>
+  .article-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-10);
+  }
+
+  .nav-link-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  a {
+    font-size: var(--step-0);
+    font-weight: var(--font-medium);
+  }
+
+  @media (min-width: 1250px) {
+    a {
+      font-size: var(--step-1);
+    }
+  }
+</style>

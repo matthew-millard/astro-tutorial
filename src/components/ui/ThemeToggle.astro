@@ -4,20 +4,24 @@ import Button from './Button.astro';
 ---
 
 <Button id="theme-toggle-button" variant="ghost" size="icon">
-  <Icon name="moon-star" />
-  <Icon name="sun" />
+  <span class="icon hide" id="moon-icon">
+    <Icon name="moon-star" />
+  </span>
+  <span class="icon hide" id="sun-icon">
+    <Icon name="sun" />
+  </span>
 </Button>
 
 <style>
-  button[data-theme='light'] > svg[data-icon='moon-star'] {
-    display: none;
+  .icon {
+    display: grid;
   }
 
-  button[data-theme='dark'] > svg[data-icon='sun'] {
+  .hide {
     display: none;
   }
 </style>
 
 <script>
-  import '@scripts/theme';
+  import '@scripts/theme-toggle';
 </script>

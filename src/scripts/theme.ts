@@ -5,8 +5,6 @@ const themeIcon = themeTogglebutton?.querySelector('#theme-icon');
 const moonIcon = themeTogglebutton?.querySelector('#moon-icon');
 const sunIcon = themeTogglebutton?.querySelector('#sun-icon');
 
-console.log(themeIcon);
-
 if (preferredTheme) {
   setTheme(preferredTheme);
 } else {

@@ -1,48 +1,45 @@
-const html = document.querySelector('html');
-const themeTogglebutton = document.querySelector('#theme-toggle-button');
-const preferredTheme = window.localStorage.getItem('preferredTheme');
-const themeIcon = themeTogglebutton?.querySelector('#theme-icon');
-const moonIcon = themeTogglebutton?.querySelector('#moon-icon');
-const sunIcon = themeTogglebutton?.querySelector('#sun-icon');
+const htmlElement = document.querySelector('html');
+const toggleButton = document.querySelector('#theme-toggle-button') as HTMLButtonElement;
 
-if (preferredTheme) {
-  setTheme(preferredTheme);
-} else {
-  setTheme('light');
+type Theme = 'light' | 'dark';
+const PREFERRED_THEME = 'preferredTheme';
+
+function getPreferredTheme() {
+  return window.localStorage.getItem(PREFERRED_THEME);
 }
 
-// if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//   setTheme('dark');
-// } else {
-//   setTheme('light');
-// }
-
-function setTheme(theme: string) {
-  if (theme === 'dark') {
-    moonIcon?.classList.remove('hide');
-    sunIcon?.classList.add('hide');
-  } else {
-    sunIcon?.classList.remove('hide');
-    moonIcon?.classList.add('hide');
-  }
-  html?.setAttribute('data-theme', theme);
-  window.localStorage.setItem('preferredTheme', theme);
-}
-
-function getTheme() {
-  return html?.getAttribute('data-theme');
+function setPreferredThemeInLocalStorage(theme: Theme) {
+  window.localStorage.setItem(PREFERRED_THEME, theme);
 }
 
 function toggleTheme() {
-  const theme = getTheme();
+  const theme = getThemeAttribute() as Theme;
 
-  if (!theme) {
-    setTheme('dark');
-  } else if (theme === 'light') {
-    setTheme('dark');
+  if (theme === 'light') {
+    setPreferredThemeInLocalStorage('dark');
+    setThemeAttribute('dark');
   } else {
-    setTheme('light');
+    setPreferredThemeInLocalStorage('light');
+    setThemeAttribute('light');
   }
 }
 
-themeTogglebutton?.addEventListener('click', toggleTheme);
+function getThemeAttribute() {
+  return htmlElement?.getAttribute('data-theme');
+}
+
+function setThemeAttribute(theme: Theme) {
+  htmlElement?.setAttribute('data-theme', theme);
+  toggleButton?.setAttribute('data-theme', theme);
+}
+
+const preferredTheme = getPreferredTheme() as Theme | null;
+
+if (!preferredTheme) {
+  setPreferredThemeInLocalStorage('light'); // default to light
+  setThemeAttribute('light');
+} else {
+  setThemeAttribute(preferredTheme);
+}
+
+toggleButton?.addEventListener('click', toggleTheme);

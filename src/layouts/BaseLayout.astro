@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import CommonHead from '@components/meta/CommonHead.astro';
 import Header from '@components/ui/Header.astro';
 import SidePanel from '@components/ui/SidePanel.astro';
 import Footer from '@components/ui/Footer.astro';
@@ -13,10 +14,7 @@ const { pageTitle } = Astro.props;
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    <CommonHead />
     <title>{pageTitle} | Matt Millard</title>
   </head>
   <body>
@@ -27,8 +25,7 @@ const { pageTitle } = Astro.props;
         <slot />
       </div>
     </main>
-  </body>
-  <Footer />
+  </body><Footer />
 </html>
 
 <script>

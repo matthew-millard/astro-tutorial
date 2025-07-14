@@ -1,14 +1,37 @@
 .content-container {
   width: 100%;
   margin-inline: auto;
-}
-
-@media (min-width: 1250px) {
-  .content-container {
-    max-width: 72rem;
-  }
+  max-width: 60ch;
+  padding-inline: 1rem;
 }
 
 .ml-auto {
   margin-left: auto;
+}
+
+.mt-5 {
+  margin-top: calc(5 * 1rem);
+}
+
+.px-1 {
+  padding-inline: 1rem;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+.lead {
+  font-size: var(--step-1);
+  font-weight: var(--font-medium);
+  line-height: 1.1;
+  color: var(--text-muted) !important;
 }

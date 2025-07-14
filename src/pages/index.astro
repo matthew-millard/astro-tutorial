@@ -2,32 +2,50 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 ---
 
-<BaseLayout pageTitle="Welcome">
-  <h1>Welcome to my blog</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, impedit dignissimos blanditiis odio tenetur eos
-    dicta adipisci ab ut consectetur cupiditate libero est atque soluta, error deleniti aspernatur debitis molestiae!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam,
-    ratione error quam magni fugiat consequuntur quasi tempore laborum pariatur delectus aut, perferendis obcaecati.
-  </p>
-  <h2>Heading 2</h2>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, impedit dignissimos blanditiis odio tenetur eos
-    dicta adipisci ab ut consectetur cupiditate libero est atque soluta, error deleniti aspernatur debitis molestiae!
-  </p>
-  <h3>Heading 3</h3>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam,
-    ratione error quam magni fugiat consequuntur quasi tempore laborum pariatur delectus aut, perferendis obcaecati.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam,
-    ratione error quam magni fugiat consequuntur quasi tempore laborum pariatur delectus aut, perferendis obcaecati.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam,
-    ratione error quam magni fugiat consequuntur quasi tempore laborum pariatur delectus aut, perferendis obcaecati.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam,
-    ratione error quam magni fugiat consequuntur quasi tempore laborum pariatur delectus aut, perferendis obcaecati.
-  </p>
+<BaseLayout pageTitle="Welcome" pageDescription="Hey, I'm Matt and welcome to my web development blog.">
+  <div class="content-container">
+    <div class="hero-container">
+      <div class="hero-masthead">
+        <h1>Hello, I'm Matt Millard 👋</h1>
+        <img
+          class="aspect-square object-cover rounded-full"
+          src="https://res.cloudinary.com/hospohub/image/upload/v1729701116/users/cm27tzxle0002yx7r6g70j3m9/images/p9eola2ockkeewoqhkjf.jpg"
+          alt="Matt Millard"
+          srcset=""
+        />
+      </div>
+      <div class="stack-sm flow">
+        <p class="lead">I'm a web developer based in Ottawa, Canada 🇨🇦</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magni aspernatur, alias id non itaque quidem
+          aperiam ea reprehenderit vitae veritatis delectus facere assumenda doloribus quae corporis natus. Beatae,
+          minima.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .hero-container {
+      margin-block-start: var(--space-3xl);
+    }
+
+    .hero-masthead {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      /* background-color: aqua; */
+    }
+
+    .hero-masthead > h1 {
+      flex-grow: 1;
+    }
+
+    .hero-masthead > img {
+      box-sizing: content-box;
+      border: 4px solid var(--border-10);
+      max-width: 5rem;
+      max-height: 5rem;
+    }
+  </style>
 </BaseLayout>

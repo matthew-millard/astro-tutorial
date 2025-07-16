@@ -9,8 +9,16 @@
   margin-left: auto;
 }
 
+.italic {
+  font-style: italic;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
 .mt-5 {
-  margin-top: calc(5 * 1rem);
+  margin-top: 5rem;
 }
 
 .px-1 {
@@ -23,6 +31,14 @@
 
 .object-cover {
   object-fit: cover;
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.rounded-md {
+  border-radius: var(--radius-md);
 }
 
 .rounded-full {

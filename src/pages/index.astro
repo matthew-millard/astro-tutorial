@@ -1,51 +1,82 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <BaseLayout pageTitle="Welcome" pageDescription="Hey, I'm Matt and welcome to my web development blog.">
   <div class="content-container">
     <div class="hero-container">
-      <div class="hero-masthead">
-        <h1>Hello, I'm Matt Millard 👋</h1>
+      <section class="hero-masthead">
+        <div>
+          <h1>Hey Everyone</h1>
+          <p class="lead">My name is Matt and welcome to my blog.</p>
+        </div>
         <img
-          class="aspect-square object-cover rounded-full"
+          class="aspect-square object-cover rounded-full shadow-sm"
           src="https://res.cloudinary.com/hospohub/image/upload/v1729701116/users/cm27tzxle0002yx7r6g70j3m9/images/p9eola2ockkeewoqhkjf.jpg"
           alt="Matt Millard"
           srcset=""
         />
-      </div>
-      <div class="stack-sm flow">
-        <p class="lead">I'm a web developer based in Ottawa, Canada 🇨🇦</p>
+      </section>
+
+      <section class="stack-sm flow">
+        <h2>About This Blog</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magni aspernatur, alias id non itaque quidem
-          aperiam ea reprehenderit vitae veritatis delectus facere assumenda doloribus quae corporis natus. Beatae,
-          minima.
+          My goal with this blog is to share my coding journey with other developers-things like solutions I've found or
+          approaches that worked for me. By writing about what I learn, I hope to get a better handle on it myself.
         </p>
-      </div>
+        <p>
+          The reason I created this blog is because, as a junior developer, I usually find other developers’ blogs and
+          official docs more helpful than relying on LLMs. Partly because I don’t want to miss out on the learning
+          opportunity of figuring things out myself, and I like seeing different takes on the same problem.
+        </p>
+      </section>
+
+      <section class="flow">
+        <h3>What You'll Find Here</h3>
+        <p>
+          I’ll mostly be writing about full stack web development-things like TypeScript, React, Next.js, Remix, and
+          Astro.
+        </p>
+        <p>If you’re learning web development too, hopefully you’ll find something here that helps.</p>
+      </section>
+
+      <section class="flow">
+        <h2>About Me</h2>
+        <img
+          class="rounded-md shadow-sm"
+          src="https://res.cloudinary.com/hospohub/image/upload/v1743565180/linkedin_2500px-3_l7jkux.jpg"
+          alt="Environmental portrait of Matt by his computer."
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sunt aspernatur commodi ipsa quisquam asperiores
+          in rem voluptatum laudantium veniam fuga error, quidem tempora eaque incidunt? Incidunt nulla necessitatibus
+          sit.
+        </p>
+      </section>
     </div>
   </div>
-
-  <style>
-    .hero-container {
-      margin-block-start: var(--space-3xl);
-    }
-
-    .hero-masthead {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-      /* background-color: aqua; */
-    }
-
-    .hero-masthead > h1 {
-      flex-grow: 1;
-    }
-
-    .hero-masthead > img {
-      box-sizing: content-box;
-      border: 4px solid var(--border-10);
-      max-width: 5rem;
-      max-height: 5rem;
-    }
-  </style>
 </BaseLayout>
+
+<style>
+  .hero-container {
+    margin-block-start: var(--space-3xl);
+  }
+
+  .hero-masthead {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .hero-masthead > div {
+    flex-grow: 1;
+  }
+
+  .hero-masthead > img {
+    margin-block-start: 1.5rem;
+    box-sizing: content-box;
+    border: 4px solid var(--border-10);
+    max-width: 3rem;
+    max-height: 3rem;
+  }
+</style>

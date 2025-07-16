@@ -48,11 +48,6 @@
   margin-block-start: var(--space-xl);
 }
 
-[class^='stack'] > * {
-  /* top and bottom margins in horizontal-tb writing mode */
-  margin-block: 0rem;
-}
-
 .stack-lg {
   padding-block: 2rem;
 }

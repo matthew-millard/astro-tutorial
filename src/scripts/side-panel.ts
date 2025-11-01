@@ -2,7 +2,7 @@ const sidePanelButton = document.querySelector('#side-panel-button') as HTMLButt
 const sidePanelEl = document.querySelector('#side-panel') as HTMLDivElement;
 const sidePanelMaskEl = document.querySelector('#side-panel-mask') as HTMLDivElement;
 
-function toggleSidePanel() {
+export function toggleSidePanel() {
   const isOpen = sidePanelEl.hasAttribute('side-panel-open');
   sidePanelEl.toggleAttribute('side-panel-open');
 

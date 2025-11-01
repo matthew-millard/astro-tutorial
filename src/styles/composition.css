@@ -40,11 +40,11 @@
   margin-block-start: var(--space-xs);
 }
 
-.flow > [class^='lead'] {
+.flow > [class^="lead"] {
   margin-block-end: 1rem;
 }
 
-.flow > [class*='article-navigation'] {
+.flow > [class*="post-navigation"] {
   margin-block-start: var(--space-xl);
 }
 
@@ -64,7 +64,7 @@
   display: grid;
 }
 
-.grid[data-layout='split'] {
+.grid[data-layout="split"] {
   grid-template-columns: repeat(2, 1fr);
 }
 

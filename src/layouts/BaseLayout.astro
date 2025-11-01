@@ -1,10 +1,10 @@
 ---
-import '../styles/global.css';
-import CommonHead from '@components/meta/CommonHead.astro';
-import Header from '@components/ui/Header.astro';
-import SidePanel from '@components/ui/SidePanel.astro';
-import Footer from '@components/ui/Footer.astro';
-import ArticleNavigation from '@components/ui/ArticleNavigation.astro';
+import "../styles/global.css";
+import CommonHead from "@components/meta/CommonHead.astro";
+import Header from "@components/ui/Header.astro";
+import SidePanel from "@components/ui/SidePanel.astro";
+import Footer from "@components/ui/Footer.astro";
+import BlogNavigation from "@components/ui/BlogNavigation.astro";
 
 interface Props {
   pageTitle: string;
@@ -30,5 +30,5 @@ const { pageTitle, pageDescription } = Astro.props;
 </html>
 
 <script>
-  import '@scripts/side-panel';
+  import "@scripts/side-panel";
 </script>

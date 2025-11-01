@@ -1,0 +1,65 @@
+---
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+
+const blog = await getCollection("blog");
+const sortedBlogPosts = blog.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const currentPostIndex = sortedBlogPosts.findIndex(
+  (post) => post.id === Astro.params.slug
+);
+const previousPost =
+  currentPostIndex > 0 ? sortedBlogPosts[currentPostIndex - 1] : undefined;
+const nextPost =
+  currentPostIndex < sortedBlogPosts.length - 1
+    ? sortedBlogPosts[currentPostIndex + 1]
+    : undefined;
+---
+
+{
+  (previousPost || nextPost) && (
+    <nav class="post-navigation">
+      {previousPost && (
+        <span class="nav-link-container">
+          <Icon name="arrow-left" />
+          <a href={`/posts/${previousPost.id}`}>{previousPost.data.title}</a>
+        </span>
+      )}
+      {nextPost && (
+        <span class="nav-link-container ml-auto">
+          <a href={`/posts/${nextPost.id}`}>{nextPost.data.title}</a>
+          <Icon name="arrow-right" />
+        </span>
+      )}
+    </nav>
+  )
+}
+
+<style>
+  .post-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-10);
+  }
+
+  .nav-link-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  a {
+    font-size: var(--step-0);
+    font-weight: var(--font-medium);
+  }
+
+  @media (min-width: 78rem) {
+    a {
+      font-size: var(--step-1);
+    }
+  }
+</style>

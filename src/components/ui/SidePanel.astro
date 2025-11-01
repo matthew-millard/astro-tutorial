@@ -1,22 +1,22 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-const articles = await getCollection('blog').then(articles =>
-  articles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const posts = await getCollection("blog").then((posts) =>
+  posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 );
 ---
 
 <aside id="side-panel" class="stack-lg">
-  <h3>Articles</h3>
+  <h4>Posts</h4>
   <ul class="stack-sm">
     {
-      articles.map(article => (
+      posts.map((post) => (
         <a
-          href={`/articles/${article.id}`}
-          class="article-link"
-          aria-current={Astro.params.slug === article.id ? 'page' : 'false'}
+          href={`/posts/${post.id}`}
+          class="post-link"
+          aria-current={Astro.params.slug === post.id ? "page" : "false"}
         >
-          <li class="article-title">{article.data.title}</li>
+          <li class="post-title">{post.data.title}</li>
         </a>
       ))
     }
@@ -65,22 +65,22 @@ const articles = await getCollection('blog').then(articles =>
     inset: 0;
   }
 
-  h3,
-  .article-title {
+  h4,
+  .post-title {
     padding-inline: 1rem;
   }
 
-  .article-title {
+  .post-title {
     font-size: var(--step-0);
     font-weight: var(--font-normal);
     line-height: 1.3;
     color: var(--text-muted);
   }
 
-  .article-title:hover {
+  .post-title:hover {
     color: var(--text);
   }
-  .article-link {
+  .post-link {
     display: inline-block;
     width: 100%;
     background-color: var(--background-accent);
@@ -88,15 +88,15 @@ const articles = await getCollection('blog').then(articles =>
     transition: all 0.2s ease;
   }
 
-  .article-link:hover {
+  .post-link:hover {
     background-color: var(--background-hover);
   }
 
-  a[aria-current='page'] {
+  a[aria-current="page"] {
     border-left-color: var(--text-link-active);
   }
 
-  a[aria-current='page'] .article-title {
+  a[aria-current="page"] .post-title {
     font-weight: var(--font-medium);
     color: var(--text-link-active);
   }

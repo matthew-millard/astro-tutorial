@@ -1,13 +1,17 @@
 ---
-title: This Is The Third Article
+title: This Is The Third Post
 pubDate: 2025-07-12
-description: This is a description of the third article
+description: This is a description of the third post
 author: Matt Millard
-image: { url: https://images.unsplash.com/photo-1555066931-4365d14bab8c, alt: This is alt text for the image }
+image:
+  {
+    url: https://images.unsplash.com/photo-1555066931-4365d14bab8c,
+    alt: This is alt text for the image,
+  }
 tags: [Web development, Testing, Typescript]
 ---
 
-# This Is The Third Article
+# This Is The Third Post
 
 ## This is a H2 heading
 
@@ -22,7 +26,7 @@ Ratione error quam magni fugiat consequuntur quasi tempore laborum pariatur dele
 ```js
 // Javascript code with syntax highlighting.
 var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l);
+  dateformat.i18n = require("./lang/" + l);
   return true;
 };
 ```

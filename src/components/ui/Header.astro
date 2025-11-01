@@ -1,8 +1,8 @@
 ---
-import Logo from '@components/ui/Logo.astro';
-import Button from '@components/ui/Button.astro';
-import { Icon } from 'astro-icon/components';
-import ThemeToggle from './ThemeToggle.astro';
+import Logo from "@components/ui/Logo.astro";
+import Button from "@components/ui/Button.astro";
+import { Icon } from "astro-icon/components";
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <header>
@@ -10,7 +10,12 @@ import ThemeToggle from './ThemeToggle.astro';
 
   <div class="button-group">
     <ThemeToggle />
-    <Button id="side-panel-button" variant="ghost" data-panel-state="closed" aria-label="Toggle side panel">
+    <Button
+      id="side-panel-button"
+      variant="ghost"
+      data-panel-state="closed"
+      aria-label="Toggle side panel"
+    >
       <Icon name="panel-left-open" class="panel-open-icon" />
       <Icon name="panel-left-close" class="panel-close-icon" />
     </Button>
@@ -19,11 +24,11 @@ import ThemeToggle from './ThemeToggle.astro';
 
 <style>
   header {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 20;
     height: 5rem;
     display: flex;
     justify-content: space-between;
@@ -48,11 +53,11 @@ import ThemeToggle from './ThemeToggle.astro';
     display: none;
   }
 
-  #side-panel-button[data-panel-state='open'] .panel-close-icon {
+  #side-panel-button[data-panel-state="open"] .panel-close-icon {
     display: block;
   }
 
-  #side-panel-button[data-panel-state='open'] .panel-open-icon {
+  #side-panel-button[data-panel-state="open"] .panel-open-icon {
     display: none;
   }
 

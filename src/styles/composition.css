@@ -48,16 +48,16 @@
   margin-block-start: var(--space-xl);
 }
 
-.stack-lg {
-  padding-block: 2rem;
-}
-
 .stack-sm {
   margin-block-start: 2rem;
 }
 
 .stack-sm > * > * {
   padding-block: 1rem;
+}
+
+.stack-md > * > * {
+  padding-block: 2rem;
 }
 
 .grid {

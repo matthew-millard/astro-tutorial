@@ -13,6 +13,12 @@
   font-style: italic;
 }
 
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .mt-2 {
   margin-top: 2rem;
 }
@@ -23,6 +29,11 @@
 
 .px-1 {
   padding-inline: 1rem;
+}
+
+.p-1 {
+  padding-inline: 1rem;
+  padding-block: 1rem;
 }
 
 .aspect-square {
@@ -50,4 +61,13 @@
   font-weight: var(--font-medium);
   line-height: 1.1;
   color: var(--text-muted) !important;
+}
+
+.time-ago {
+  font-size: small;
+  color: var(--color-500);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--border-10);
 }

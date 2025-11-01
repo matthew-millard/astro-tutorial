@@ -42,7 +42,7 @@
   --font-black: 900;
 
   /* colour palette */
-  --color-950: rgb(10 10 10);
+  --color-950: rgb(10, 10, 10);
   --color-900: rgb(23 23 23);
   --color-800: rgb(38 38 38);
   --color-700: rgb(64 64 64);
@@ -101,10 +101,11 @@
   --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-:root[data-theme='dark'] {
+:root[data-theme="dark"] {
   --background: var(--color-950);
   --background-accent: var(--color-950);
   --background-hover: var(--color-900);

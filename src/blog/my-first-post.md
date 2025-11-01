@@ -1,13 +1,17 @@
 ---
-title: 'My First Article'
+title: "My First Post"
 pubDate: 2022-07-02
-description: 'This is a description of my first article'
-author: 'Matt Millard'
-image: { url: https://images.unsplash.com/photo-1555066931-4365d14bab8c, alt: 'This is alt text for the image' }
-tags: ['Web development', 'Testing', 'Typescript']
+description: "This is a description of my first Post"
+author: "Matt Millard"
+image:
+  {
+    url: https://images.unsplash.com/photo-1555066931-4365d14bab8c,
+    alt: "This is alt text for the image",
+  }
+tags: ["Web development", "Testing", "Typescript"]
 ---
 
-# My First Article
+# My First Post
 
 ## This is a H2 heading
 
@@ -22,7 +26,7 @@ Ratione error quam magni fugiat consequuntur quasi tempore laborum pariatur dele
 ```js
 // Javascript code with syntax highlighting.
 var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l);
+  dateformat.i18n = require("./lang/" + l);
   return true;
 };
 ```

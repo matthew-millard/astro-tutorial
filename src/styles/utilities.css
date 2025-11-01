@@ -1,8 +1,14 @@
 .content-container {
   width: 100%;
   margin-inline: auto;
-  max-width: 60ch;
+  max-width: 80ch;
   padding-inline: 1rem;
+}
+
+@media (min-width: 78rem) {
+  .content-container {
+    padding-inline: 4rem;
+  }
 }
 
 .ml-auto {
@@ -70,4 +76,8 @@
 
 .border-bottom {
   border-bottom: 1px solid var(--border-10);
+}
+
+.arrow {
+  color: var(--text-muted);
 }

@@ -24,7 +24,9 @@ const { pageTitle, pageDescription } = Astro.props;
     <Header />
     <SidePanel />
     <main class="page">
-      <slot />
+      <div class="flow content-container">
+        <slot />
+      </div>
     </main>
   </body><Footer />
 </html>

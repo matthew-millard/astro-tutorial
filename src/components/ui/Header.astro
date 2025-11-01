@@ -6,19 +6,20 @@ import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <header>
-  <Logo />
-
-  <div class="button-group">
-    <ThemeToggle />
-    <Button
-      id="side-panel-button"
-      variant="ghost"
-      data-panel-state="closed"
-      aria-label="Toggle side panel"
-    >
-      <Icon name="panel-left-open" class="panel-open-icon" />
-      <Icon name="panel-left-close" class="panel-close-icon" />
-    </Button>
+  <div class="header-container">
+    <Logo />
+    <div class="button-group">
+      <ThemeToggle />
+      <Button
+        id="side-panel-button"
+        variant="ghost"
+        data-panel-state="closed"
+        aria-label="Toggle side panel"
+      >
+        <Icon name="panel-left-open" class="panel-open-icon" />
+        <Icon name="panel-left-close" class="panel-close-icon" />
+      </Button>
+    </div>
   </div>
 </header>
 
@@ -30,13 +31,26 @@ import ThemeToggle from "./ThemeToggle.astro";
     right: 0;
     z-index: 20;
     height: 5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-block: 0.75rem;
     padding-inline: 1rem;
     background-color: var(--background-accent);
     border-bottom: 1px solid var(--border-10);
+  }
+
+  .header-container {
+    height: 100%;
+    max-width: 80ch;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: 78rem) {
+    .header-container {
+      max-width: 100%;
+      margin-inline: 0;
+    }
   }
 
   .button-group {

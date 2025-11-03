@@ -1,0 +1,37 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button
+  id="side-panel-button"
+  data-panel-state="closed"
+  aria-label="Toggle side panel"
+  class="has-icon"
+>
+  <Icon name="panel-left-open" class="panel-open-icon icon" />
+  <Icon name="panel-left-close" class="panel-close-icon icon" />
+</button>
+
+<style>
+  .panel-open-icon {
+    display: block;
+  }
+
+  .panel-close-icon {
+    display: none;
+  }
+
+  #side-panel-button[data-panel-state="open"] .panel-close-icon {
+    display: block;
+  }
+
+  #side-panel-button[data-panel-state="open"] .panel-open-icon {
+    display: none;
+  }
+
+  @media (min-width: 78rem) {
+    #side-panel-button {
+      display: none;
+    }
+  }
+</style>

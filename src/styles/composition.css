@@ -2,16 +2,20 @@
   padding-top: 5rem;
   padding-bottom: 2rem;
 }
+
+.page-container {
+  padding: 1rem;
+}
 @media (min-width: 78rem) {
   .page {
     padding-left: 20rem;
   }
-}
 
-.page-container {
-  padding-top: 2rem;
-  padding-inline: 4rem;
-  max-width: 80ch;
+  .page-container {
+    padding-top: 2rem;
+    padding-inline: 4rem;
+    max-width: 80ch;
+  }
 }
 
 .repel {

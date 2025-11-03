@@ -10,7 +10,8 @@
       "@data/*": ["src/data/*"],
       "@scripts/*": ["src/scripts/*"],
       "@tests/*": ["src/tests/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@images/*": ["src/images/*"]
     }
   }
 }

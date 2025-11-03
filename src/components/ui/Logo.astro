@@ -1,18 +1,30 @@
-<a href="/">
-  <div class="domain-name">
-    mattmillard<span class="top-level-domain">.dev</span>
-  </div>
-</a>
+<div>
+  <a href="/">
+    <span>by</span>
+    <img
+      src="/src/images/mattmillard_headshot_1x1.jpg"
+      alt="Matt Millard"
+      srcset=""
+    />
+  </a>
+</div>
 
 <style>
-  .domain-name {
-    color: var(--color-text-primary);
-    font-size: var(--step-1);
-    font-weight: var(--font-black);
+  a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
     font-family: "Crimson Pro";
+    font-size: var(--step-2);
+    font-style: italic;
   }
-
-  .top-level-domain {
-    color: var(--color-accent);
+  img {
+    width: var(--step-4);
+    height: var(--step-4);
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
   }
 </style>

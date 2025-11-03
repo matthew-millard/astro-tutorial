@@ -1,24 +1,15 @@
 ---
 import Logo from "@components/ui/Logo.astro";
-import Button from "@components/ui/Button.astro";
-import { Icon } from "astro-icon/components";
 import ThemeToggle from "./ThemeToggle.astro";
+import SidePanelToggle from "./SidePanelToggle.astro";
 ---
 
 <header>
-  <div class="header-container">
+  <div class="repel header-container">
     <Logo />
     <div class="button-group">
       <ThemeToggle />
-      <Button
-        id="side-panel-button"
-        variant="ghost"
-        data-panel-state="closed"
-        aria-label="Toggle side panel"
-      >
-        <Icon name="panel-left-open" class="panel-open-icon" />
-        <Icon name="panel-left-close" class="panel-close-icon" />
-      </Button>
+      <SidePanelToggle />
     </div>
   </div>
 </header>
@@ -29,55 +20,27 @@ import ThemeToggle from "./ThemeToggle.astro";
     top: 0;
     left: 0;
     right: 0;
-    z-index: 20;
+    z-index: 90;
     height: 5rem;
-    padding-block: 0.75rem;
     padding-inline: 1rem;
-    background-color: var(--background-accent);
-    border-bottom: 1px solid var(--border-10);
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  @media (min-width: 78rem) {
+    header {
+      padding-inline: 2rem;
+    }
   }
 
   .header-container {
     height: 100%;
-    max-width: 80ch;
     margin-inline: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  @media (min-width: 78rem) {
-    .header-container {
-      max-width: 100%;
-      margin-inline: 0;
-    }
   }
 
   .button-group {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: center;
-  }
-
-  .panel-open-icon {
-    display: block;
-  }
-
-  .panel-close-icon {
-    display: none;
-  }
-
-  #side-panel-button[data-panel-state="open"] .panel-close-icon {
-    display: block;
-  }
-
-  #side-panel-button[data-panel-state="open"] .panel-open-icon {
-    display: none;
-  }
-
-  @media (min-width: 78rem) {
-    #side-panel-button {
-      display: none;
-    }
   }
 </style>

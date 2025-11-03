@@ -1,0 +1,66 @@
+---
+interface Props {
+  placeholder?: string;
+}
+
+const { placeholder = "Search" } = Astro.props;
+---
+
+<input
+  type="search"
+  id="side-panel-search"
+  placeholder={placeholder}
+  class="search-input"
+/>
+
+<style>
+  input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--step--1);
+  }
+
+  input:focus {
+    outline: 1px solid var(--color-accent);
+  }
+</style>
+
+<script>
+  const searchInput = document.getElementById(
+    "side-panel-search"
+  ) as HTMLInputElement;
+  const postLinks = document.querySelectorAll(
+    "[data-searchable]"
+  ) as NodeListOf<HTMLAnchorElement>;
+  const noResults = document.getElementById(
+    "no-results"
+  ) as HTMLParagraphElement;
+
+  function handleSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    postLinks.forEach((link) => {
+      const title = link.getAttribute("data-title") || "";
+
+      if (title.includes(query)) {
+        link.style.display = "";
+        visibleCount++;
+      } else {
+        link.style.display = "none";
+      }
+    });
+
+    if (visibleCount === 0 && query !== "") {
+      noResults.style.display = "block";
+    } else {
+      noResults.style.display = "none";
+    }
+  }
+
+  searchInput?.addEventListener("input", handleSearch);
+</script>

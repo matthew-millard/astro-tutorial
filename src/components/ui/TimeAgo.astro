@@ -1,0 +1,18 @@
+---
+import { timeAgo } from "@utils/time-ago";
+
+interface Props {
+  pubDate: Date;
+}
+const { pubDate } = Astro.props;
+---
+
+<span class="time-ago">{timeAgo(pubDate)}</span>
+
+<style>
+  .time-ago {
+    display: inline-block;
+    font-size: small;
+    color: var(--color-text-secondary);
+  }
+</style>

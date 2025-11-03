@@ -24,12 +24,12 @@ const { frontmatter } = Astro.props;
   <body>
     <Header />
     <SidePanel />
-    <main class="page">
-      <div class="flow content-container">
+    <div class="page">
+      <div class="page-container">
         <slot />
         <BlogNavigation />
       </div>
-    </main>
+    </div>
   </body><Footer />
 </html>
 

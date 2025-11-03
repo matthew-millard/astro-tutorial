@@ -6,52 +6,43 @@
 
 /* Global styles 👇 */
 :root {
-  background: var(--background);
+  background: var(--color-bg);
 }
 
 body {
-  color: var(--text);
-  font-family: "Söhne";
+  color: var(--color-text-primary);
+  font-family: "Inter";
   font-size: var(--step-0);
 }
 
 h1 {
   font-size: var(--step-5);
-  /* margin-block-start: var(--space-xl); */
 }
 
 h2 {
   font-size: var(--step-4);
-  /* margin-block-start: var(--space-l); */
 }
 
 h3 {
   font-size: var(--step-3);
-  /* margin-block-start: var(--space-m); */
 }
 
 h4 {
   font-size: var(--step-1);
-  font-weight: var(--font-normal);
-  color: var(--green-400);
 }
 
 p {
-  /* margin-block-start: var(--space-xs); */
-}
-
-p:first-of-type {
-  /* margin-block-start: var(--space-l); */
+  font-size: var(--step-0);
 }
 
 a {
   text-decoration: none;
-  color: var(--text-link);
+  color: var(--color-link);
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--text-link-hover);
+  color: var(--color-link-hover);
 }
 
 ul {
@@ -61,4 +52,24 @@ ul {
 
 pre {
   padding: 1.5rem;
+}
+
+button.has-icon {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 0.5rem;
+  line-height: 0;
+  color: var(--toggle-fg);
+  background-color: var(--toggle-bg);
+  border: 1px solid var(--toggle-border);
+  border-radius: var(--radius-full);
+  font-size: var(--icon-base);
+  transition-property: color, background-color;
+  transition-duration: 200ms;
+}
+
+button.has-icon:hover {
+  color: var(--toggle-fg-hover);
+  background-color: var(--toggle-bg-hover);
 }

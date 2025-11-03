@@ -25,13 +25,45 @@ const { frontmatter } = Astro.props;
     <Header />
     <SidePanel />
     <div class="page">
-      <div class="page-container">
+      <main>
         <slot />
+      </main>
+      <footer>
         <BlogNavigation />
-      </div>
+      </footer>
     </div>
-  </body><Footer />
+  </body>
 </html>
+
+<style>
+  .page {
+    margin-top: 5rem;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    min-height: calc(100dvh - 5rem);
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 78rem) {
+    .page {
+      padding-block: 2rem;
+      padding-left: 24rem;
+      padding-right: 2rem;
+      /* background-color: aqua; */
+    }
+  }
+
+  main {
+    flex-grow: 1;
+    max-width: 80ch;
+    /* background-color: pink; */
+  }
+
+  footer {
+    /* background-color: teal; */
+  }
+</style>
 
 <script>
   import "@scripts/side-panel";

@@ -22,7 +22,7 @@ const nextPost =
   (previousPost || nextPost) && (
     <nav class="post-navigation">
       {previousPost && (
-        <span class="nav-link-container">
+        <span class="nav-link-container mr-auto">
           <Icon name="arrow-left" class="arrow" />
           <a href={`/posts/${previousPost.id}`} class="truncate">
             {previousPost.data.title}
@@ -30,7 +30,7 @@ const nextPost =
         </span>
       )}
       {nextPost && (
-        <span class="nav-link-container">
+        <span class="nav-link-container ml-auto">
           <a href={`/posts/${nextPost.id}`} class="truncate">
             {nextPost.data.title}
           </a>

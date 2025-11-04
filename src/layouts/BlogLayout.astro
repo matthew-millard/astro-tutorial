@@ -6,6 +6,7 @@ import SidePanel from "@components/ui/SidePanel.astro";
 import Footer from "@components/ui/Footer.astro";
 import type { InferEntrySchema } from "astro:content";
 import BlogNavigation from "@components/ui/BlogNavigation.astro";
+import VerticalIconBar from "@components/ui/VerticalIconBar.astro";
 
 interface Props {
   frontmatter: InferEntrySchema<"blog">;
@@ -25,9 +26,13 @@ const { frontmatter } = Astro.props;
     <Header />
     <SidePanel />
     <div class="page">
-      <main>
-        <slot />
-      </main>
+      <div class="content-wrapper">
+        <main>
+          <slot />
+        </main>
+
+        <VerticalIconBar />
+      </div>
       <footer>
         <BlogNavigation />
       </footer>
@@ -37,6 +42,7 @@ const { frontmatter } = Astro.props;
 
 <style>
   .page {
+    position: relative;
     margin-top: 5rem;
     padding-block: 2rem;
     padding-inline: 1rem;
@@ -45,19 +51,30 @@ const { frontmatter } = Astro.props;
     flex-direction: column;
   }
 
+  main {
+    margin-inline: auto;
+    flex-grow: 1;
+    min-width: 0;
+    max-width: 75ch;
+  }
+
   @media (min-width: 78rem) {
     .page {
       padding-block: 2rem;
-      padding-left: 24rem;
+      padding-left: 22rem;
       padding-right: 2rem;
       /* background-color: aqua; */
     }
+    main {
+      margin-inline: 0;
+    }
   }
 
-  main {
+  .content-wrapper {
+    display: flex;
     flex-grow: 1;
-    max-width: 80ch;
-    /* background-color: pink; */
+    gap: 2rem;
+    align-items: flex-start;
   }
 
   footer {

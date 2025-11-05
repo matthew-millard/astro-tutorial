@@ -4,6 +4,7 @@ import CommonHead from "@components/meta/CommonHead.astro";
 import Header from "@components/ui/Header.astro";
 import SidePanel from "@components/ui/SidePanel.astro";
 import Footer from "@components/ui/Footer.astro";
+import VerticalIconBar from "@components/ui/VerticalIconBar.astro";
 
 interface Props {
   pageTitle: string;
@@ -22,11 +23,14 @@ const { pageTitle, pageDescription } = Astro.props;
   <body>
     <Header />
     <SidePanel />
-    <main class="page">
-      <div>
-        <slot />
+    <div class="page">
+      <div class="content-wrapper">
+        <main class="main-container prose flow">
+          <slot />
+        </main>
+        <VerticalIconBar />
       </div>
-    </main>
+    </div>
   </body><Footer />
 </html>
 

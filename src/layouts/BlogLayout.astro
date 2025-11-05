@@ -3,7 +3,6 @@ import "../styles/global.css";
 import CommonHead from "@components/meta/CommonHead.astro";
 import Header from "@components/ui/Header.astro";
 import SidePanel from "@components/ui/SidePanel.astro";
-import Footer from "@components/ui/Footer.astro";
 import type { InferEntrySchema } from "astro:content";
 import BlogNavigation from "@components/ui/BlogNavigation.astro";
 import VerticalIconBar from "@components/ui/VerticalIconBar.astro";
@@ -27,7 +26,7 @@ const { frontmatter } = Astro.props;
     <SidePanel />
     <div class="page">
       <div class="content-wrapper">
-        <main>
+        <main class="main-container prose flow">
           <slot />
         </main>
 
@@ -39,48 +38,6 @@ const { frontmatter } = Astro.props;
     </div>
   </body>
 </html>
-
-<style>
-  .page {
-    position: relative;
-    margin-top: 5rem;
-    padding-block: 2rem;
-    padding-inline: 1rem;
-    min-height: calc(100dvh - 5rem);
-    display: flex;
-    flex-direction: column;
-  }
-
-  main {
-    margin-inline: auto;
-    flex-grow: 1;
-    min-width: 0;
-    max-width: 75ch;
-  }
-
-  @media (min-width: 78rem) {
-    .page {
-      padding-block: 2rem;
-      padding-left: 22rem;
-      padding-right: 2rem;
-      /* background-color: aqua; */
-    }
-    main {
-      margin-inline: 0;
-    }
-  }
-
-  .content-wrapper {
-    display: flex;
-    flex-grow: 1;
-    gap: 2rem;
-    align-items: flex-start;
-  }
-
-  footer {
-    /* background-color: teal; */
-  }
-</style>
 
 <script>
   import "@scripts/side-panel";

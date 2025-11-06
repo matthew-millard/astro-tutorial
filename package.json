@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "astro": "^5.11.0",
-    "astro-icon": "^1.1.5"
+    "astro-icon": "^1.1.5",
+    "date-fns": "^4.1.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",

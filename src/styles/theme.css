@@ -38,6 +38,9 @@
   --font-extrabold: 800;
   --font-black: 900;
 
+  /* text decorations */
+  --underline: 0.125rem;
+
   /* border radius  */
   --radius-xs: 0.125rem;
   --radius-sm: 0.25rem;

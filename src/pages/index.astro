@@ -1,12 +1,24 @@
 ---
+import BlogCard from "@components/ui/BlogCard.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
 ---
 
 <BaseLayout
   pageTitle="Welcome"
   pageDescription="Hey, I'm Matt and welcome to my web development blog."
 >
-  <h1>Hi I'm Matt, welcome to my coding blog</h1>
+  <h1>I build things on the web and write about what I learn along the way.</h1>
+  <h2 class="underline">Recent Posts</h2>
+
+  <div class="cards-container stack-lg">
+    {posts.map((post) => <BlogCard post={post} />)}
+  </div>
 </BaseLayout>
 
-<style></style>
+<style>
+  .cards-container {
+  }
+</style>

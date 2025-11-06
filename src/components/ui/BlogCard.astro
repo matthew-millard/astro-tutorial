@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from "astro:content";
+import PubDate from "./PubDate.astro";
+import Tag from "./Tag.astro";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { title, description, image, tags, pubDate } = post.data;
+---
+
+<div class="card-container">
+  <img src={image.url} alt={image.alt} srcset="" loading="lazy" />
+  <div class="card-body">
+    <div class="card-meta">
+      <PubDate date={pubDate} />
+      <div class="card-tags">
+        {tags.map((tag) => <Tag tag={tag} />)}
+      </div>
+    </div>
+    <div class="card-text">
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card-container {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+  }
+
+  .card-body {
+  }
+  .card-meta {
+  }
+
+  .card-text {
+  }
+</style>

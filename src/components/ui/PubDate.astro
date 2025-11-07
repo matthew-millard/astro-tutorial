@@ -8,6 +8,10 @@ interface Props {
 const { date } = Astro.props;
 ---
 
-<p>{formatDate(date)}</p>
+<p class="pub-date">{formatDate(date)}</p>
 
-<style></style>
+<style>
+  .pub-date {
+    font-size: var(--step--1);
+  }
+</style>

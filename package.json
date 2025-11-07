@@ -12,11 +12,13 @@
   "dependencies": {
     "astro": "^5.11.0",
     "astro-icon": "^1.1.5",
-    "date-fns": "^4.1.0"
+    "date-fns": "^4.1.0",
+    "slug": "^11.0.1"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
+    "@types/slug": "^5.0.9",
     "happy-dom": "^18.0.1",
     "vitest": "^3.2.4"
   }

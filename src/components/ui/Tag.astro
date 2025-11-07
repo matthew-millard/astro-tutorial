@@ -1,24 +1,28 @@
 ---
+import { generateSlug } from "@utils/generate-slug";
 interface Props {
   tag: string;
 }
 
 const { tag } = Astro.props;
+const categoryUrl = generateSlug(tag);
 ---
 
-<p class="tag">{tag}</p>
+<!-- Todo: need to come up with a category route -->
+<a href={`/${categoryUrl}`}>
+  <p class="tag">{tag}</p>
+</a>
 
 <style>
   .tag {
+    width: max-content;
+    padding: 0.25rem 0.5rem;
     white-space: nowrap;
-    padding: 0.375rem;
-    display: grid;
-    line-height: 1;
-    text-align: center;
-    font-size: 14px;
     font-weight: var(--font-normal);
+    font-size: var(--step--1);
+    text-align: center;
     background-color: var(--color-tag-bg);
     border: 1px solid var(--color-tag-border);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
   }
 </style>

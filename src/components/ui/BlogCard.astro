@@ -8,16 +8,16 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, description, image, tags, pubDate } = post.data;
+const { title, description, image, tag, pubDate } = post.data;
 ---
 
 <div class="card-container">
   <img src={image.url} alt={image.alt} srcset="" loading="lazy" />
-  <div class="card-body">
+  <div class="card-body flow">
     <div class="card-meta">
       <PubDate date={pubDate} />
-      <div class="card-tags">
-        {tags.map((tag) => <Tag tag={tag} />)}
+      <div class="card-tag">
+        <Tag tag={tag} />
       </div>
     </div>
     <div class="card-text">
@@ -35,10 +35,20 @@ const { title, description, image, tags, pubDate } = post.data;
   }
 
   .card-body {
+    padding: 1.5rem 1rem;
   }
   .card-meta {
+    /* margin-top: rem; */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* background-color: darkseagreen; */
   }
 
-  .card-text {
+  .card-tag {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 </style>

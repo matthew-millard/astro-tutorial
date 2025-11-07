@@ -8,7 +8,7 @@ image:
     url: https://images.unsplash.com/photo-1555066931-4365d14bab8c,
     alt: "This is alt text for the image",
   }
-tags: ["Web development", "Testing", "Typescript"]
+tag: "Web development"
 ---
 
 # My First Post

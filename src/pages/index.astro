@@ -1,5 +1,6 @@
 ---
 import BlogCard from "@components/ui/BlogCard.astro";
+import Divider from "@components/ui/Divider.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
@@ -19,6 +20,9 @@ const posts = await getCollection("blog");
 </BaseLayout>
 
 <style>
-  .cards-container {
-  }
+  /* @media (min-width: 78rem) {
+    .cards-container {
+      --space: 4rem;
+    }
+  } */
 </style>

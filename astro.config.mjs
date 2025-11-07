@@ -6,7 +6,7 @@ import icon from 'astro-icon';
 export default defineConfig({
   markdown: {
     shikiConfig: {
-      theme: 'aurora-x',
+      theme: 'everforest-dark',
     },
   },
   integrations: [icon()],

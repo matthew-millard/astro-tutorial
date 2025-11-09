@@ -14,7 +14,8 @@
 
 /* Set core body defaults */
 body {
-  line-height: 1.5;
+  --line-height: 1.5;
+  line-height: var(--line-height);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -29,11 +30,17 @@ label {
   line-height: 1.1;
 }
 
-h1,
-h2,
+h1 {
+  font-weight: var(--font-bold);
+}
+
+h2 {
+  font-weight: var(--font-semibold);
+}
+
 h3,
 h4 {
-  font-weight: var(--font-semibold);
+  font-weight: var(--font-medium);
 }
 
 /* Avoid text overflows */
@@ -52,7 +59,7 @@ p {
   text-wrap: pretty;
   color: var(--color-text-primary);
   font-family: "Inter";
-  font-weight: var(--font-medium);
+  font-weight: var(--font-normal);
 }
 
 h1,

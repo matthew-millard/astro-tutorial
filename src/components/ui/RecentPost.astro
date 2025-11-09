@@ -1,0 +1,99 @@
+---
+import type { CollectionEntry } from "astro:content";
+import PubDate from "./PubDate.astro";
+import Tag from "./Tag.astro";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { title, description, image, tag, pubDate } = post.data;
+const slug = post.id;
+---
+
+<article class="post-container">
+  <a class="shrink-0" href={`/posts/${slug}`}>
+    <img
+      class="post-image"
+      src={image.url}
+      alt={image.alt}
+      srcset=""
+      loading="lazy"
+    />
+  </a>
+  <div class="post-body stack-sm">
+    <div class="post-meta">
+      <PubDate date={pubDate} />
+      <div class="post-tag">
+        <Tag tag={tag} />
+      </div>
+    </div>
+    <a href={`/posts/${slug}`}>
+      <div class="post-text stack-sm">
+        <h3 class="truncate">{title}</h3>
+        <p class="truncate-3">{description}</p>
+      </div>
+    </a>
+  </div>
+</article>
+
+<style>
+  .post-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 78rem) {
+    .post-container {
+      flex-direction: row;
+    }
+  }
+
+  .post-image {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+  }
+
+  @media (min-width: 36rem) {
+    .post-image {
+      aspect-ratio: 2 / 1;
+    }
+  }
+
+  @media (min-width: 78rem) {
+    .post-image {
+      aspect-ratio: 1 / 1;
+      width: 16rem;
+      height: 16rem;
+    }
+  }
+
+  .post-body {
+    flex-grow: 1;
+    --space: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  .post-text {
+    flex-grow: 1;
+    --space: 1em;
+  }
+
+  .post-tag {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+</style>

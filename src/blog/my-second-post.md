@@ -1,14 +1,14 @@
 ---
-title: "My Second Post"
+title: Really short
 pubDate: 2022-07-04
-description: "This is a description of my first post"
-author: "Matt Millard"
+description: Lorem ipsum dolor sit amet consectetur adipisicing.
+author: Matt Millard
 image:
   {
     url: https://images.unsplash.com/photo-1555066931-4365d14bab8c,
-    alt: "This is alt text for the image",
+    alt: This is alt text for the image,
   }
-tag: "Typescript"
+tag: Typescript
 ---
 
 # This title needs replaced

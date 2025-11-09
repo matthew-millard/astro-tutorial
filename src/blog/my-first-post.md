@@ -1,14 +1,14 @@
 ---
-title: "My First Post"
+title: My First Post
 pubDate: 2024-07-02
-description: "This is a description of my first Post"
-author: "Matt Millard"
+description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam.
+author: Matt Millard
 image:
   {
     url: https://images.unsplash.com/photo-1555066931-4365d14bab8c,
-    alt: "This is alt text for the image",
+    alt: This is alt text for the image,
   }
-tag: "Testing"
+tag: Testing
 ---
 
 # My First Post

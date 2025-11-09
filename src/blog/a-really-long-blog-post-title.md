@@ -1,14 +1,14 @@
 ---
-title: "A Really Long Blog Post Title To Test Layout"
+title: A Really Long Blog Post Title To Test Layout
 pubDate: 2021-07-02
-description: "This is a description of my first Post"
-author: "Matt Millard"
+description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse magnam adipisci ipsum in rem veniam.
+author: Matt Millard
 image:
   {
     url: https://images.unsplash.com/photo-1555066931-4365d14bab8c,
-    alt: "This is alt text for the image",
+    alt: This is alt text for the image,
   }
-tag: "Web development"
+tag: Web development
 ---
 
 # My First Post

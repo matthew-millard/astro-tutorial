@@ -12,7 +12,7 @@ const posts = await getCollection("blog").then((posts) =>
   <div class="side-panel-container">
     <div class="side-panel-header repel">
       <h2 class="panel-title">Blog Posts</h2>
-      <span class="post-count">{posts.length} Posts</span>
+      <span class="post-count italic">{posts.length} Posts</span>
       <SearchInput placeholder="Search posts..." />
     </div>
     <div id="side-panel-posts" class="side-panel-posts">

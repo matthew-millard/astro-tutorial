@@ -24,20 +24,40 @@ const { frontmatter } = Astro.props;
   <body>
     <Header />
     <SidePanel />
-    <div class="page">
-      <div class="content-wrapper">
-        <main class="main-container prose flow">
-          <slot />
-        </main>
-
-        <VerticalIconBar />
-      </div>
-      <footer>
+    <div class="page-container">
+      <main class="main flow">
+        <slot />
+      </main>
+      <footer class="footer">
         <BlogNavigation />
       </footer>
     </div>
   </body>
 </html>
+
+<style>
+  .page-container {
+    margin-top: 5rem;
+    padding-block: 2em;
+    padding-inline: 1rem;
+    min-height: calc(100dvh - 5rem);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main,
+  .footer {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 65ch;
+  }
+
+  @media (min-width: 78rem) {
+    .page-container {
+      padding-inline-start: 20rem;
+    }
+  }
+</style>
 
 <script>
   import "@scripts/side-panel";

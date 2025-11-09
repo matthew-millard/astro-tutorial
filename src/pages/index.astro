@@ -1,6 +1,5 @@
 ---
 import RecentPost from "@components/ui/RecentPost.astro";
-import Divider from "@components/ui/Divider.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
@@ -11,25 +10,25 @@ const posts = await getCollection("blog");
   pageTitle="Welcome"
   pageDescription="Hey, I'm Matt and welcome to my web development blog."
 >
-  <div class="flow">
-    <h1>
-      I build things on the web and write about what I learn along the way.
-    </h1>
-    <section class="recent-posts stack-lg">
-      <h2>Recent Posts</h2>
+  <h1>I build things on the web and write about what I learn along the way.</h1>
+  <section class="flow">
+    <h2>Recent Posts</h2>
+    <div class="stack-lg">
       {
         posts.map((post) => {
           return <RecentPost post={post} />;
         })
       }
-      <Divider />
-    </section>
-  </div>
-</BaseLayout>
+    </div>
+  </section>
 
-<style>
-  .recent-posts {
-    --flow-space: 3rem;
-    --space: 3rem;
-  }
-</style>
+  <section class="flow">
+    <h2>About me</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+      deserunt libero totam debitis. Quo, commodi aliquid rerum laboriosam
+      voluptatem incidunt reiciendis voluptatum esse saepe nostrum impedit
+      atque. Autem, corporis distinctio.
+    </p>
+  </section>
+</BaseLayout>

@@ -1,38 +1,3 @@
-.page {
-  position: relative;
-  margin-top: 5rem;
-  padding-block: 2rem;
-  padding-inline: 1rem;
-  min-height: calc(100dvh - 5rem);
-  display: flex;
-  flex-direction: column;
-}
-
-.main-container {
-  margin-inline: auto;
-  flex-grow: 1;
-  min-width: 0;
-  max-width: 75ch;
-}
-
-@media (min-width: 78rem) {
-  .page {
-    padding-block: 4rem;
-    padding-left: 24rem;
-    padding-right: 2rem;
-  }
-  .main-container {
-    margin-inline: 0;
-  }
-}
-
-.content-wrapper {
-  display: flex;
-  flex-grow: 1;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
 .repel {
   display: flex;
   justify-content: space-between;
@@ -42,30 +7,19 @@
 }
 
 .flow > * + * {
-  margin-block-start: var(--flow-space, 1em);
+  margin-block-start: var(--flow-space, 1.5em);
 }
 
-.prose {
-  --flow-space: var(--space-l);
+.flow :is(h1 + *, section + *) {
+  --flow-space: var(--space-xl);
 }
 
-.prose :is(h2 + *, h3 + *, h4 + *) {
-  --flow-space: var(--space-s);
-}
-
-/* Work on this... */
-[class^="stack"] {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-[class^="stack"] > * {
-  margin-block: 0;
+.flow :is(h2 + *, h3 + *, h4 + *) {
+  --flow-space: var(--space-m);
 }
 
 .stack-sm > * + * {
-  margin-block-start: var(--space, 1.5rem);
+  margin-block-start: var(--space, 1.5em);
 }
 
 .stack-lg > * + * {

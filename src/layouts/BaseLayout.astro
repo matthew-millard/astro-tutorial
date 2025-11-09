@@ -23,18 +23,36 @@ const { pageTitle, pageDescription } = Astro.props;
   <body>
     <Header />
     <SidePanel />
-    <div class="page">
-      <div class="content-wrapper">
-        <main class="main-container">
-          <slot />
-        </main>
-        <VerticalIconBar />
-      </div>
+    <div class="page-container">
+      <main class="main-container flow">
+        <slot />
+      </main>
     </div>
-  </body><Footer />
+  </body>
 </html>
 
-<style></style>
+<style>
+  .page-container {
+    margin-top: 5rem;
+    padding-block: 2em;
+    padding-inline: 1rem;
+    min-height: calc(100dvh - 5rem);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-container {
+    margin-inline: auto;
+    max-width: 65ch;
+  }
+
+  @media (min-width: 78rem) {
+    .page-container {
+      padding-inline-start: 20rem;
+      flex-direction: row;
+    }
+  }
+</style>
 
 <script>
   import "@scripts/side-panel";

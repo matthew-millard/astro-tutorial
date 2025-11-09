@@ -4,8 +4,8 @@ import CommonHead from "@components/meta/CommonHead.astro";
 import Header from "@components/ui/Header.astro";
 import SidePanel from "@components/ui/SidePanel.astro";
 import type { InferEntrySchema } from "astro:content";
-import BlogNavigation from "@components/ui/BlogNavigation.astro";
-import VerticalIconBar from "@components/ui/VerticalIconBar.astro";
+import Pagination from "@components/ui/Pagination.astro";
+import TableOfContents from "@components/ui/TableOfContents.astro";
 
 interface Props {
   frontmatter: InferEntrySchema<"blog">;
@@ -25,36 +25,49 @@ const { frontmatter } = Astro.props;
     <Header />
     <SidePanel />
     <div class="page-container">
-      <main class="main flow">
-        <slot />
-      </main>
-      <footer class="footer">
-        <BlogNavigation />
-      </footer>
+      <div class="grid">
+        <main class="post-content stack-lg">
+          <article class="flow">
+            <slot />
+          </article>
+          <footer>
+            <Pagination />
+          </footer>
+        </main>
+        <TableOfContents />
+      </div>
     </div>
   </body>
 </html>
 
 <style>
   .page-container {
-    margin-top: 5rem;
-    padding-block: 2em;
+    padding-block-start: 5rem;
     padding-inline: 1rem;
-    min-height: calc(100dvh - 5rem);
-    display: flex;
-    flex-direction: column;
   }
 
-  .main,
-  .footer {
-    margin-inline: auto;
-    width: 100%;
+  .post-content {
+    padding-block-start: 2rem;
     max-width: 65ch;
+    margin-inline: auto;
   }
 
   @media (min-width: 78rem) {
     .page-container {
-      padding-inline-start: 20rem;
+      padding-inline-start: 24rem;
+      padding-inline-end: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      justify-content: center;
+      align-items: start;
+      grid-template-columns: minmax(50ch, 65ch) minmax(250px, 300px);
+      column-gap: 2rem;
+    }
+
+    .post-content {
+      max-width: none;
     }
   }
 </style>

@@ -1,0 +1,73 @@
+<aside class="table-of-contents">
+  <nav class="toc-nav stack-sm" aria-label="Table of contents">
+    <h2 class="toc-heading">Overview</h2>
+    <ul id="toc-list"></ul>
+  </nav>
+</aside>
+
+<style>
+  .table-of-contents {
+    display: none;
+    position: sticky;
+    top: 5rem;
+    padding-block: 2rem;
+  }
+
+  .toc-nav {
+    --space: 1em;
+    font-size: var(--step--1);
+    line-height: 1.1;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+
+      li {
+        padding-left: 0.5rem;
+        border-left: 2px solid transparent;
+        transition: border 0.2s ease;
+      }
+
+      li:hover {
+        border-left: 2px solid var(--color-border);
+      }
+
+      li[aria-current="true"] {
+        font-weight: var(--font-medium);
+      }
+    }
+  }
+
+  .toc-heading {
+    font-size: var(--step-2);
+    font-weight: var(--font-medium);
+  }
+
+  @media (min-width: 78rem) {
+    .table-of-contents {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  import { generateSlug } from "@utils/generate-slug";
+  const articleElement = document.querySelector("article");
+  const h2Elements = articleElement?.querySelectorAll("h2");
+  const ulElement = document?.querySelector("#toc-list") as HTMLUListElement;
+
+  h2Elements?.forEach((element) => {
+    if (!element.textContent) return;
+    const id = generateSlug(element.textContent);
+    element.setAttribute("id", id);
+
+    const aElement = document.createElement("a");
+    const liElement = document.createElement("li");
+
+    aElement.href = `#${id}`;
+    liElement.textContent = element.textContent;
+    aElement.append(liElement);
+    ulElement.append(aElement);
+  });
+</script>

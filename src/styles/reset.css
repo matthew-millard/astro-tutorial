@@ -12,6 +12,11 @@
   margin: 0;
 }
 
+html {
+  --header-height: 5rem;
+  scroll-padding-top: var(--header-height);
+}
+
 /* Set core body defaults */
 body {
   --line-height: 1.5;

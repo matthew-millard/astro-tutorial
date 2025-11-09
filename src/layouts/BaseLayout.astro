@@ -3,8 +3,6 @@ import "../styles/global.css";
 import CommonHead from "@components/meta/CommonHead.astro";
 import Header from "@components/ui/Header.astro";
 import SidePanel from "@components/ui/SidePanel.astro";
-import Footer from "@components/ui/Footer.astro";
-import VerticalIconBar from "@components/ui/VerticalIconBar.astro";
 
 interface Props {
   pageTitle: string;
@@ -24,7 +22,7 @@ const { pageTitle, pageDescription } = Astro.props;
     <Header />
     <SidePanel />
     <div class="page-container">
-      <main class="main-container flow">
+      <main class="main flow">
         <slot />
       </main>
     </div>
@@ -41,7 +39,7 @@ const { pageTitle, pageDescription } = Astro.props;
     flex-direction: column;
   }
 
-  .main-container {
+  .main {
     margin-inline: auto;
     max-width: 65ch;
   }

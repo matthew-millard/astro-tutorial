@@ -52,6 +52,7 @@ ul {
 
 pre {
   padding: 1.5rem;
+  border-radius: var(--radius-lg);
 }
 
 button.has-icon {

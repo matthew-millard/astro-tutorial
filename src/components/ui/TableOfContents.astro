@@ -10,7 +10,7 @@
     display: none;
     position: sticky;
     top: 5rem;
-    padding-block: 5rem;
+    padding-block-start: 1.5em;
   }
 
   .toc-nav {
@@ -62,7 +62,7 @@
   import { generateSlug } from "@utils/generate-slug";
   const articleEl = document.querySelector("article");
   const allHTags = articleEl?.querySelectorAll(
-    "h1, h2, h3"
+    "h2, h3"
   ) as NodeListOf<HTMLHeadingElement>;
   const ulEl = document?.querySelector("#toc-list") as HTMLUListElement;
 
@@ -98,19 +98,23 @@
 
   const options: IntersectionObserverInit = {
     root: null,
-    rootMargin: "0px",
+    rootMargin: "-30px 0% -77%",
     threshold: [1],
   };
 
   const observeHTags = new IntersectionObserver((entries) => {
+    const allTocLinks = document.querySelectorAll(
+      "#toc-list li a"
+    ) as NodeListOf<HTMLAnchorElement>;
+
+    console.log("allTocLinks", allTocLinks);
     entries.forEach((entry) => {
       const id = entry.target.getAttribute("id");
       const tocLink = document.querySelector(`#toc-list li a[href="#${id}"]`);
 
       if (entry.isIntersecting) {
+        allTocLinks.forEach((el) => el.removeAttribute("aria-current"));
         tocLink?.setAttribute("aria-current", "true");
-      } else {
-        tocLink?.removeAttribute("aria-current");
       }
     });
   }, options);

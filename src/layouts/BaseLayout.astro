@@ -22,7 +22,7 @@ const { pageTitle, pageDescription } = Astro.props;
     <Header />
     <SidePanel />
     <div class="page-container">
-      <main class="main flow">
+      <main class="main-grid flow">
         <slot />
       </main>
     </div>
@@ -31,24 +31,16 @@ const { pageTitle, pageDescription } = Astro.props;
 
 <style>
   .page-container {
-    margin-top: 5rem;
-    padding-block: 2em;
+    padding-block-start: 5rem;
     padding-inline: 1rem;
-    min-height: calc(100dvh - 5rem);
-    display: flex;
-    flex-direction: column;
   }
 
-  .main {
-    margin-inline: auto;
-    max-width: 65ch;
-  }
-
-  @media (min-width: 78rem) {
-    .page-container {
-      padding-inline-start: 20rem;
-      flex-direction: row;
-    }
+  .main-grid {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(0, 75ch);
+    /* background-color: lightsalmon; */
   }
 </style>
 

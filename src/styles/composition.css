@@ -10,12 +10,16 @@
   margin-block-start: var(--flow-space, 1.5em);
 }
 
-.flow :is(h1 + *, section + *) {
-  --flow-space: var(--space-xl);
+.flow :is(h1, h2, h3, h4, h5) {
+  margin-block-start: 1em;
+}
+
+.flow :is(h1 + *) {
+  --flow-space: var(--space-l);
 }
 
 .flow :is(h2 + *, h3 + *, h4 + *) {
-  --flow-space: var(--space-m);
+  --flow-space: var(--space-s);
 }
 
 .stack-sm > * + * {

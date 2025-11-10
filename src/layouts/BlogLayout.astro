@@ -25,7 +25,7 @@ const { frontmatter } = Astro.props;
     <Header />
     <SidePanel />
     <div class="page-container">
-      <div id="scroll-area" class="grid">
+      <div id="scroll-area" class="post-grid">
         <main class="post-content stack-lg">
           <article class="flow">
             <slot />
@@ -46,40 +46,29 @@ const { frontmatter } = Astro.props;
     padding-inline: 1rem;
   }
 
-  .post-content {
-    padding-block-start: 2rem;
-    max-width: 65ch;
-    margin-inline: auto;
-  }
-
-  @media (min-width: 78rem) {
-    .page-container {
-      padding-inline-start: 24rem;
-      padding-inline-end: 2rem;
-    }
-
-    .post-content {
-      max-width: 65ch;
-      margin-inline: auto;
-    }
+  .post-grid {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(0, 75ch);
+    /* background-color: lightsalmon; */
   }
 
   @media (min-width: 90rem) {
-    .grid {
-      display: grid;
-      justify-content: center;
-      align-items: start;
-      grid-template-columns: 1fr 300px;
-      column-gap: 3rem;
-      max-width: 1400px;
-      margin-inline: auto;
+    .page-container {
+      padding-inline: 2rem;
+      /* background-color: lightgoldenrodyellow; */
     }
 
-    .post-content {
-      max-width: 65ch;
-      margin-inline: 0;
-      min-width: 0;
+    .post-grid {
+      grid-template-columns: minmax(60ch, 75ch) minmax(250px, 300px);
+      padding-left: 20rem;
+      gap: 5rem;
     }
+  }
+
+  article {
+    /* background-color: lightskyblue; */
   }
 </style>
 

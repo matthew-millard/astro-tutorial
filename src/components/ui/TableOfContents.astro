@@ -10,26 +10,22 @@
     display: none;
     position: sticky;
     top: 5rem;
-    padding-block-start: 1.5em;
+    padding-block-start: 3rem;
   }
 
   .toc-nav {
     --space: 1em;
-    line-height: 1.6;
     max-height: calc(100vh - 12rem);
     overflow-y: auto;
-    padding-right: 0.5rem;
+    padding-inline: 0.5rem;
 
     ul {
       display: flex;
       flex-direction: column;
       gap: 0.5em;
-      margin-top: var(--space-m);
-      padding-left: 0;
 
       a {
         display: block;
-        padding: 0.25rem 0;
         transition: all 0.15s ease;
         color: var(--color-text-muted);
         text-decoration: none;
@@ -87,9 +83,6 @@
         liEl.classList.add("toc-h2");
         break;
       }
-      default: {
-        liEl.classList.add("toc-h1");
-      }
     }
 
     liEl.append(aEl);
@@ -98,16 +91,15 @@
 
   const options: IntersectionObserverInit = {
     root: null,
-    rootMargin: "-30px 0% -77%",
+    rootMargin: "-30px 0px -60%",
     threshold: [1],
   };
 
-  const observeHTags = new IntersectionObserver((entries) => {
-    const allTocLinks = document.querySelectorAll(
-      "#toc-list li a"
-    ) as NodeListOf<HTMLAnchorElement>;
+  const allTocLinks = document.querySelectorAll(
+    "#toc-list li a"
+  ) as NodeListOf<HTMLAnchorElement>;
 
-    console.log("allTocLinks", allTocLinks);
+  const observeHTags = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const id = entry.target.getAttribute("id");
       const tocLink = document.querySelector(`#toc-list li a[href="#${id}"]`);

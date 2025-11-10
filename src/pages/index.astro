@@ -11,16 +11,6 @@ const posts = await getCollection("blog");
   pageDescription="Hey, I'm Matt and welcome to my web development blog."
 >
   <h1>I build things on the web and write about what I learn along the way.</h1>
-  <section class="flow">
-    <h2>Recent Posts</h2>
-    <div class="stack-lg">
-      {
-        posts.map((post) => {
-          return <RecentPost post={post} />;
-        })
-      }
-    </div>
-  </section>
 
   <section class="flow">
     <h2>About me</h2>
@@ -30,5 +20,16 @@ const posts = await getCollection("blog");
       voluptatem incidunt reiciendis voluptatum esse saepe nostrum impedit
       atque. Autem, corporis distinctio.
     </p>
+  </section>
+
+  <section class="flow">
+    <h2>Recent Posts</h2>
+    <div class="stack-lg">
+      {
+        posts.map((post) => {
+          return <RecentPost post={post} />;
+        })
+      }
+    </div>
   </section>
 </BaseLayout>

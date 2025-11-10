@@ -15,6 +15,32 @@ body {
   font-size: var(--step-0);
 }
 
+/* Global scrollbar styling */
+* {
+  /* Scrollbar styling for Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+/* Scrollbar styling for WebKit browsers */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: var(--radius-full);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
 h1 {
   font-size: var(--step-5);
 }
@@ -53,6 +79,13 @@ ul {
 pre {
   padding: 1.5rem;
   border-radius: var(--radius-lg);
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+code {
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 button.has-icon {

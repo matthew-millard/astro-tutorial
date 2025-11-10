@@ -10,31 +10,37 @@
     display: none;
     position: sticky;
     top: 5rem;
-    padding-block: 2rem;
+    padding-block: 5rem;
   }
 
   .toc-nav {
     --space: 1em;
-    font-size: var(--step--1);
-    line-height: 1.1;
+    line-height: 1.6;
+    max-height: calc(100vh - 12rem);
+    overflow-y: auto;
+    padding-right: 0.5rem;
 
     ul {
       display: flex;
       flex-direction: column;
-      gap: 1em;
+      gap: 0.5em;
+      margin-top: var(--space-m);
+      padding-left: 0;
 
-      li {
-        padding-left: 0.5rem;
-        border-left: 2px solid transparent;
-        transition: border 0.2s ease;
+      a {
+        display: block;
+        padding: 0.25rem 0;
+        transition: all 0.15s ease;
+        color: var(--color-text-muted);
+        text-decoration: none;
       }
 
-      li:hover {
-        border-left: 2px solid var(--color-border);
+      a:hover {
+        color: var(--color-text-primary);
       }
 
-      li[aria-current="true"] {
-        font-weight: var(--font-medium);
+      a[aria-current="true"] {
+        color: var(--color-accent);
       }
     }
   }
@@ -42,9 +48,10 @@
   .toc-heading {
     font-size: var(--step-2);
     font-weight: var(--font-medium);
+    color: var(--color-text-muted);
   }
 
-  @media (min-width: 78rem) {
+  @media (min-width: 90rem) {
     .table-of-contents {
       display: block;
     }
@@ -53,21 +60,63 @@
 
 <script>
   import { generateSlug } from "@utils/generate-slug";
-  const articleElement = document.querySelector("article");
-  const h2Elements = articleElement?.querySelectorAll("h2");
-  const ulElement = document?.querySelector("#toc-list") as HTMLUListElement;
+  const articleEl = document.querySelector("article");
+  const allHTags = articleEl?.querySelectorAll(
+    "h1, h2, h3"
+  ) as NodeListOf<HTMLHeadingElement>;
+  const ulEl = document?.querySelector("#toc-list") as HTMLUListElement;
 
-  h2Elements?.forEach((element) => {
-    if (!element.textContent) return;
-    const id = generateSlug(element.textContent);
-    element.setAttribute("id", id);
+  allHTags?.forEach((tag) => {
+    if (!tag.textContent) return;
 
-    const aElement = document.createElement("a");
-    const liElement = document.createElement("li");
+    const id = generateSlug(tag.textContent);
+    tag.setAttribute("id", id);
 
-    aElement.href = `#${id}`;
-    liElement.textContent = element.textContent;
-    aElement.append(liElement);
-    ulElement.append(aElement);
+    const liEl = document.createElement("li");
+    const aEl = document.createElement("a");
+
+    aEl.href = `#${id}`;
+    aEl.textContent = tag.textContent;
+
+    switch (tag.tagName) {
+      case "H3": {
+        liEl.classList.add("toc-h3");
+        break;
+      }
+      case "H2": {
+        liEl.classList.add("toc-h2");
+        break;
+      }
+      default: {
+        liEl.classList.add("toc-h1");
+      }
+    }
+
+    liEl.append(aEl);
+    ulEl.append(liEl);
+  });
+
+  const options: IntersectionObserverInit = {
+    root: null,
+    rootMargin: "0px",
+    threshold: [1],
+  };
+
+  const observeHTags = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+      const tocLink = document.querySelector(`#toc-list li a[href="#${id}"]`);
+
+      if (entry.isIntersecting) {
+        tocLink?.setAttribute("aria-current", "true");
+      } else {
+        tocLink?.removeAttribute("aria-current");
+      }
+    });
+  }, options);
+
+  // Track all h2 that have an `id` applied
+  allHTags?.forEach((tag) => {
+    observeHTags.observe(tag);
   });
 </script>

@@ -2,8 +2,11 @@
 import RecentPost from "@components/ui/RecentPost.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import { sortPostsByDate } from "@utils/sort-posts-by-date";
 
 const posts = await getCollection("blog");
+const sortedPosts = sortPostsByDate(posts);
+const fourMostRecentPosts = sortedPosts.slice(0, 4);
 ---
 
 <BaseLayout
@@ -41,9 +44,13 @@ const posts = await getCollection("blog");
     <h2>Recent Posts</h2>
     <div class="stack-lg">
       {
-        posts.map((post) => {
-          return <RecentPost post={post} />;
-        })
+        posts.length > 0 ? (
+          fourMostRecentPosts.map((post) => {
+            return <RecentPost post={post} />;
+          })
+        ) : (
+          <p>There are currently no posts</p>
+        )
       }
     </div>
   </section>

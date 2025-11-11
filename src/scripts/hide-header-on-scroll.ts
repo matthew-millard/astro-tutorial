@@ -9,9 +9,7 @@ function handleScroll() {
     return;
   }
 
-  // const SCROLL_THRESHOLD = 0;
   const currentScrollY = window.scrollY;
-  const scrollDifference = Math.abs(currentScrollY - previousScrollY);
 
   if (previousScrollY > 64 && currentScrollY > previousScrollY) {
     // Scrolling down

@@ -7,7 +7,7 @@
 }
 
 .flow > * + * {
-  margin-block-start: var(--flow-space, 1.5em);
+  margin-block-start: var(--flow-space, 1em);
 }
 
 .flow :is(h1, h2, h3, h4, h5) {

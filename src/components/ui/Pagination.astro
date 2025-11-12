@@ -49,8 +49,15 @@ const nextPost =
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding-block: 1rem;
+    padding-block: 2rem;
     border-top: 1px solid var(--color-border);
+  }
+
+  @media (min-width: 90rem) {
+    .pagination-links {
+      padding-inline: 2rem;
+      border-top-color: transparent;
+    }
   }
 
   .pagination-link-container {

@@ -24,51 +24,43 @@ const { frontmatter } = Astro.props;
   <body>
     <Header />
     <SidePanel />
-    <div class="page-container">
-      <div id="scroll-area" class="post-grid">
-        <main class="post-content stack-lg">
-          <article class="flow">
-            <slot />
-          </article>
-          <footer>
-            <Pagination />
-          </footer>
-        </main>
-        <TableOfContents />
-      </div>
+
+    <div id="scroll-area" class="page-container">
+      <main class="post-container stack-lg">
+        <article class="post-content flow">
+          <slot />
+        </article>
+        <footer>
+          <Pagination />
+        </footer>
+      </main>
+      <TableOfContents />
     </div>
   </body>
 </html>
 
 <style>
   .page-container {
-    padding-block-start: 5rem;
-    padding-inline: 1rem;
-  }
-
-  .post-grid {
-    position: relative;
     display: grid;
     justify-content: center;
     grid-template-columns: minmax(0, 75ch);
-    /* background-color: lightsalmon; */
+    padding-inline: 1rem;
+  }
+
+  .post-container {
+    margin-block-start: 5rem;
   }
 
   @media (min-width: 90rem) {
     .page-container {
       padding-inline: 2rem;
-      /* background-color: lightgoldenrodyellow; */
-    }
-
-    .post-grid {
-      grid-template-columns: minmax(60ch, 75ch) minmax(250px, 300px);
       padding-left: 20rem;
-      gap: 5rem;
+      grid-template-columns: minmax(70ch, 85ch) minmax(250px, 400px);
     }
-  }
 
-  article {
-    /* background-color: lightskyblue; */
+    .post-content {
+      padding-inline: 2rem;
+    }
   }
 </style>
 

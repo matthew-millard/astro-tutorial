@@ -1,7 +1,7 @@
 <aside class="table-of-contents">
   <nav class="toc-nav stack-sm" aria-label="Table of contents">
     <h2 class="toc-heading">Overview</h2>
-    <ul id="toc-list"></ul>
+    <ul id="toc-list" class="stack-sm"></ul>
   </nav>
 </aside>
 
@@ -9,30 +9,25 @@
   .table-of-contents {
     display: none;
     position: sticky;
-    /* background-color: lightpink; */
+    top: 0px;
     padding: 1rem 0.5rem;
-    border-left: 1px solid var(--color-border);
-    min-height: calc(100vh - var(--header-height));
-    top: var(--header-height);
     align-self: start;
   }
 
   .toc-nav {
     --space: 1em;
-    max-height: calc(100vh - 12rem);
+    max-height: calc(100vh - 10rem);
     overflow-y: auto;
+    padding-block: 5rem;
     padding-inline: 0.5rem;
 
     ul {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5em;
+      margin-block-start: 1rem;
+      --space: 0.5rem;
 
       a {
-        display: block;
         transition: all 0.15s ease;
         color: var(--color-text-muted);
-        text-decoration: none;
       }
 
       a:hover {
@@ -47,7 +42,7 @@
 
   .toc-heading {
     font-size: var(--step-2);
-    font-weight: var(--font-medium);
+    letter-spacing: 0.025em;
     color: var(--color-text-muted);
   }
 

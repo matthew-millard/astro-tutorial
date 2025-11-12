@@ -37,6 +37,11 @@ import SidePanelToggle from "./SidePanelToggle.astro";
     header {
       padding-inline: 2rem;
     }
+
+    header[data-hidden="true"] {
+      /* Prevent hide header on scroll for large viewports */
+      transform: none;
+    }
   }
 
   .header-container {

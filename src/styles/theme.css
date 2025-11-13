@@ -71,6 +71,11 @@
   --color-link: #c1502e;
   --color-link-hover: #a03820;
 
+  --button-bg: #2d5016;
+  --button-bg-hover: #3a6b1d; /* Lighter, more saturated green */
+  --button-bg-active: #254012; /* Darker when pressed */
+  --button-fg: #faf7f0;
+
   --toggle-bg: #faf7f0;
   --toggle-bg-hover: #f0ebe3;
   --toggle-fg: rgb(193, 80, 46, 1);

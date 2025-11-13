@@ -27,7 +27,7 @@ allH2Tags?.forEach((tag) => {
 const options: IntersectionObserverInit = {
   root: null,
   rootMargin: "0% 0% 0%",
-  threshold: 0,
+  threshold: 1,
 };
 
 // Track which headings are currently visible

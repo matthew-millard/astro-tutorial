@@ -59,3 +59,7 @@
   padding-inline-start: 1.5rem;
   opacity: 0.75;
 }
+
+.no-scroll {
+  overflow: hidden;
+}

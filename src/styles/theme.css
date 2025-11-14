@@ -56,33 +56,24 @@
 
   /* colour palette */
   --color-bg: #faf7f0;
-  --color-text-primary: #1f2420;
+  --color-text: #1f2420;
   --color-text-muted: rgb(31, 36, 32, 0.8);
   --color-text-secondary: #5a7a3c;
-  --color-primary: #2d5016;
-  --color-secondary: #5a7a3c;
   --color-heading: #2d5016;
   --color-backdrop: rgb(31, 36, 32, 0.5);
 
-  --surface-bg: #f0ebe3;
+  --panel-bg: #f0ebe3;
 
-  --color-accent: #c1502e;
-  --color-accent-hover: #a03820;
   --color-link: #c1502e;
   --color-link-hover: #a03820;
+  --color-link-active: #a03820;
 
-  --button-bg: #2d5016;
-  --button-bg-hover: #3a6b1d; /* Lighter, more saturated green */
-  --button-bg-active: #254012; /* Darker when pressed */
-  --button-fg: #faf7f0;
+  --button-fg: #3a6b1d;
+  --button-fg-hover: #c1502e;
+  --button-bg: transparent;
+  --button-bg-hover: #f0ebe3;
+  --button-border: transparent;
 
-  --toggle-bg: #faf7f0;
-  --toggle-bg-hover: #f0ebe3;
-  --toggle-fg: rgb(193, 80, 46, 1);
-  --toggle-fg-hover: rgb(193, 80, 46, 0.8);
-  --toggle-border: transparent;
-
-  --color-code-bg: #f0ebe3;
   --color-tag-bg: #e8e2d5;
   --color-border: #e8e2d5;
 
@@ -92,28 +83,24 @@
 
 :root[data-theme="dark"] {
   --color-bg: #1a1a1a;
-  --color-text-primary: #d4cfc3;
+  --color-text: #d4cfc3;
   --color-text-muted: rgb(212, 207, 195, 0.8);
-  --color-text-primary-hover: rgb(212, 207, 195, 0.8);
 
   --color-text-secondary: #9aa88a;
   --color-heading: #faf7f0;
 
-  --surface-bg: #252525;
+  --panel-bg: #252525;
 
-  --color-accent: #e8956f;
-  --color-accent-hover: #f5a981;
   --color-link: #e8956f;
   --color-link-hover: #f5a981;
+  --color-link-active: #e8956f;
 
-  /* Dark Mode Toggle */
-  --toggle-bg: #1a1a1a;
-  --toggle-bg-hover: #2a2a2a;
-  --toggle-fg: rgb(154, 168, 138, 0.7);
-  --toggle-fg-hover: rgb(154, 168, 138, 1);
-  --toggle-border: transparent;
+  --button-fg: #9aa88a;
+  --button-fg-hover: #f5a981;
+  --button-bg: transparent;
+  --button-bg-hover: #2a2a2a;
+  --button-border: transparent;
 
-  --color-code-bg: #252525;
   --color-border: #3a3a3a;
 
   --color-tag-bg: #2a2a2a;

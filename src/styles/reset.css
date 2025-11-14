@@ -63,7 +63,7 @@ h6 {
 /* Balance text wrapping on headings and paragraphs */
 p {
   text-wrap: pretty;
-  color: var(--color-text-primary);
+  color: var(--color-text);
   font-family: "Inter";
   font-weight: var(--font-normal);
 }

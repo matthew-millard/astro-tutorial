@@ -39,7 +39,7 @@
 .toc-h1 {
   font-size: 1em;
   font-weight: var(--font-semibold);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-block: 0.75em 0.5em;
 }
 
@@ -48,8 +48,9 @@
 }
 
 .toc-h2 {
-  font-size: 0.9em;
-  font-weight: var(--font-medium);
+  font-size: var(--step--1);
+  /* font-weight: var(--font-medium);
+   */
   padding-inline-start: 0.75rem;
 }
 

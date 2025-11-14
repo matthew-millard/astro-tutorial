@@ -10,7 +10,7 @@
 }
 
 body {
-  color: var(--color-text-primary);
+  color: var(--color-text);
   font-family: "Inter";
   font-size: var(--step-0);
 }
@@ -95,38 +95,17 @@ code {
   padding: 0.25rem 0.75rem;
   width: fit-content;
   border-radius: var(--radius-md);
-  color: var(--toggle-fg);
-  background-color: var(--toggle-bg);
-  border: 1px solid var(--toggle-border);
+  color: var(--button-fg);
+  transition: color 0.2s ease;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
   font-size: var(--step-0);
   font-weight: var(--font-medium);
-  transition-property: color, background-color;
+  transition-property: all;
   transition-duration: 200ms;
 }
 
-.btn {
-  color: var(--toggle-fg-hover);
-  background-color: var(--toggle-bg-hover);
-}
-
-a[class^="button"] {
-  font-size: var(--step--1);
-  font-style: normal;
-  font-weight: var(--font-medium);
-  display: block;
-  width: fit-content;
-  background-color: var(--button-bg);
-  color: var(--button-fg);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  transition: all 0.15s ease;
-}
-
-a[class^="button"]:hover {
+.btn:hover {
+  color: var(--button-fg-hover);
   background-color: var(--button-bg-hover);
-}
-
-a[class^="button"]:active {
-  background-color: var(--button-bg-active);
 }

@@ -4,6 +4,8 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://mattmillard.dev",
+  trailingSlash: "never",
   markdown: {
     shikiConfig: {
       theme: 'everforest-dark',

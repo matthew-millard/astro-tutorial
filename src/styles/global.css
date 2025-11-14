@@ -88,7 +88,7 @@ code {
   word-wrap: break-word;
 }
 
-button.has-icon {
+.btn-icon {
   display: grid;
   justify-items: center;
   align-items: center;
@@ -103,7 +103,7 @@ button.has-icon {
   transition-duration: 200ms;
 }
 
-button.has-icon:hover {
+.btn-icon:hover {
   color: var(--toggle-fg-hover);
   background-color: var(--toggle-bg-hover);
 }

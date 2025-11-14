@@ -88,22 +88,23 @@ code {
   word-wrap: break-word;
 }
 
-.btn-icon {
+.btn {
   display: grid;
   justify-items: center;
   align-items: center;
-  padding: 0.5rem;
-  line-height: 0;
+  padding: 0.25rem 0.75rem;
+  width: fit-content;
+  border-radius: var(--radius-md);
   color: var(--toggle-fg);
   background-color: var(--toggle-bg);
   border: 1px solid var(--toggle-border);
-  border-radius: var(--radius-full);
-  font-size: var(--icon-base);
+  font-size: var(--step-0);
+  font-weight: var(--font-medium);
   transition-property: color, background-color;
   transition-duration: 200ms;
 }
 
-.btn-icon:hover {
+.btn {
   color: var(--toggle-fg-hover);
   background-color: var(--toggle-bg-hover);
 }

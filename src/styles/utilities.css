@@ -67,3 +67,10 @@
 .italic {
   font-style: italic;
 }
+
+.icon-only {
+  border-radius: var(--radius-full) !important;
+  padding: 0.5rem !important;
+  font-size: var(--icon-base) !important;
+  line-height: 0 !important;
+}

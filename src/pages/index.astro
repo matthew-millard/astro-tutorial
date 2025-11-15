@@ -3,6 +3,7 @@ import RecentPost from "@components/ui/RecentPost.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import { sortPostsByDate } from "@utils/sort-posts-by-date";
+import ExternalLink from "@components/ui/ExternalLink.astro";
 
 const posts = await getCollection("blog");
 const sortedPosts = sortPostsByDate(posts);
@@ -23,24 +24,21 @@ const mostRecentPosts = sortedPosts.slice(0, 4); // Limit 4
     <p>
       I'm a junior developer who's always building something. Right now I've got
       a few full-stack apps live, like
-      <a href="https://notely.ca" target="_blank" rel="noopener noreferrer"
-        >Notely</a
-      >
+      <ExternalLink url="https://notely.ca" text="Notely" />
       and
-      <a
-        href="https://mattmillard.photography"
-        target="_blank"
-        rel="noopener noreferrer">my photography site</a
-      >. I also help co-organize
-      <a href="https://forwardjs.com/" target="_blank" rel="noopener noreferrer"
-        >ForwardJS Ottawa</a
-      >, a popular local meetup where developers get together every month. If
-      you're in Ottawa, come along and say hi!
+      <ExternalLink
+        url="https://mattmillard.photography"
+        text="my photography site"
+      />. I also help co-organize
+      <ExternalLink url="https://forwardjs.com/" text="ForwardJS Ottawa" />, a
+      popular local meetup where developers get together every month. If you're
+      in Ottawa, come along and say hi!
     </p>
 
     <p>
-      I'm currently looking for junior developer or internship opportunities. If
-      you think I'd be a great fit for your team, I'd love to hear from you!
+      At the moment, I'm currently looking for junior developer or internship
+      opportunities. If you think I'd be a great fit for your team, I'd love to
+      hear from you!
     </p>
     <a
       href="https://res.cloudinary.com/hospohub/image/upload/v1761833724/matthew_millard_resume_2025_wub2nh.pdf"

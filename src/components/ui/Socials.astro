@@ -1,0 +1,45 @@
+---
+import { Icon } from "astro-icon/components";
+const icons = [
+  // {
+  //   name: "discord",
+  //   href: "https://discord.gg/7rZ5fC6w",
+  // },
+  {
+    name: "linkedin",
+    href: "https://www.linkedin.com/in/matthew-richie-millard/",
+  },
+  {
+    name: "github",
+    href: "https://github.com/matthew-millard",
+  },
+  // {
+  //   name: "instagram",
+  //   href: "https://www.instagram.com/_mattmillard/",
+  // },
+];
+---
+
+<div class="socials">
+  {
+    icons.map((icon) => (
+      <a
+        href={icon.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={icon.name}
+      >
+        <Icon name={icon.name} />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .socials {
+    font-size: var(--icon-base);
+  }
+  .socials > a:not(:first-child) {
+    margin-inline-start: 1rem;
+  }
+</style>

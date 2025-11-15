@@ -1,3 +1,43 @@
-<footer>
-  <!-- <h3>Footer</h3> -->
+---
+import { Icon } from "astro-icon/components";
+import ExternalLink from "./ExternalLink.astro";
+import Socials from "./Socials.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer repel">
+  <div>
+    <p>
+      Built by me - Code on <ExternalLink
+        url="https://github.com/matthew-millard/astro-tutorial"
+        text="Github"
+      />
+    </p>
+    <small class="copyright">
+      <Icon name="copyright" /> mattmillard.dev {currentYear}
+    </small>
+  </div>
+  <Socials />
 </footer>
+
+<style>
+  .footer {
+    background-color: var(--panel-bg);
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    --gutter: 1rem;
+  }
+
+  .copyright {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+  }
+
+  @media (min-width: 90rem) {
+    .footer {
+      padding-inline: 2rem;
+    }
+  }
+</style>

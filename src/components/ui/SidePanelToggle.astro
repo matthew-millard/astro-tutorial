@@ -45,9 +45,11 @@ import { Icon } from "astro-icon/components";
 
     if (isOpen) {
       sidePanelButton.setAttribute("data-panel-state", "closed");
+      sidePanelEl.setAttribute("inert", "true");
       document.body.classList.remove("no-scroll");
     } else {
       sidePanelButton.setAttribute("data-panel-state", "open");
+      sidePanelEl.removeAttribute("inert");
       document.body.classList.add("no-scroll");
     }
   }

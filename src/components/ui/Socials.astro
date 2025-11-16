@@ -27,6 +27,7 @@ const icons = [
         href={icon.href}
         target="_blank"
         rel="noopener noreferrer"
+        class="social-icon"
         aria-label={icon.name}
       >
         <Icon name={icon.name} />
@@ -37,9 +38,12 @@ const icons = [
 
 <style>
   .socials {
+    display: flex;
     font-size: var(--icon-base);
+    gap: 1rem;
   }
-  .socials > a:not(:first-child) {
-    margin-inline-start: 1rem;
+
+  .social-icon {
+    display: inline-flex;
   }
 </style>

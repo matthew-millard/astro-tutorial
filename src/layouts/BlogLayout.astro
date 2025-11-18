@@ -31,9 +31,7 @@ const { frontmatter } = Astro.props;
         <article class="post-content flow">
           <slot />
         </article>
-        <footer>
-          <Pagination />
-        </footer>
+        <Pagination />
       </main>
       <TableOfContents />
     </div>
@@ -56,8 +54,8 @@ const { frontmatter } = Astro.props;
   @media (min-width: 90rem) {
     .page-container {
       padding-inline: 2rem;
-      padding-left: 20rem;
-      grid-template-columns: minmax(70ch, 85ch) minmax(300px, 400px);
+      padding-left: 10rem;
+      grid-template-columns: minmax(75ch, 85ch) 300px;
     }
 
     .post-content {

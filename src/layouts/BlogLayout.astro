@@ -54,7 +54,7 @@ const { frontmatter } = Astro.props;
   @media (min-width: 90rem) {
     .page-container {
       padding-inline: 2rem;
-      grid-template-columns: 1fr minmax(75ch, 85ch) 300px;
+      grid-template-columns: 1fr minmax(75ch, 85ch) minmax(300px, 1fr);
     }
 
     /* pseudo element to act as a spacer to center article on larger viewports */

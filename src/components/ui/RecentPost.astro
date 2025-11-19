@@ -12,7 +12,7 @@ const { title, description, image, tag, pubDate } = post.data;
 const slug = post.id;
 ---
 
-<article class="post-container stack-sm">
+<article class="post-container">
   <img
     class="post-image"
     src={image.url}
@@ -20,13 +20,13 @@ const slug = post.id;
     srcset=""
     loading="lazy"
   />
-  <div class="post-body stack-sm">
+  <div class="post-body">
     <div class="post-meta">
       <PubDate date={pubDate} />
       <Tag tag={tag} />
     </div>
     <a href={`/posts/${slug}`}>
-      <div class="post-text stack-sm">
+      <div class="post-text flow stack-sm">
         <h3 class="truncate-2">{title}</h3>
         <p class="truncate-3">{description}</p>
       </div>
@@ -46,20 +46,17 @@ const slug = post.id;
     border-radius: var(--radius-xl);
   }
 
-  .post-body {
-    /* --space: 0; */
-    flex-grow: 1;
-  }
 
   .post-meta {
-    margin-block-end: 1rem;
+    margin-block-start: 1em;
     display: flex;
     align-items: center;
     column-gap: 1rem;
   }
 
   .post-text {
-    --space: var(--space-3xs);
+    --flow-space: 0.5rem;
+    --space: 0.5rem;
   }
 
   /* Media queries */
@@ -81,8 +78,6 @@ const slug = post.id;
       height: 16rem;
     }
 
-    .post-body {
-      --space: 0;
-    }
+    
   }
 </style>

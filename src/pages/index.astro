@@ -14,9 +14,16 @@ const mostRecentPosts = sortedPosts.slice(0, 4); // Limit 4
   pageTitle="Blog"
   pageDescription="Hi, I'm Matt Millard. I build for the web and share what I learn along the way."
 >
-  <h1>
-    Hi, I'm Matt. I build for the web and share what I learn along the way.
-  </h1>
+  <section class="hero">
+    <img
+      src="https://res.cloudinary.com/hospohub/image/upload/v1762193850/mattmillard_headshot_1x1_1024px.jpg"
+      alt="Matt Millard"
+      srcset=""
+    />
+    <h1>
+      Hi, I'm Matt. I build for the web and share what I learn along the way.
+    </h1>
+  </section>
 
   <section class="about-me flow">
     <h2>About me</h2>
@@ -68,7 +75,39 @@ const mostRecentPosts = sortedPosts.slice(0, 4); // Limit 4
 </BaseLayout>
 
 <style>
+  .hero {
+    margin-block-start: 1.5em;
+  }
+
   .about-me {
     --flow-space: 1em;
+  }
+
+  img {
+    /* margin-left: auto; */
+    /* width: var(--step-4);
+    height: var(--step-4); */
+    height: 5rem;
+    width: 5rem;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    background-color: var(--color-bg);
+  }
+
+  h1 {
+    margin-block-start: 1rem;
+  }
+
+  @media (min-width: 90rem) {
+    .hero {
+      margin-block-start: 3rem;
+    }
+
+    h1 {
+      margin-block-start: 2rem;
+    }
   }
 </style>

@@ -1,5 +1,4 @@
 ---
-import Logo from "@components/ui/Logo.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 import SidePanelToggle from "./SidePanelToggle.astro";
 import RSSFeed from "./RSSFeed.astro";
@@ -8,11 +7,15 @@ import RSSFeed from "./RSSFeed.astro";
 <header id="header">
   <div class="repel header-container">
     <SidePanelToggle />
-    <div class="button-group">
+    <nav class="nav">
+      <a href="/" aria-current={Astro.url.pathname === "/" ? "page" : "false"}
+        >Blog</a
+      >
+    </nav>
+    <div class="btn-group">
       <ThemeToggle />
       <RSSFeed />
     </div>
-    <!-- <Logo /> -->
   </div>
 </header>
 
@@ -35,6 +38,14 @@ import RSSFeed from "./RSSFeed.astro";
     transform: translateY(-100%);
   }
 
+  .nav {
+    flex-grow: 1;
+
+    a[aria-current="page"] {
+      /* font-weight: var(--font-medium); */
+    }
+  }
+
   @media (min-width: 90rem) {
     header {
       padding-inline: 2rem;
@@ -51,7 +62,7 @@ import RSSFeed from "./RSSFeed.astro";
     margin-inline: auto;
   }
 
-  .button-group {
+  .btn-group {
     display: flex;
     gap: 1rem;
     align-items: center;

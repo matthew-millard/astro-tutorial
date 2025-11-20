@@ -58,9 +58,9 @@ const mostRecentPosts = sortedPosts.slice(0, 4); // Limit 4
     </a>
   </section>
 
-  <section class="flow">
+  <section class="recent-posts flow">
     <h2>Recent Posts</h2>
-    <div class="stack-lg">
+    <div class="recent-post-list stack-lg">
       {
         mostRecentPosts.length > 0 ? (
           mostRecentPosts.map((post) => {
@@ -83,10 +83,12 @@ const mostRecentPosts = sortedPosts.slice(0, 4); // Limit 4
     --flow-space: 1em;
   }
 
+  .recent-post-list {
+    margin-block-start: 2rem;
+    --space: 3rem;
+  }
+
   img {
-    /* margin-left: auto; */
-    /* width: var(--step-4);
-    height: var(--step-4); */
     height: 5rem;
     width: 5rem;
     object-fit: cover;

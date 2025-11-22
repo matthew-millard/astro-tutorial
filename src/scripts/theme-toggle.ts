@@ -1,44 +1,43 @@
-const html = document.querySelector('html');
-const themeTogglebutton = document.querySelector('#theme-toggle-button');
-const themeIcon = themeTogglebutton?.querySelector('#theme-icon');
-const moonIcon = themeTogglebutton?.querySelector('#moon-icon');
-const sunIcon = themeTogglebutton?.querySelector('#sun-icon');
+const html = document.querySelector("html");
+const themeTogglebutton = document.querySelector("#theme-toggle-button");
+const moonIcon = themeTogglebutton?.querySelector("#moon-icon");
+const sunIcon = themeTogglebutton?.querySelector("#sun-icon");
 
-// Update UI to match the theme that was already set by the inline script
-updateThemeUI();
+type Theme = "light" | "dark";
+const THEME_KEY = "preferred_theme";
 
-function updateThemeUI() {
-  const currentTheme = html?.getAttribute('data-theme');
+function getThemeFromLocalStorage(): Theme | null {
+  return window.localStorage.getItem(THEME_KEY) as Theme | null;
+}
 
-  if (currentTheme === 'dark') {
-    moonIcon?.classList.remove('hide');
-    sunIcon?.classList.add('hide');
+const initialTheme = getThemeFromLocalStorage() ?? "light";
+setTheme(initialTheme);
+
+function setThemeInLocalStorage(theme: Theme) {
+  window.localStorage.setItem(THEME_KEY, theme);
+}
+
+function setTheme(theme: Theme) {
+  if (theme === "dark") {
+    moonIcon?.classList.remove("hide");
+    sunIcon?.classList.add("hide");
+    html?.setAttribute("data-theme", "dark");
+    setThemeInLocalStorage("dark");
   } else {
-    sunIcon?.classList.remove('hide');
-    moonIcon?.classList.add('hide');
+    sunIcon?.classList.remove("hide");
+    moonIcon?.classList.add("hide");
+    html?.setAttribute("data-theme", "light");
+    setThemeInLocalStorage("light");
   }
-}
-
-function setTheme(theme: string) {
-  updateThemeUI();
-  html?.setAttribute('data-theme', theme);
-  window.localStorage.setItem('preferredTheme', theme);
-}
-
-function getTheme() {
-  return html?.getAttribute('data-theme');
 }
 
 function toggleTheme() {
-  const theme = getTheme();
-
-  if (!theme) {
-    setTheme('dark');
-  } else if (theme === 'light') {
-    setTheme('dark');
-  } else {
-    setTheme('light');
-  }
+  const currentTheme =
+    getThemeFromLocalStorage() ??
+    (html?.getAttribute("data-theme") as Theme) ??
+    "light";
+  const newTheme = currentTheme === "light" ? "dark" : "light";
+  setTheme(newTheme);
 }
 
-themeTogglebutton?.addEventListener('click', toggleTheme);
+themeTogglebutton?.addEventListener("click", toggleTheme);
